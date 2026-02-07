@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* ============================================
+   THEME CONFIGURATION
+   ============================================ */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-primary: #0B1720;
+  --color-button-primary: #0E59AE;
+}
+
+/* ============================================
+   CUSTOM CSS VARIABLES
+   ============================================ */
+:root {
+  --color-primary: #0B1720;
+  --button-primary: #0E59AE;
+}
+
+
+
+/* ============================================
+   COMPONENT CLASSES
+   ============================================ */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--button-primary);
+}
+
+.border-primary {
+  border-color: var(--button-primary);
+}
+
+.button-primary {
+  background-color: var(--button-primary);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.font-inter {
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   MOBILE MENU TRANSITIONS
+   ============================================ */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#mobile-menu.open {
+  max-height: 600px;
+  opacity: 1;
+}
+
