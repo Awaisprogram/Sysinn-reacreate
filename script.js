@@ -25,3 +25,31 @@ document.addEventListener('click', (e) => {
       closeIcon.classList.add("hidden");
     }
 });
+
+
+// FAQS SECTION
+
+document.querySelectorAll('.faq-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.faq-icon');
+    
+    // Close all other open items
+    document.querySelectorAll('.faq-content').forEach(otherContent => {
+      if (otherContent !== content) {
+        otherContent.style.maxHeight = null;
+        otherContent.parentElement.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Toggle current item
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.style.transform = 'rotate(45deg)'; // Rotates plus to an 'x' or minus style
+    }
+  });
+});
