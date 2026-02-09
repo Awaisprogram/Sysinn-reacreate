@@ -57,22 +57,16 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
 // Swiper 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".testimonialSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
+  const swiper = new Swiper('.testimonialSwiper', {
+    effect: 'fade', // This keeps the layout "in place"
+    fadeEffect: {
+        crossFade: true
+    },
     loop: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-
-    effect: "slide",
     speed: 600,
-  });
+    navigation: {
+        nextEl: '.next-btn',
+        prevEl: '.prev-btn',
+    },
+});
 });
