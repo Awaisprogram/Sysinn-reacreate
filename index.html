@@ -22,77 +22,170 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
          ======================================== -->
          <section class="hero-bg relative min-h-screen lg:min-h-[800px] flex flex-col font-inter overflow-hidden">
   
+          <!-- ========================================
+               NAVBAR SECTION - DESKTOP NAVIGATION
+               ======================================== -->
           <nav class="relative px-8 h-20 flex items-center justify-between  z-50">
 
+            <!-- Navbar: Logo/Brand Section -->
             <div class="flex items-center gap-2 cursor-pointer z-10">
               <img src="images/logo.webp" alt="sysinn logo" class="h-8 w-auto" />
             </div>
     
-            <div class="hidden lg:flex items-center gap-8 h-full">
+            <!-- Navbar: Main Navigation Links Container -->
+            <div class="hidden lg:flex items-center gap-8 h-100vh">
                 
-                <div class="group static h-full flex items-center">
-                    <button class="text-slate-600 group-hover:text-blue-600 font-medium text-[15px] flex items-center gap-1.5 outline-none transition-colors">
-                        Services
-                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    
-                    <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible pointer-events-none pt-4 z-50">
-                        <div class="bg-slate-50 rounded-b-3xl shadow-2xl border-t border-slate-100 p-8 max-w-[1400px] mx-auto relative rounded-3xl mt-2">
-                            <div class="grid grid-cols-12 gap-6">
-                                <div class="col-span-9 grid grid-cols-3 gap-6">
-                                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer">
-                                        <div class="flex justify-between items-start mb-4">
-                                            <h3 class="font-bold text-slate-900 text-lg leading-tight">Digital Marketing<br>Services</h3>
-                                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600"><i class="fas fa-bullhorn"></i></div>
-                                        </div>
-                                        <ul class="space-y-2">
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Digital Marketing Consultant</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Strategy & Planning</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Franchise Marketing</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer">
-                                        <div class="flex justify-between items-start mb-4">
-                                            <h3 class="font-bold text-slate-900 text-lg leading-tight">E-Commerce<br>Services</h3>
-                                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600"><i class="fas fa-store"></i></div>
-                                        </div>
-                                        <ul class="space-y-2">
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Full Service E-Commerce</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">E-Commerce SEO</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">PPC Management</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 cursor-pointer">
-                                        <div class="flex justify-between items-start mb-4">
-                                            <h3 class="font-bold text-slate-900 text-lg leading-tight">Development<br>Services</h3>
-                                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600"><i class="fas fa-code"></i></div>
-                                        </div>
-                                        <ul class="space-y-2">
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Web Development</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">App Development</a></li>
-                                            <li><a href="#" class="text-sm text-slate-500 hover:text-blue-600 block">Custom Software</a></li>
-                                        </ul>
-                                    </div>
-                                    </div>
-    
-                                <div class="col-span-3">
-                                    <div class="bg-gradient-to-b from-blue-50 to-white rounded-2xl p-8 h-full flex flex-col items-center justify-center text-center border border-blue-100 relative overflow-hidden">
-                                        <div class="relative z-10">
-                                            <h2 class="text-5xl font-extrabold text-slate-900 mb-2">198%</h2>
-                                            <p class="text-slate-600 font-medium mb-6">Increase in Organic Traffic</p>
-                                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm shadow-lg shadow-blue-600/20 w-full">
-                                                Read Our Case Study
-                                            </button>
+              <!-- Navbar: Services Dropdown with Mega Menu -->
+              <div class="group static h-full flex items-center">
+                <button class="text-slate-600 group-hover:text-blue-600 font-medium text-[15px] flex items-center gap-1.5 outline-none transition-colors cursor-pointer">
+                    Services
+                    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                
+                <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible pointer-events-none pt-4 z-50 transition-all duration-200 ease-in-out">
+                    <div class="bg-[#f8fafc] rounded-3xl shadow-2xl border border-slate-100 p-8 max-w-[1400px] mx-auto mt-2">
+                        
+                        <div class="grid grid-cols-12 gap-8">
+                            <div class="col-span-9 grid grid-cols-4 gap-4">
+                                
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Digital Marketing<br>Services</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-envelope-open-text"></i>
                                         </div>
                                     </div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Consultant <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Strategy <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Franchise Digital Marketing <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">E-Commerce<br>Services</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-store"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce Services <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce SEO <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce PPC <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Development<br>Services</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-keyboard"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Software Development <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Web Development <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Mobile App Development <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Designing<br>Services</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">UI/UX Designing <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Graphic Designing <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Brand Identity <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Content<br>Marketing</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-cog"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">SEO Content Writing <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Copywriting Services <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Social Media<br>Marketing</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-ad"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Social Media Mgmt <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Facebook Marketing <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Search Engine<br>Optimization</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Technical SEO <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">AI SEO Services <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Pay Per Click<br>(PPC)</h3>
+                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-mouse-pointer"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Google Ads <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Youtube Ads <span class="text-[10px]">→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                            </div>
+            
+                            <div class="col-span-3">
+                                <div class="bg-[#dbeafe] rounded-3xl p-8 h-full flex flex-col items-center justify-center text-center relative overflow-hidden">
+                                    <h2 class="text-6xl font-black text-slate-900 mb-2">198%</h2>
+                                    <p class="text-slate-600 font-semibold text-lg mb-8">Increase in Organic Traffic</p>
+                                    
+                                    <div class="flex items-end gap-2 mb-8">
+                                        <div class="w-3 h-8 bg-blue-400 rounded-t-sm"></div>
+                                        <div class="w-3 h-12 bg-blue-500 rounded-t-sm"></div>
+                                        <div class="w-3 h-16 bg-blue-600 rounded-t-sm"></div>
+                                        <div class="w-3 h-24 bg-blue-700 rounded-t-sm"></div>
+                                    </div>
+            
+                                    <button class="bg-[#0056b3] text-white px-8 py-3 rounded-xl font-bold text-sm shadow-xl hover:bg-blue-800 transition-colors w-full">
+                                        Read Our Case Study
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
     
+              <!-- Navbar: Direct Link to Local SEO -->
                 <a href="#" class="text-slate-600 hover:text-blue-600 font-medium text-[15px] transition-colors">Local SEO</a>
     
+                <!-- Navbar: Industries Dropdown with Mega Menu -->
                 <div class="group static h-full flex items-center">
                     <button class="text-slate-600 group-hover:text-blue-600 font-medium text-[15px] flex items-center gap-1.5 outline-none transition-colors">
                         Industries
@@ -151,6 +244,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                     </div>
                 </div>
     
+                <!-- Navbar: Platform Dropdown with Mega Menu -->
                 <div class="group static h-full flex items-center">
                     <button class="text-slate-600 group-hover:text-blue-600 font-medium text-[15px] flex items-center gap-1.5 outline-none transition-colors">
                         Platform
@@ -201,31 +295,46 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                     </div>
                 </div>
     
+                <!-- Navbar: Direct Link to Blogs -->
                 <a href="#" class="text-slate-600 hover:text-blue-600 font-medium text-[15px] transition-colors">Blogs</a>
+                <!-- Navbar: Direct Link to Portfolio -->
                 <a href="#" class="text-slate-600 hover:text-blue-600 font-medium text-[15px] transition-colors">Our Portfolio</a>
+                <!-- Navbar: Direct Link to About Us -->
                 <a href="#" class="text-slate-600 hover:text-blue-600 font-medium text-[15px] transition-colors">About Us</a>
             </div>
     
+            <!-- Navbar: CTA Button for Getting Free Quote -->
             <div class="z-10 lg:block hidden">
                 <a href="#" class="button-primary hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all shadow-lg shadow-blue-600/20">
                     Get A Free Quote
                 </a>
             </div>
-            <button id="menu-btn" class="lg:hidden text-gray-800 p-2 hover:bg-white/50 rounded-lg transition-colors focus:outline-none">
+              <!-- Navbar: Mobile Menu Toggle Button (Hamburger/Close Icon) -->
+              <button id="menu-btn" class="lg:hidden text-gray-800 p-2 hover:bg-white/50 rounded-lg transition-colors focus:outline-none">
               <i id="menu-icon" class="fas fa-bars w-6 h-6 transition-transform duration-300"></i>
               <i id="close-icon" class="fas fa-times w-6 h-6 hidden transition-transform duration-300"></i>
               </button>
               
+              <!-- Navbar: Mobile Menu Dropdown Container -->
               <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 mt-2 mx-2">
+              <!-- Navbar: Mobile Menu Links List -->
               <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
               <div class="flex flex-col p-4 space-y-1">
+              <!-- Navbar: Mobile Link - Services -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Services</a>
+              <!-- Navbar: Mobile Link - Local SEO -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Local SEO</a>
+              <!-- Navbar: Mobile Link - Industries -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Industries</a>
+              <!-- Navbar: Mobile Link - Platform -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Platform</a>
+              <!-- Navbar: Mobile Link - Blogs -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Blogs</a>
+              <!-- Navbar: Mobile Link - Our Portfolio -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Our Portfolio</a>
+              <!-- Navbar: Mobile Link - About Us -->
               <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">About Us</a>
+              <!-- Navbar: Mobile CTA Button -->
               <div class="pt-2 mt-2 border-t border-gray-100">
               <button class="w-full button-primary active:bg-blue-700 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-600/30 transition-transform active:scale-[0.98]">
               Get A Free Quote
