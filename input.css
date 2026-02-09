@@ -62,3 +62,10 @@
   opacity: 1;
 }
 
+.hero-bg {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #E0EFFF 100%);
+}
+
+.btn-soft-shadow {
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
+}

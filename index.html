@@ -16,14 +16,13 @@
     <!-- ========================================
          HERO SECTION WITH NAVIGATION
          ======================================== -->
-    <section class="relative bg-gradient-to-b from-[#D6E6FF] to-[#BED7FF] z-10">
-      
-      <nav class="container mx-auto px-4 py-6 relative z-50">
-        <div class="flex items-center justify-between bg-white/40 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-xl px-4 py-2 lg:p-0 border border-white/50 lg:border-none">
-          
-          <img src="images/logo.webp" alt="sysinn logo" class="h-8 w-auto" />
-
-          <div class="hidden lg:flex items-center gap-8">
+         <section class="hero-bg relative min-h-screen lg:min-h-[800px] flex flex-col font-inter overflow-hidden">
+  
+          <nav class="container mx-auto px-4 py-6 relative z-50">
+            <div class="flex items-center justify-between bg-white/40 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-xl px-4 py-2 lg:p-0 border border-white/50 lg:border-none">
+            <img src="images/logo.webp" alt="sysinn logo" class="h-8 w-auto" />
+            
+            <div class="hidden lg:flex items-center gap-8">
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">Services</a>
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">Local SEO</a>
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">Industries</a>
@@ -31,64 +30,74 @@
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">Blogs</a>
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">Our Portfolio</a>
             <a href="#" class="text-gray-700 hover:text-primary text-sm font-medium transition-colors">About Us</a>
-          </div>
-
-          <button class="hidden lg:block button-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-colors cursor-pointer shadow-md shadow-blue-600/20">
+            </div>
+            
+            <button class="hidden lg:block button-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-colors cursor-pointer shadow-md shadow-blue-600/20">
             Get A Free Quote
-          </button>
-
-          <button id="menu-btn" class="lg:hidden text-gray-800 p-2 hover:bg-white/50 rounded-lg transition-colors focus:outline-none">
+            </button>
+            
+            <button id="menu-btn" class="lg:hidden text-gray-800 p-2 hover:bg-white/50 rounded-lg transition-colors focus:outline-none">
             <i id="menu-icon" class="fas fa-bars w-6 h-6 transition-transform duration-300"></i>
             <i id="close-icon" class="fas fa-times w-6 h-6 hidden transition-transform duration-300"></i>
-          </button>
-
-          <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 mt-2 mx-2">
+            </button>
+            
+            <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 mt-2 mx-2">
             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-              <div class="flex flex-col p-4 space-y-1">
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Services</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Local SEO</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Industries</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Platform</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Blogs</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Our Portfolio</a>
-                <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">About Us</a>
+            <div class="flex flex-col p-4 space-y-1">
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Services</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Local SEO</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Industries</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Platform</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Blogs</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Our Portfolio</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">About Us</a>
+            <div class="pt-2 mt-2 border-t border-gray-100">
+            <button class="w-full button-primary active:bg-blue-700 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-600/30 transition-transform active:scale-[0.98]">
+            Get A Free Quote
+            </button>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </nav>
+            
+        
+          <div class="container mx-auto px-6 flex-grow flex items-center">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 w-full items-center py-12 lg:py-0">
+              
+              <div class="max-w-[640px]">
+                <h1 class="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#1a1f2e] leading-[1.15] tracking-tight mb-6">
+                  A 360° Digital Marketing<br class="hidden lg:block">
+                  Company for Growth<br class="hidden lg:block">
+                  <span class="text-[#0E5FD9]">Focused Businesses</span>
+                </h1>
                 
-                <div class="pt-2 mt-2 border-t border-gray-100">
-                  <button class="w-full button-primary active:bg-blue-700 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-600/30 transition-transform active:scale-[0.98]">
-                    Get A Free Quote
+                <p class="text-gray-500 text-base md:text-[17px] leading-[1.7] mb-10 max-w-xl">
+                  Sysinn helps businesses in America turn attention into revenue by combining conversion-focused UI/UX, scalable development, and the best performance marketing agency built for modern search, including AI Overviews, zero-click behavior, and intent-driven discovery.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <button class="bg-[#0E5FD9] hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-[15px] transition-all shadow-lg shadow-blue-500/30 whitespace-nowrap">
+                    Book a strategy Call
+                  </button>
+                  
+                  <button class="bg-white hover:bg-gray-50 text-[#1a1f2e] px-10 py-4 rounded-md font-bold text-[15px] transition-all btn-soft-shadow border border-transparent hover:border-gray-200 whitespace-nowrap">
+                    Learn More
                   </button>
                 </div>
               </div>
+        
+              <div class="relative flex items-center justify-center lg:justify-end">
+                <img src="images/hero.svg" alt="Marketing 360 Wheel" class="w-full max-w-[550px] h-auto drop-shadow-xl" />
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-
-      <div class="container mx-auto px-4 py-12 lg:py-20">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          <div class="max-w-xl">
-            <h1 class="text-4xl md:text-5xl lg:text-[56px] font-bold text-gray-900 leading-tight mb-6">
-              A 360° Digital Marketing Company for Growth Focused Businesses
-            </h1>
-            <p class="text-gray-600 text-base md:text-[20px] leading-relaxed mb-8">
-              Sysinn helps businesses in America turn attention into revenue by combining conversion-focused UI/UX, scalable development, and the best performance marketing.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <button class="button-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-semibold text-sm transition-colors shadow-lg shadow-blue-600/30">
-                Book a Strategy Call
-              </button>
-              <button class="bg-white hover:bg-gray-50 text-gray-900 px-8 py-3.5 rounded-lg font-semibold text-sm transition-colors border-2 border-gray-200 cursor-pointer">
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div class="relative flex items-center justify-center">
-             <img src="images/hero.svg" alt="Sysinn Digital Marketing" class="w-full max-w-[500px] aspect-square" />
-          </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
+        
+        
+        
+      
 
     <!-- ========================================
          STATS SECTION
@@ -572,25 +581,25 @@
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-chart-line w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Data Focused</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Data Focused</span>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-eye w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Cost Effective</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Cost Effective</span>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-bolt w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Highly Targetable</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Highly Targetable</span>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-desktop w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Customizable</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Customizable</span>
                       </div>
                     </div>
         
@@ -599,19 +608,19 @@
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-chart-bar w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Measurable</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Measurable</span>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-clock w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Fast Result</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center">Fast Result</span>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <i class="fas fa-globe w-5 h-5 text-center"></i>
                         </div>
-                        <span class="text-[8px] text-gray-400 font-bold uppercase">Increased Exposure</span>
+                        <span class="text-[8px] text-gray-400 font-bold uppercase text-center" >Increased Exposure</span>
                       </div>
                     </div>
                   </div>
