@@ -27,6 +27,9 @@
 .bg-primary {
   background-color: var(--color-primary);
 }
+.bg-secondary {
+  background-color: var(--button-primary);
+}
 
 .text-primary {
   color: var(--button-primary);
@@ -63,9 +66,45 @@
 }
 
 .hero-bg {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #E0EFFF 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #BED7FF 100%);
 }
 
 .btn-soft-shadow {
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
 }
+
+/* Testonomial swiper */
+
+.swiper-button-prev,
+        .swiper-button-next {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: #f8fafc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.5;
+        }
+
+        .quote-mark {
+            font-size: 64px;
+            line-height: 1;
+            color: #1e40af;
+            font-family: Georgia, serif;
+        }
