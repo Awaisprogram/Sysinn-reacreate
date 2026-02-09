@@ -50,6 +50,33 @@
   font-family: var(--font-sans);
 }
 
+
+/* ============================================
+
+*/
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Custom scrollbar for better aesthetics if content overflows */
+.mega-menu {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(10px);
+}
+
+
 /* ============================================
    MOBILE MENU TRANSITIONS
    ============================================ */
