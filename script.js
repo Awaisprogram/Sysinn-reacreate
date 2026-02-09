@@ -54,6 +54,29 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
   });
 });
 
+// logo animator:
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const logos = entry.target.querySelectorAll('.logo-item');
+          logos.forEach((logo, index) => {
+              // Start Entrance
+              logo.classList.add('animate-entrance');
+              
+              // Once entrance is done, start the continuous float loop
+              setTimeout(() => {
+                  logo.classList.add('animate-float');
+                  // Randomize float timing slightly so they don't move in perfect sync
+                  logo.style.animationDelay = `${Math.random() * 2}s`;
+              }, 1000 + (index * 100));
+          });
+          observer.unobserve(entry.target);
+      }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(document.querySelector('#logo-section'));
+
 // Swiper 
 
 document.addEventListener("DOMContentLoaded", () => {

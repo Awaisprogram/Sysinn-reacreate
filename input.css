@@ -73,8 +73,40 @@
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
 }
 
+
+/* Logo animator */
+
+@keyframes slowFloatingUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px); /* Moves slightly above original position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* The class that handles the continuous slow movement */
+.logo-animate {
+  animation: slowFloatingUp 4s ease-in-out infinite alternate;
+  opacity: 0; /* Ensures they don't flash before animation starts */
+}
+
+/* To prevent them from moving all at the same time (looks more natural) */
+.logo-animate:nth-child(odd) {
+  animation-duration: 5s;
+  animation-delay: 0.2s;
+}
 /* Testonomial swiper */
 
 .swiper-button-prev::after, .swiper-button-next::after {
   content: '' !important;
 }
+
