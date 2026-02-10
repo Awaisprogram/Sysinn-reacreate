@@ -93,3 +93,131 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 });
 });
+
+// 1. THE DATA: Define the content for each tab here
+const servicesData = [
+  {
+      id: 0,
+      title: "Paid Social That Drives The Conversion Pipeline",
+      description: "Acquiring new customers is expensive. Our email and lifecycle marketing transforms first time visitors into loyal, repeat buyers through automated flows and targeted campaigns.",
+      rightHeader: "BOOST CUSTOMER <br> LIFETIME VALUES, DRIVE <br> REPEAT PURCHASE",
+      centralTag: "Advertising",
+      features: ["Data Focused", "Cost Effective", "Targetable", "Customizable", "Measurable", "Fast Result", "Exposure"]
+  },
+  {
+      id: 1,
+      title: "Email & Lifecycle Marketing for Dedicated Conversions",
+      description: "Don't let leads go cold. We build automated email flows that nurture customers from their first click to their hundredth purchase, maximizing LTV.",
+      rightHeader: "NURTURE LEADS <br> INTO LOYAL FANS & <br> REPEAT BUYERS",
+      centralTag: "Email Flows",
+      features: ["Automation", "Personalized", "High ROI", "Retention", "Segmentation", "Loyalty", "Engagement"]
+  },
+  {
+      id: 2,
+      title: "Conversion Rate Optimization (CRO)",
+      description: "Traffic is useless if it doesn't convert. We analyze user behavior and optimize your landing pages to turn more visitors into paying customers.",
+      rightHeader: "MAXIMIZE EVERY <br> CLICK WITH DATA-DRIVEN <br> OPTIMIZATION",
+      centralTag: "Optimization",
+      features: ["A/B Testing", "Heatmaps", "UX Design", "Funnel Fix", "Analytics", "Speed", "Growth"]
+  },
+  {
+      id: 3,
+      title: "Conversion-First Content",
+      description: "Content that sells. From ad copy to blog posts, we create narratives that resonate with your audience and drive them toward the checkout button.",
+      rightHeader: "TELL STORIES <br> THAT SELL AND <br> BUILD TRUST",
+      centralTag: "Content",
+      features: ["Copywriting", "SEO", "Creative", "Viral", "Authority", "Organic", "Brand"]
+  }
+];
+
+let activeIndex = 0;
+
+// 2. RENDER FUNCTIONS
+function renderLeftList() {
+  const listContainer = document.getElementById('services-list');
+  listContainer.innerHTML = '';
+
+  servicesData.forEach((service, index) => {
+      const isActive = index === activeIndex;
+      
+      // Logic for styling Active vs Inactive items
+      const cardClass = isActive 
+          ? "bg-[#F8FBFF] border-blue-100 shadow-sm" 
+          : "bg-white border-gray-100 hover:border-blue-200 cursor-pointer";
+      
+      const titleClass = isActive ? "text-xl text-gray-900 mb-4" : "text-lg text-gray-800";
+      
+      // Create HTML
+      const html = `
+          <div onclick="setActive(${index})" class="border rounded-2xl p-6 lg:p-8 transition-all duration-300 ${cardClass}">
+              <h3 class="${titleClass} font-bold">${service.title}</h3>
+              ${isActive ? `
+                  <div class="fade-in">
+                      <p class="text-gray-500 text-[15px] leading-relaxed mb-6">
+                          ${service.description}
+                      </p>
+                      <button class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border border-blue-100 rounded-full text-blue-600 font-semibold text-sm hover:bg-blue-50 transition-colors">
+                          Explore Services
+                          <i class="fas fa-arrow-right w-4 h-4"></i>
+                      </button>
+                  </div>
+              ` : ''}
+          </div>
+      `;
+      listContainer.innerHTML += html;
+  });
+}
+
+function renderRightPanel() {
+  const data = servicesData[activeIndex];
+  
+  // Update Text
+  const header = document.getElementById('right-header');
+  const tag = document.getElementById('central-tag');
+  
+  // Simple fade effect
+  header.classList.remove('fade-in');
+  void header.offsetWidth; // trigger reflow
+  header.classList.add('fade-in');
+  header.innerHTML = data.rightHeader;
+
+  tag.innerText = data.centralTag;
+
+  // Render Icons (Splitting features array into top grid and bottom row)
+  const topFeatures = data.features.slice(0, 4);
+  const bottomFeatures = data.features.slice(4, 7);
+
+  const iconMap = ["chart-line", "eye", "bolt", "desktop", "chart-bar", "clock", "globe"]; // Just cycling random icons for demo
+
+  const topGrid = document.getElementById('feature-grid');
+  topGrid.innerHTML = topFeatures.map((feat, i) => `
+      <div class="flex flex-col items-center gap-1 fade-in" style="animation-delay: ${i * 50}ms">
+          <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
+              <i class="fas fa-${iconMap[i % iconMap.length]} w-5 h-5 text-center"></i>
+          </div>
+          <span class="text-[8px] text-gray-400 font-bold uppercase text-center">${feat}</span>
+      </div>
+  `).join('');
+
+  const bottomGrid = document.getElementById('feature-grid-bottom');
+  bottomGrid.innerHTML = bottomFeatures.map((feat, i) => `
+      <div class="flex flex-col items-center gap-1 fade-in" style="animation-delay: ${(i+4) * 50}ms">
+          <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
+               <i class="fas fa-${iconMap[(i+4) % iconMap.length]} w-5 h-5 text-center"></i>
+          </div>
+          <span class="text-[8px] text-gray-400 font-bold uppercase text-center">${feat}</span>
+      </div>
+  `).join('');
+}
+
+// 3. EVENT HANDLER
+function setActive(index) {
+  if(activeIndex === index) return; // Prevent re-rendering if clicking same item
+  activeIndex = index;
+  renderLeftList();
+  renderRightPanel();
+}
+
+// Initialize
+renderLeftList();
+renderRightPanel();
