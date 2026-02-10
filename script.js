@@ -269,3 +269,35 @@ function setActive(index) {
 // Initialize
 renderLeftList();
 renderRightPanel();
+
+// Slider for bars:
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1.1, // Shows a peek of the next slide
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
+  speed: 800,
+  navigation: {
+    nextEl: ".swiper-button-next-custom",
+    prevEl: ".swiper-button-prev-custom",
+  },
+  breakpoints: {
+    // Mobile: 1 slide full width
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: false,
+    },
+    // Tablet/Desktop: Show a bit of the next slide for context
+    768: {
+      slidesPerView: 1.15,
+      spaceBetween: 30,
+      centeredSlides: true,
+    },
+    1024: {
+      slidesPerView: 1.3,
+      spaceBetween: 40,
+      centeredSlides: true,
+    }
+  }
+});

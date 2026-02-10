@@ -143,3 +143,37 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
 }
+
+/* Bars slide */
+
+.swiper-slide {
+  height: auto; /* Ensures equal height */
+}
+
+/* Custom Navigation Buttons */
+.custom-nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ecf3f9; /* Light blue/gray background */
+  color: #3b82f6; /* Blue arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.custom-nav-btn:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+.custom-nav-btn.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Stats Icon Colors */
+.stat-icon-yellow { color: #fbbf24; }
+.stat-icon-purple { color: #a855f7; }
+.stat-icon-blue { color: #3b82f6; }
+.stat-icon-green { color: #22c55e; }
