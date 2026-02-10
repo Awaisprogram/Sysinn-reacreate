@@ -17,6 +17,54 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
+// Mega Menu with Delayed Close
+const megaMenuTriggers = document.querySelectorAll('.group.static');
+
+// Add a slight delay before closing mega menus
+megaMenuTriggers.forEach(trigger => {
+  let hideTimeout;
+  let isHovered = false;
+  
+  const megaMenu = trigger.querySelector('.mega-menu');
+  
+  // Show menu immediately on hover
+  trigger.addEventListener('mouseenter', () => {
+    isHovered = true;
+    clearTimeout(hideTimeout);
+    megaMenu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+    megaMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+  });
+  
+  // Hide menu after delay when mouse leaves
+  trigger.addEventListener('mouseleave', () => {
+    isHovered = false;
+    hideTimeout = setTimeout(() => {
+      if (!isHovered) {
+        megaMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        megaMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+      }
+    }, 300); // 300ms delay before closing
+  });
+  
+  // Also keep menu open when hovering the mega menu itself
+  if (megaMenu) {
+    megaMenu.addEventListener('mouseenter', () => {
+      isHovered = true;
+      clearTimeout(hideTimeout);
+    });
+    
+    megaMenu.addEventListener('mouseleave', () => {
+      isHovered = false;
+      hideTimeout = setTimeout(() => {
+        if (!isHovered) {
+          megaMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+          megaMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+        }
+      }, 300);
+    });
+  }
+});
+
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
