@@ -20,7 +20,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     <!-- ========================================
          HERO SECTION WITH NAVIGATION
          ======================================== -->
-         <section class="hero-bg relative min-h-screen lg:min-h-[800px] flex flex-col font-inter overflow-hidden">
+         <section class="hero-bg relative min-h-screen  flex flex-col font-inter overflow-hidden">
   
           <!-- ========================================
                NAVBAR SECTION - DESKTOP NAVIGATION
@@ -43,136 +43,160 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                
-                <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible pointer-events-none pt-4 z-50 transition-all duration-200 ease-in-out">
-                    <div class="bg-[#f8fafc] rounded-3xl shadow-2xl border border-slate-100 p-8 max-w-[1400px] mx-auto mt-2">
+            
+                <div class="mega-menu absolute top-full left-0 w-screen opacity-0 invisible group-hover:opacity-100 group-hover:visible pointer-events-none group-hover:pointer-events-auto pt-4 z-50 transition-all duration-200 ease-in-out">
+                    <div class="bg-[#ebf4ff] rounded-b-3xl shadow-2xl p-10 max-w-[1400px] mx-auto mt-1">
                         
-                        <div class="grid grid-cols-12 gap-8">
+                        <div class="grid grid-cols-12 gap-6">
                             <div class="col-span-9 grid grid-cols-4 gap-4">
                                 
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Digital Marketing<br>Services</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-envelope-open-text"></i>
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all min-h-[320px]">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Digital Marketing<br>Services</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-envelope-open-text text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Consultant <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Strategy <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Franchise Digital Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Email Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Enterprise Digital Marketing <span>→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">E-Commerce<br>Services</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-store text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce Digital Marketing Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce SEO <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce PPC <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce Website Development Services <span>→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Development<br>Services</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-keyboard text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Software Development Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Web Development Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Mobile App Development <span>→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Designing<br>Services</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-ruler-combined text-xl"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">UI/UX Designing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Graphic Designing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Brand Identity Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Email NewsLetter Designing <span>→</span></a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Content<br>Marketing</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-bullhorn text-xl"></i>
                                         </div>
                                     </div>
                                     <ul class="space-y-3">
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Consultant <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Digital Marketing Strategy <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Franchise Digital Marketing <span class="text-[10px]">→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">SEO Content Writing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Copywriting Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Blog Writing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Article Writing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Product Description writing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Sales Pitch Writing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Academic Writing <span>→</span></a></li>
                                     </ul>
                                 </div>
             
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">E-Commerce<br>Services</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-store"></i>
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Social Media<br>Marketing</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-users text-xl"></i>
                                         </div>
                                     </div>
-                                    <ul class="space-y-3">
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce Services <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce SEO <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">E-Commerce PPC <span class="text-[10px]">→</span></a></li>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Social Media Management <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Social Media Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Facebook Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Instagram Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Youtube Marketing <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Linkedin Marketing <span>→</span></a></li>
                                     </ul>
                                 </div>
             
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Development<br>Services</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-keyboard"></i>
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Search Engine<br>Optimization (SEO)</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-search-dollar text-xl"></i>
                                         </div>
                                     </div>
-                                    <ul class="space-y-3">
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Software Development <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Web Development <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Mobile App Development <span class="text-[10px]">→</span></a></li>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Technical SEO <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">AI SEO Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Franchise SEO <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">SEO Audits <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Off Page SEO (Link Building) <span>→</span></a></li>
                                     </ul>
                                 </div>
             
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Designing<br>Services</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-edit"></i>
+                                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start mb-6">
+                                        <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Pay Per Click<br>(PPC) Marketing</h3>
+                                        <div class="w-12 h-12 bg-[#dbeafe] rounded-full flex items-center justify-center text-blue-600">
+                                            <i class="fas fa-mouse-pointer text-xl"></i>
                                         </div>
                                     </div>
-                                    <ul class="space-y-3">
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">UI/UX Designing <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Graphic Designing <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[13px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Brand Identity <span class="text-[10px]">→</span></a></li>
+                                    <ul class="space-y-4">
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Search Engine Marketing (SEM) <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Google Ads Management <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Brand Identity Services <span>→</span></a></li>
+                                        <li><a href="#" class="text-[14px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Youtube Ads Management <span>→</span></a></li>
                                     </ul>
                                 </div>
-            
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Content<br>Marketing</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
-                                    </div>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">SEO Content Writing <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Copywriting Services <span class="text-[10px]">→</span></a></li>
-                                    </ul>
-                                </div>
-            
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Social Media<br>Marketing</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-ad"></i>
-                                        </div>
-                                    </div>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Social Media Mgmt <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Facebook Marketing <span class="text-[10px]">→</span></a></li>
-                                    </ul>
-                                </div>
-            
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Search Engine<br>Optimization</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-chart-line"></i>
-                                        </div>
-                                    </div>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Technical SEO <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">AI SEO Services <span class="text-[10px]">→</span></a></li>
-                                    </ul>
-                                </div>
-            
-                                <div class="bg-white p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h3 class="font-bold text-slate-900 text-[16px] leading-tight">Pay Per Click<br>(PPC)</h3>
-                                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                                            <i class="fas fa-mouse-pointer"></i>
-                                        </div>
-                                    </div>
-                                    <ul class="space-y-2">
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Google Ads <span class="text-[10px]">→</span></a></li>
-                                        <li><a href="#" class="text-[12px] text-slate-500 hover:text-blue-600 flex justify-between items-center">Youtube Ads <span class="text-[10px]">→</span></a></li>
-                                    </ul>
-                                </div>
-            
                             </div>
             
                             <div class="col-span-3">
-                                <div class="bg-[#dbeafe] rounded-3xl p-8 h-full flex flex-col items-center justify-center text-center relative overflow-hidden">
-                                    <h2 class="text-6xl font-black text-slate-900 mb-2">198%</h2>
-                                    <p class="text-slate-600 font-semibold text-lg mb-8">Increase in Organic Traffic</p>
-                                    
-                                    <div class="flex items-end gap-2 mb-8">
-                                        <div class="w-3 h-8 bg-blue-400 rounded-t-sm"></div>
-                                        <div class="w-3 h-12 bg-blue-500 rounded-t-sm"></div>
-                                        <div class="w-3 h-16 bg-blue-600 rounded-t-sm"></div>
-                                        <div class="w-3 h-24 bg-blue-700 rounded-t-sm"></div>
+                                <div class="bg-white rounded-3xl p-8 h-full flex flex-col items-center justify-center text-center shadow-lg relative overflow-hidden border border-slate-100">
+                                    <div class="absolute inset-0 opacity-10 pointer-events-none">
+                                        <div class="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full blur-2xl"></div>
+                                        <div class="absolute bottom-10 right-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl"></div>
                                     </div>
             
-                                    <button class="bg-[#0056b3] text-white px-8 py-3 rounded-xl font-bold text-sm shadow-xl hover:bg-blue-800 transition-colors w-full">
+                                    <h2 class="text-7xl font-black text-slate-900 mb-2 relative">198%</h2>
+                                    <p class="text-slate-600 font-medium text-lg mb-10 relative">Increase in Organic Traffic</p>
+                                    
+                                    <div class="flex items-end gap-3 mb-10 relative">
+                                        <div class="w-4 h-12 bg-blue-300 rounded-t-md"></div>
+                                        <div class="w-4 h-20 bg-blue-400 rounded-t-md"></div>
+                                        <div class="w-4 h-28 bg-blue-500 rounded-t-md"></div>
+                                        <div class="w-4 h-40 bg-blue-600 rounded-t-md flex items-center justify-center">
+                                            <span class="text-yellow-400 -mt-8">★</span>
+                                        </div>
+                                    </div>
+            
+                                    <button class="bg-[#0056b3] text-white px-10 py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-blue-800 transition-all relative z-10 w-full uppercase tracking-wider">
                                         Read Our Case Study
                                     </button>
                                 </div>
