@@ -2391,6 +2391,12 @@
       font-size: 56px;
     }
   }
+  .lg\:tracking-wide {
+    @media (width >= 64rem) {
+      --tw-tracking: var(--tracking-wide);
+      letter-spacing: var(--tracking-wide);
+    }
+  }
   .lg\:opacity-100 {
     @media (width >= 64rem) {
       opacity: 100%;
