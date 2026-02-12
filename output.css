@@ -1361,6 +1361,9 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
@@ -1449,6 +1452,10 @@
   .text-\[18px\] {
     font-size: 18px;
   }
+  .leading-\[1\.1\] {
+    --tw-leading: 1.1;
+    line-height: 1.1;
+  }
   .leading-\[1\.7\] {
     --tw-leading: 1.7;
     line-height: 1.7;
@@ -1464,10 +1471,6 @@
   .leading-\[54px\] {
     --tw-leading: 54px;
     line-height: 54px;
-  }
-  .leading-\[75px\] {
-    --tw-leading: 75px;
-    line-height: 75px;
   }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
@@ -2394,6 +2397,12 @@
   .lg\:text-\[56px\] {
     @media (width >= 64rem) {
       font-size: 56px;
+    }
+  }
+  .lg\:leading-\[75px\] {
+    @media (width >= 64rem) {
+      --tw-leading: 75px;
+      line-height: 75px;
     }
   }
   .lg\:tracking-wide {
