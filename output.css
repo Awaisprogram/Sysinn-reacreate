@@ -1346,9 +1346,6 @@
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
-  .py-16 {
-    padding-block: calc(var(--spacing) * 16);
-  }
   .py-\[12px\] {
     padding-block: 12px;
   }
@@ -2341,9 +2338,9 @@
       padding-block: calc(var(--spacing) * 16);
     }
   }
-  .lg\:py-24 {
+  .lg\:py-18 {
     @media (width >= 64rem) {
-      padding-block: calc(var(--spacing) * 24);
+      padding-block: calc(var(--spacing) * 18);
     }
   }
   .lg\:pt-0 {
@@ -2404,10 +2401,10 @@
       font-size: 56px;
     }
   }
-  .lg\:leading-\[75px\] {
+  .lg\:leading-\[60px\] {
     @media (width >= 64rem) {
-      --tw-leading: 75px;
-      line-height: 75px;
+      --tw-leading: 60px;
+      line-height: 60px;
     }
   }
   .lg\:tracking-wide {
