@@ -560,8 +560,8 @@
   .inline-flex {
     display: inline-flex;
   }
-  .aspect-square {
-    aspect-ratio: 1 / 1;
+  .aspect-1\/2 {
+    aspect-ratio: 1/2;
   }
   .h-2\.5 {
     height: calc(var(--spacing) * 2.5);
@@ -1334,6 +1334,10 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-6xl {
     font-size: var(--text-6xl);
