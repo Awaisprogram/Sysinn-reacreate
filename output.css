@@ -341,9 +341,6 @@
   .-bottom-1 {
     bottom: calc(var(--spacing) * -1);
   }
-  .-bottom-2 {
-    bottom: calc(var(--spacing) * -2);
-  }
   .-bottom-3 {
     bottom: calc(var(--spacing) * -3);
   }
@@ -1131,9 +1128,6 @@
   }
   .bg-\[\#eef6ff\] {
     background-color: #eef6ff;
-  }
-  .bg-\[\#f0f7ff\] {
-    background-color: #f0f7ff;
   }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
