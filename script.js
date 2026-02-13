@@ -280,9 +280,9 @@ renderRightPanel();
 
 // Slider for bars:
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.1, // Shows a peek of the next slide
-  spaceBetween: 20,
-  centeredSlides: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: false,
   loop: true,
   speed: 800,
   navigation: {
@@ -290,22 +290,20 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev-custom",
   },
   breakpoints: {
-    // Mobile: 1 slide full width
+    // Mobile
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
-      centeredSlides: false,
+      spaceBetween: 0,
     },
-    // Tablet/Desktop: Show a bit of the next slide for context
+    // Tablet
     768: {
-      slidesPerView: 1.15,
-      spaceBetween: 30,
-      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
     },
+    // Desktop
     1024: {
-      slidesPerView: 1.3,
-      spaceBetween: 40,
-      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
     }
   }
 });
