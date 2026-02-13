@@ -175,6 +175,14 @@ const servicesData = [
       rightHeader: "TELL STORIES <br> THAT SELL AND <br> BUILD TRUST",
       centralTag: "Content",
       features: ["Copywriting", "SEO", "Creative", "Viral", "Authority", "Organic", "Brand"]
+  },
+  {
+      id: 4,
+      title: "Responsive First Web Marketing",
+      description: "Content that sells. From ad copy to blog posts, we create narratives that resonate with your audience and drive them toward the checkout button.",
+      rightHeader: "TELL STORIES <br> THAT SELL AND <br> BUILD TRUST",
+      centralTag: "Content",
+      features: ["Personalized", "UX Design", "Creative", "SEO", "Authority", "Organic", "Brand"]
   }
 ];
 
@@ -197,7 +205,7 @@ function renderLeftList() {
       
       // Create HTML
       const html = `
-          <div onclick="setActive(${index})" class="border rounded-2xl p-6 lg:p-8 transition-all duration-300 ${cardClass}">
+          <div onclick="setActive(${index})" class="border rounded-2xl p-6  transition-all duration-300 ${cardClass}">
               <h3 class="${titleClass} font-bold">${service.title}</h3>
               ${isActive ? `
                   <div class="fade-in">
