@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
+
 /* ============================================
    THEME CONFIGURATION
    ============================================ */
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Inter for headings */
+  --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  
+  /* Outfit for body/paragraphs/buttons */
+  --font-body: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   
   --color-primary: #0B1720;
   --color-button-primary: #0E59AE;
@@ -17,9 +23,9 @@
 :root {
   --color-primary: #0B1720;
   --button-primary: #0E59AE;
+  --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Outfit', ui-sans-serif, system-ui, sans-serif;
 }
-
-
 
 /* ============================================
    COMPONENT CLASSES
@@ -44,10 +50,30 @@
 }
 
 /* ============================================
-   UTILITY CLASSES
+   FONT UTILITY CLASSES
+   ============================================ */
+/* Headings - Inter */
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Body/Paragraphs/Buttons - Outfit */
+p, span, a, button,
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Buttons - Outfit */
+button, .btn, [class*="button-"] {
+  font-family: var(--font-body);
+}
+
+/* ============================================
+   LEGACY UTILITY CLASSES (for backward compatibility)
    ============================================ */
 .font-inter {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading);
 }
 
 

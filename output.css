@@ -3,8 +3,8 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
@@ -99,6 +99,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Outfit', ui-sans-serif, system-ui, sans-serif;
     --color-primary: #0B1720;
   }
 }
@@ -1323,6 +1325,12 @@
   .text-left {
     text-align: left;
   }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-heading {
+    font-family: var(--font-heading);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -2327,9 +2335,12 @@
     }
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
 :root {
   --color-primary: #0B1720;
   --button-primary: #0E59AE;
+  --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Outfit', ui-sans-serif, system-ui, sans-serif;
 }
 .bg-primary {
   background-color: var(--color-primary);
@@ -2346,8 +2357,17 @@
 .button-primary {
   background-color: var(--button-primary);
 }
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+p, span, a, button, .font-body {
+  font-family: var(--font-body);
+}
+button, .btn, [class*="button-"] {
+  font-family: var(--font-body);
+}
 .font-inter {
-  font-family: var(--font-sans);
+  font-family: var(--font-heading);
 }
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
