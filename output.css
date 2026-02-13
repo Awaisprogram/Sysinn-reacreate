@@ -560,8 +560,8 @@
   .inline-flex {
     display: inline-flex;
   }
-  .aspect-1\/2 {
-    aspect-ratio: 1/2;
+  .aspect-square {
+    aspect-ratio: 1 / 1;
   }
   .h-2\.5 {
     height: calc(var(--spacing) * 2.5);
