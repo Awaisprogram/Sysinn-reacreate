@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -74,6 +75,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --tracking-tight: -0.025em;
     --tracking-normal: 0em;
@@ -436,6 +438,9 @@
   .z-0 {
     z-index: 0;
   }
+  .z-5 {
+    z-index: 5;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -504,6 +509,9 @@
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
@@ -798,6 +806,9 @@
   .rotate-3 {
     rotate: 3deg;
   }
+  .rotate-45 {
+    rotate: 45deg;
+  }
   .rotate-\[-5deg\] {
     rotate: -5deg;
   }
@@ -940,6 +951,13 @@
   .gap-x-20 {
     column-gap: calc(var(--spacing) * 20);
   }
+  .-space-x-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * -3) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * -3) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
   }
@@ -969,6 +987,9 @@
   }
   .rounded-\[3rem\] {
     border-radius: 3rem;
+  }
+  .rounded-\[8px\] {
+    border-radius: 8px;
   }
   .rounded-\[24px\] {
     border-radius: 24px;
@@ -1006,6 +1027,10 @@
   .border-\[1px\] {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-\[3px\] {
+    border-style: var(--tw-border-style);
+    border-width: 3px;
   }
   .border-\[10px\] {
     border-style: var(--tw-border-style);
@@ -1074,6 +1099,9 @@
   .border-transparent {
     border-color: transparent;
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .border-white\/5 {
     border-color: color-mix(in srgb, #fff 5%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1098,6 +1126,12 @@
       border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
     }
   }
+  .border-white\/60 {
+    border-color: color-mix(in srgb, #fff 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 60%, transparent);
+    }
+  }
   .border-white\/80 {
     border-color: color-mix(in srgb, #fff 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1106,6 +1140,9 @@
   }
   .bg-\[\#0b4d9c\] {
     background-color: #0b4d9c;
+  }
+  .bg-\[\#0e5fae\] {
+    background-color: #0e5fae;
   }
   .bg-\[\#1a1f2e\] {
     background-color: #1a1f2e;
@@ -1124,6 +1161,9 @@
   }
   .bg-\[\#F8FBFF\] {
     background-color: #F8FBFF;
+  }
+  .bg-\[\#e8f2ff\]\/70 {
+    background-color: color-mix(in oklab, #e8f2ff 70%, transparent);
   }
   .bg-\[\#ebf4ff\] {
     background-color: #ebf4ff;
@@ -1186,6 +1226,9 @@
     --tw-gradient-position: to bottom right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[linear-gradient\(to_right\,\#80808012_1px\,transparent_1px\)\,linear-gradient\(to_bottom\,\#80808012_1px\,transparent_1px\)\] {
+    background-image: linear-gradient(to right,#80808012 1px,transparent 1px),linear-gradient(to bottom,#80808012 1px,transparent 1px);
+  }
   .bg-\[url\(\'https\:\/\/grainy-gradients\.vercel\.app\/noise\.svg\'\)\] {
     background-image: url('https://grainy-gradients.vercel.app/noise.svg');
   }
@@ -1201,6 +1244,9 @@
   .to-\[\#93C5FD\] {
     --tw-gradient-to: #93C5FD;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-size-\[80px_80px\] {
+    background-size: 80px 80px;
   }
   .fill-current {
     fill: currentcolor;
@@ -1229,6 +1275,9 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
+  .p-9 {
+    padding: calc(var(--spacing) * 9);
+  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
@@ -1246,6 +1295,9 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-9 {
+    padding-inline: calc(var(--spacing) * 9);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
@@ -1405,6 +1457,12 @@
   .text-\[24px\] {
     font-size: 24px;
   }
+  .text-\[42px\] {
+    font-size: 42px;
+  }
+  .text-\[44px\] {
+    font-size: 44px;
+  }
   .leading-\[1\.1\] {
     --tw-leading: 1.1;
     line-height: 1.1;
@@ -1425,6 +1483,10 @@
     --tw-leading: 54px;
     line-height: 54px;
   }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
@@ -1444,6 +1506,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -1480,8 +1546,17 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-\[\#0e5fae\] {
+    color: #0e5fae;
+  }
   .text-\[\#1a1f2e\] {
     color: #1a1f2e;
+  }
+  .text-\[\#1a2b3c\] {
+    color: #1a2b3c;
+  }
+  .text-\[\#4b5563\] {
+    color: #4b5563;
   }
   .text-blue-50 {
     color: var(--color-blue-50);
@@ -1822,6 +1897,13 @@
       }
     }
   }
+  .hover\:bg-\[\#0c4e91\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #0c4e91;
+      }
+    }
+  }
   .hover\:bg-\[\#EAF2FF\] {
     &:hover {
       @media (hover: hover) {
@@ -1987,6 +2069,11 @@
       width: auto;
     }
   }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
@@ -2089,9 +2176,19 @@
       font-size: 17px;
     }
   }
+  .md\:text-\[18px\] {
+    @media (width >= 48rem) {
+      font-size: 18px;
+    }
+  }
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .md\:text-\[52px\] {
+    @media (width >= 48rem) {
+      font-size: 52px;
     }
   }
   .lg\:order-1 {
@@ -2167,6 +2264,11 @@
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .lg\:grid-cols-6 {
@@ -2254,6 +2356,11 @@
       padding-block: calc(var(--spacing) * 18);
     }
   }
+  .lg\:py-28 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 28);
+    }
+  }
   .lg\:pt-0 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 0);
@@ -2335,7 +2442,6 @@
     }
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
 :root {
   --color-primary: #0B1720;
   --button-primary: #0E59AE;
@@ -2397,6 +2503,14 @@ button, .btn, [class*="button-"] {
 }
 .hero-bg {
   background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #BED7FF 100%);
+}
+.full-width-grid {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .btn-soft-shadow {
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
@@ -2512,6 +2626,11 @@ button, .btn, [class*="button-"] {
   inherits: false;
 }
 @property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
@@ -2779,6 +2898,7 @@ button, .btn, [class*="button-"] {
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
+      --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
