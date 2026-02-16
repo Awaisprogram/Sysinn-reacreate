@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysinn- About Us</title>
+  <!-- Google Fonts: Inter for headings, Outfit for body/buttons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="output.css" />
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+   <!-- ========================================
+               NAVBAR SECTION - DESKTOP NAVIGATION
+               ======================================== -->
+               <section>
+                <nav class="relative px-4 h-20 flex items-center justify-between z-50 max-w-7xl mx-auto font-heading shadow-md">
+      
+                  <!-- Navbar: Logo/Brand Section -->
+                  <div class="flex items-center gap-2 cursor-pointer z-10">
+                    <img src="images/logo.webp" alt="sysinn logo" class="h-10 w-auto" />
+                  </div>
+          
+                  <!-- Navbar: Main Navigation Links Container -->
+                  <div class="hidden lg:flex items-center gap-8 h-100vh">
+                      
+                    <!-- Navbar: Services Dropdown with Mega Menu -->
+                    <div class="group static h-full flex items-center">
+                      <button class="text-slate-600 group-hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] flex items-center gap-1.5 outline-none transition-colors cursor-pointer">
+                          Services
+                          <i class="fas fa-chevron-down w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                      </button>
+                  
+                      <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible group-hover:opacity-100 group-hover:visible pointer-events-none group-hover:pointer-events-auto pt-4 z-50 transition-all duration-200 ease-in-out">
+                          <div class="bg-[#ebf4ff] rounded-b-3xl shadow-2xl p-10 max-w-[1400px] mx-auto mt-1">
+                              
+                              <div class="grid grid-cols-12 gap-6 mb-6">
+                                  <div class="col-span-9 grid grid-cols-4 gap-4">
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Digital Marketing<br>Services</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                  <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                 <img src="/images/services1.svg" alt="">
+                                              </div>
+                                          </div>
+                                          <ul class="space-y-4">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Digital Marketing Consultant <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Digital Marketing Strategy <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Franchise Digital Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Email Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Enterprise Digital Marketing <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">E-Commerce<br>Services</h3>
+                                              <div class="w-12 h-12   rounded-full flex items-center justify-center relative overflow-hidden">
+                                                  <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-100 rounded-full opacity-50"></div>
+                                                  <i class="fas fa-store text-primary text-xl relative z-10"></i>
+                                              </div>
+                                          </div>
+                                          <ul class="space-y-4">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">E-Commerce Digital Marketing Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">E-Commerce SEO <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">E-Commerce PPC <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">E-Commerce Website Development Services <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Development<br>Services</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services3.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-4">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Software Development Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Web Development Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Mobile App Development <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Designing<br>Services</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services2.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-4">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">UI/UX Designing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Graphic Designing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Brand Identity Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Email NewsLetter Designing <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="col-span-3">
+                                      <div class="bg-white rounded-[2.5rem] p-8 h-full flex flex-col items-center justify-center text-center shadow-lg relative overflow-hidden border border-slate-100">
+                                          <div class="relative z-10">
+                                              <h2 class="text-6xl font-black text-slate-900 mb-2">198%</h2>
+                                              <p class="text-slate-600 font-semibold text-base mb-8">Increase in Organic Traffic</p>
+                                              <div class="w-full flex items-center justify-center py-2">
+      
+                                                <img src="/images/servicesbanner2.svg" alt="">
+                                              </div>
+                  
+      <button class="w-full bg-[#0056b3] text-white py-3.5 rounded-xl font-bold text-[12px] uppercase tracking-wider shadow-lg hover:bg-blue-800 transition-all cursor-pointer">
+                                                  Read Our Case Study
+                                              </button>
+                                          </div>
+                                          <div class="absolute -bottom-10 -left-10 w-40 h-40 border-[10px] border-slate-50 rounded-full opacity-50"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                              <div class="grid grid-cols-12 gap-6">
+                                  <div class="col-span-9 grid grid-cols-4 gap-4">
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Content<br>Marketing</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services5.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-3">
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">SEO Content Writing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Copywriting Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Blog Writing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Article Writing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Product Description writing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Sales Pitch Writing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[13px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Academic Writing <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Social Media<br>Marketing</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services6.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-3">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Social Media Management <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Social Media Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Facebook Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Instagram Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Youtube Marketing <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Linkedin Marketing <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Search Engine<br>Optimization</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services7.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-3">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Technical SEO <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">AI SEO Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Franchise SEO <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">SEO Audits <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Off Page SEO (Link Building) <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                  
+                                      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                          <div class="flex justify-between items-start mb-6">
+                                              <h3 class="font-bold text-slate-800 text-[18px] leading-tight">Pay Per Click<br>(PPC)</h3>
+                                              <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                               <img src="/images/services8.svg" alt="">
+                                            </div>
+                                          </div>
+                                          <ul class="space-y-3">
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Search Engine Marketing (SEM) <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Google Ads Management <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Brand Identity Services <span>→</span></a></li>
+                                            <li><a href="#" class="text-[14px] text-slate-500 hover:bg-[#EAF2FF] flex justify-between items-center">Youtube Ads Management <span>→</span></a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+          
+                    <!-- Navbar: Direct Link to Local SEO -->
+                      <a href="#" class="text-slate-600 hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] transition-colors">Local SEO</a>
+          
+                      <!-- Navbar: Industries Dropdown with Mega Menu -->
+                      <div class="group static h-full flex items-center">
+                      <button class="text-slate-600 group-hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] flex items-center gap-1.5 outline-none transition-colors cursor-pointer">
+                            Industries
+                            <i class="fas fa-chevron-down w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible group-hover:opacity-100 group-hover:visible pointer-events-none group-hover:pointer-events-auto pt-4 z-50 transition-all duration-200 ease-in-out">
+                            <div class="bg-[#ebf4ff] rounded-b-3xl shadow-2xl p-10 max-w-[1400px] mx-auto mt-1">
+                                
+                                <div class="grid grid-cols-12 gap-8">
+                                    <div class="col-span-9">
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-8 px-2">Explore Industries</h3>
+                                        
+                                        <div class="grid grid-cols-4 gap-x-4 gap-y-6">
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                        <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                       <img src="/images/industry0.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Accounting</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                        <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                       <img src="/images/industry1.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Cosmetics</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry2.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Law Firm</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry3.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Real Estate</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry4.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Healthcare</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry5.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Fashion</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry6.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Travel</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry7.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Dental</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry8.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[15px]">Car Rentals</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item col-span-1">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12   rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/industry9.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[13px] leading-tight">Opticians (Eye<br>Care)</span>
+                                                </div>
+                                                <span class="text-slate-400 text-sm group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-span-3">
+                                        <div class="bg-white rounded-[2.5rem] p-8 h-full flex flex-col items-center justify-center text-center shadow-lg relative overflow-hidden border border-slate-100">
+                                            <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+                                                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-[1px] border-slate-200 rounded-full"></div>
+                                                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-[12px] border-slate-50 rounded-full"></div>
+                                                 <div class="absolute bottom-6 left-6 flex gap-1.5">
+                                                    <div class="w-2.5 h-2.5 bg-slate-200 rounded-full"></div>
+                                                    <div class="w-2.5 h-2.5 bg-slate-100 rounded-full"></div>
+                                                 </div>
+                                            </div>
+                    
+                                            <div class="relative z-10 w-full">
+                                                <div class="inline-block bg-[#eef6ff] text-primary text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+                                                    Healthcare
+                                                </div>
+                                                
+                                                <h2 class="text-7xl font-black text-slate-900 mb-2">+61%</h2>
+                                                <p class="text-slate-600 font-semibold text-base leading-snug mb-10">
+                                                    Increase in Revenue per Visitor
+                                                </p>
+                    
+      <button class="w-full bg-[#0056b3] text-white py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-blue-800 transition-all uppercase tracking-wide cursor-pointer">
+                                                    Read Our Case Study
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                      <!-- Navbar: Platform Dropdown with Mega Menu -->
+                      <div class="group static h-full flex items-center">
+                      <button class="text-slate-600 group-hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] flex items-center gap-1.5 outline-none transition-colors cursor-pointer">
+                            Platforms
+                            <i class="fas fa-chevron-down w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <div class="mega-menu absolute top-full left-0 w-full opacity-0 invisible group-hover:opacity-100 group-hover:visible pointer-events-none group-hover:pointer-events-auto pt-4 z-50 transition-all duration-200 ease-in-out">
+                            <div class="bg-[#ebf4ff] rounded-b-3xl shadow-2xl p-10 max-w-[1400px] mx-auto mt-1">
+                                
+                                <div class="grid grid-cols-12 gap-8">
+                                    <div class="col-span-9">
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-8 px-2">Explore Platforms:</h3>
+                                        
+                                        <div class="grid grid-cols-4 gap-4">
+                                            <a href="#" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12  rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                        <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                       <img src="/images/platform1.svg" alt="">
+                                                    </div>
+                                                  </div>
+                                                    <span class="font-semibold text-slate-700 text-[12px]">Shopify SEO</span>
+                                                </div>
+                                                <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12  rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="w-12 h-12  rounded-full flex items-center justify-center relative overflow-hidden">
+                                                        <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                       <img src="/images/platform2.svg" alt="">
+                                                    </div>
+                                                  </div>
+                                                    <span class="font-semibold text-slate-700 text-[12px] leading-tight">Woocommerce<br>SEO</span>
+                                                </div>
+                                                <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12  rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/platform3.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[12px] leading-tight">Youtube SEO<br>(Video SEO)</span>
+                                                </div>
+                                                <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                    
+                                            <a href="#" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center justify-between group/item">
+                                                <div class="flex items-center gap-4">
+                                                    <div class="w-14 h-12  rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                                      <div class="absolute -bottom-1 -right-1 w-8 h-8  rounded-full opacity-50"></div>
+                                                      <img src="/images/platform4.svg" alt="">
+                                                   </div>
+                                                    <span class="font-semibold text-slate-700 text-[12px]">SaaS SEO</span>
+                                                </div>
+                                                <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-span-3">
+                                        <div class="bg-white rounded-[2.5rem] p-8 h-full flex flex-col items-center justify-center text-center shadow-lg relative overflow-hidden border border-slate-100">
+                                            <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+                                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-[15px] border-slate-100 rounded-full"></div>
+                                                <div class="absolute bottom-10 py-12 left-0 right-0 flex justify-center">
+                                                   <img src="/images/platformbanner.svg" alt="">
+                                                </div>
+                                            </div>
+                    
+                                            <div class="relative z-10 w-full">
+                                                <p class="text-slate-800 font-bold text-[15px] leading-snug mb-8 max-w-[200px] mx-auto">
+                                                    Want to know the proven we follow to drive measurable results on each platform?
+                                                </p>
+                    
+      <button class="w-full bg-[#0056b3] text-white py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-blue-800 transition-all uppercase tracking-wide cursor-pointer">
+                                                    Talk to a Consultant
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                      <!-- Navbar: Direct Link to Blogs -->
+                      <a href="#" class="text-slate-600 hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] transition-colors">Blogs</a>
+                      <!-- Navbar: Direct Link to Portfolio -->
+                      <a href="#" class="text-slate-600 hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] transition-colors">Our Portfolio</a>
+                      <!-- Navbar: Direct Link to About Us -->
+                      <a href="#" class="text-slate-600 hover:bg-[#EAF2FF] px-1 py-3 rounded-sm font-medium text-[14px] transition-colors">About Us</a>
+                  </div>
+          
+                  <!-- Navbar: CTA Button for Getting Free Quote -->
+                  <div class="z-10 lg:block hidden">
+                      <a href="#" class="button-primary hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all shadow-lg shadow-primary/20">
+                          Get A Free Quote
+                      </a>
+                  </div>
+                    <!-- Navbar: Mobile Menu Toggle Button (Hamburger/Close Icon) -->
+      <button id="menu-btn" class="lg:hidden text-gray-800 p-2 hover:bg-white/50 rounded-lg transition-colors focus:outline-none cursor-pointer">
+                    <i id="menu-icon" class="fas fa-bars w-6 h-6 transition-transform duration-300"></i>
+                    <i id="close-icon" class="fas fa-times w-6 h-6 hidden transition-transform duration-300"></i>
+                    </button>
+                    
+                    <!-- Navbar: Mobile Menu Dropdown Container -->
+                    <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 mt-2 mx-2">
+                    <!-- Navbar: Mobile Menu Links List -->
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                    <div class="flex flex-col p-4 space-y-1">
+                    <!-- Navbar: Mobile Link - Services -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Services</a>
+                    <!-- Navbar: Mobile Link - Local SEO -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Local SEO</a>
+                    <!-- Navbar: Mobile Link - Industries -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Industries</a>
+                    <!-- Navbar: Mobile Link - Platform -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Platform</a>
+                    <!-- Navbar: Mobile Link - Blogs -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Blogs</a>
+                    <!-- Navbar: Mobile Link - Our Portfolio -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">Our Portfolio</a>
+                    <!-- Navbar: Mobile Link - About Us -->
+                    <a href="#" class="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-xl transition-colors">About Us</a>
+                    <!-- Navbar: Mobile CTA Button -->
+                    <div class="pt-2 mt-2 border-t border-gray-100">
+                    <button class="w-full button-primary active:bg-blue-700 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-primary/30 transition-transform active:scale-[0.98]">
+                    Get A Free Quote
+                    </button>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+              </nav>
+            </section> 
+
+             <!-- ========================================
+               ABOUT HERO SECTION 
+               ======================================== -->
+               <section class="relative py-16 overflow-hidden ">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+                  <div
+                class="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[80px_80px] "></div>
+                
+                <!-- Gradient Overlay - higher z-index to appear in front of grid -->
+                <div class="absolute inset-0 -z-10 hero-bg"></div>
+                    
+                    <!-- Heading -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                            About Us
+                        </h2>
+                    </div>
+                    
+                    <!-- Images Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                        <!-- Image 1 -->
+                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" 
+                                alt="Team collaboration" 
+                                class="w-full h-96 object-cover"
+                            >
+                        </div>
+                        
+                        <!-- Image 2 - Center spanning 2 columns -->
+                        <div class="rounded-2xl overflow-hidden shadow-lg md:col-span-2">
+                            <img 
+                                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
+                                alt="Team meeting" 
+                                class="w-full h-96 object-cover"
+                            >
+                        </div>
+                        
+                        <!-- Image 3 -->
+                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                            <img 
+                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" 
+                                alt="Team discussion" 
+                                class="w-full h-96 object-cover"
+                            >
+                        </div>
+                    </div>
+                    
+                    <!-- Description and CTA -->
+                    <div class=" rounded-3xl py-12 px-8 text-center">
+                        <p class="text-gray-700 text-base md:text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
+                            At Sysinn, we believe smart strategies should feel clear and useful. We help small businesses grow by turning complex ideas into simple, workable plans that actually move things forward. Ready to build something impactful? Get in touch and let's create together.
+                        </p>
+                        
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl active:scale-95">
+                            Let's Build Your Strategy
+                        </button>
+                    </div>
+                    
+                </div>
+            </section>
+  
+</body>
+</html>
