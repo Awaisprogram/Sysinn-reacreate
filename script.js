@@ -307,3 +307,61 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
+
+ // Tab switching functionality
+ const tabs = document.querySelectorAll('button.active-tab, button.inactive-tab');
+  tabs.forEach(tab => {
+
+  tab.addEventListener('click', function() {
+      // Remove active state from all tabs
+      tabs.forEach(t => {
+          t.classList.remove('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
+          t.classList.add('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
+      });
+      
+      // Add active state to clicked tab
+      this.classList.remove('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
+      this.classList.add('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
+      
+      // Update content based on selected country
+      const country = this.textContent.trim();
+      updateLocationInfo(country);
+  });
+});
+
+function updateLocationInfo(country) {
+  const locationData = {
+      'USA': {
+          country: 'USA',
+          address: '20100 S Western Ave Torrance, CA',
+          phone: '(213) 817-5192',
+          mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.8373717171656!2d-118.29254!3d33.8358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUwJzA4LjkiTiAxMTjCsDE3JzMzLjEiVw!5e0!3m2!1sen!2sus!4v1234567890',
+          pinAddress: '# 20100 S',
+          pinCity: 'Western Ave Torrance, CA'
+      },
+      'Norway': {
+          country: 'Norway',
+          address: 'Karl Johans gate 22, 0159 Oslo',
+          phone: '+47 22 00 00 00',
+          mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.0!2d10.7461!3d59.9139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU0JzUwLjAiTiAxMMKwNDQnNDYuMCJF!5e0!3m2!1sen!2sno!4v1234567890',
+          pinAddress: 'Karl Johans gate 22',
+          pinCity: '0159 Oslo, Norway'
+      }
+  };
+  
+  const data = locationData[country];
+  
+  // Update text content
+  document.querySelector('.text-lg.font-bold').textContent = data.country;
+  document.querySelectorAll('.text-base.font-semibold')[0].textContent = data.address;
+  document.querySelector('a[href^="tel"]').textContent = data.phone;
+  document.querySelector('a[href^="tel"]').href = `tel:${data.phone.replace(/\D/g, '')}`;
+  
+  // Update map
+  document.querySelector('iframe').src = data.mapSrc;
+  
+  // Update pin overlay
+  document.querySelector('.text-xs.text-gray-500.font-medium').textContent = data.pinAddress;
+  document.querySelector('.text-sm.text-gray-900.font-semibold').textContent = data.pinCity;
+}
