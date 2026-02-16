@@ -593,6 +593,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .aspect-2\/2 {
+    aspect-ratio: 2/2;
+  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -1407,6 +1410,9 @@
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
+  .py-24 {
+    padding-block: calc(var(--spacing) * 24);
+  }
   .py-\[12px\] {
     padding-block: 12px;
   }
@@ -1418,6 +1424,9 @@
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
