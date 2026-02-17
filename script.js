@@ -373,3 +373,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pinCityElement) pinCityElement.textContent = data.pinCity;
   }
 });
+
+
+// Blogs swiper
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Swiper
+  const swiper = new Swiper('.blogsSwiper', {
+      slidesPerView: 1,      // Default to 1 slide (mobile)
+      spaceBetween: 24,      // 24px gap between slides
+      loop: true,            // Infinite loop
+      grabCursor: true,      // Hand cursor on drag
+      navigation: {
+          nextEl: '.swiper-next-blogs',
+          prevEl: '.swiper-prev-blogs',
+      },
+      breakpoints: {
+          // When window width is >= 640px
+          640: { 
+              slidesPerView: 2, 
+              spaceBetween: 24 
+          },
+          // When window width is >= 1024px (Desktop)
+          1024: { 
+              slidesPerView: 3, 
+              spaceBetween: 28 
+          },
+      }
+  });
+});

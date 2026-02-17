@@ -79,6 +79,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --tracking-tight: -0.025em;
     --tracking-wide: 0.025em;
@@ -667,6 +668,9 @@
   }
   .h-48 {
     height: calc(var(--spacing) * 48);
+  }
+  .h-56 {
+    height: calc(var(--spacing) * 56);
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
@@ -1261,6 +1265,9 @@
   .bg-\[\#0056b3\] {
     background-color: #0056b3;
   }
+  .bg-\[\#BFDBFE\] {
+    background-color: #BFDBFE;
+  }
   .bg-\[\#E7EEF7\] {
     background-color: #E7EEF7;
   }
@@ -1269,6 +1276,9 @@
   }
   .bg-\[\#EDF4FF\] {
     background-color: #EDF4FF;
+  }
+  .bg-\[\#F3F4F6\] {
+    background-color: #F3F4F6;
   }
   .bg-\[\#F3F9FF\] {
     background-color: #F3F9FF;
@@ -1521,6 +1531,9 @@
   .font-heading {
     font-family: var(--font-heading);
   }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -1647,6 +1660,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -2216,6 +2233,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-blue-50);
+      }
+    }
+  }
+  .hover\:bg-blue-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-300);
       }
     }
   }
