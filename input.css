@@ -52,6 +52,10 @@
 /* ============================================
    FONT UTILITY CLASSES
    ============================================ */
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
 /* Headings - Inter */
 h1, h2, h3, h4, h5, h6,
 .font-heading {
@@ -212,3 +216,16 @@ button, .btn, [class*="button-"] {
 .stat-icon-purple { color: #a855f7; }
 .stat-icon-blue { color: #3b82f6; }
 .stat-icon-green { color: #22c55e; }
+
+
+/* Blogs page */
+
+ /* Active TOC state via JS */
+ .toc-link.active {
+  color: #0E59AE !important;
+  border-left-color: #0E59AE !important;
+  font-weight: 600;
+}
+.toc-link.active span {
+  background-color: #0E59AE !important;
+}

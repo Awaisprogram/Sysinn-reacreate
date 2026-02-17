@@ -401,3 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+// blogs
+
+   
