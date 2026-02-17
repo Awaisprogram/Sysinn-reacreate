@@ -588,6 +588,426 @@
         </section>
 
   <!-- ========================================
+   MAIN BLOGS SECTION
+   ======================================== -->
+   <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex gap-12 lg:gap-16 items-start">
+
+            <!-- ===================== -->
+            <!-- LEFT: Sticky Sidebar  -->
+            <!-- ===================== -->
+            <aside class="hidden lg:block w-64 xl:w-72 flex-shrink-0 sticky top-8 self-start">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">On This Page:</p>
+
+                <nav id="toc" class="space-y-1">
+
+                    <!-- Section 1 — active -->
+                    <a href="#what-is" class="toc-link flex items-center gap-2 py-1.5 text-sm font-semibold text-primary border-l-2 border-primary pl-3 transition-all">
+                        <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+                        What is a Mobile First Design
+                    </a>
+
+                    <!-- Section 2 — with sub-items -->
+                    <div>
+                        <a href="#phases" class="toc-link flex items-center gap-2 py-1.5 text-sm text-gray-500 hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition-all">
+                            <span class="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
+                            What are the Phases of Mobile - First Design?
+                        </a>
+                        <!-- Sub Items -->
+                        <div class="ml-7 mt-1 space-y-1 border-l border-gray-200 pl-3">
+                            <a href="#research" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">1. Research and Planning</a>
+                            <a href="#wireframing" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">2. Wireframing and Prototyping</a>
+                            <a href="#design-dev" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">3. Design and Development</a>
+                            <a href="#testing" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">4. Testing and Optimization</a>
+                            <a href="#adapt" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">5. Adapt for Larger Screens</a>
+                            <a href="#launch" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">6. Launch and Monitor</a>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 — with sub-items -->
+                    <div>
+                        <a href="#benefits" class="toc-link flex items-center gap-2 py-1.5 text-sm text-gray-500 hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition-all">
+                            <span class="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
+                            Benefits of Mobile-First Role in a Product Design
+                        </a>
+                        <div class="ml-7 mt-1 space-y-1 border-l border-gray-200 pl-3">
+                            <a href="#dominance" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">1. Mobile Dominance</a>
+                            <a href="#on-the-go" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">2. On the Go Use</a>
+                            <a href="#load-time" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">3. Faster Load Time</a>
+                            <a href="#resources" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">4. Efficient Resources Use</a>
+                            <a href="#content" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">5. Prioritization of Content</a>
+                            <a href="#clarity" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">6. Clarity and Usability</a>
+                            <a href="#responsive" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">7. Responsive Design</a>
+                            <a href="#accessibility" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">8. Accessibility</a>
+                            <a href="#trends" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">9. Adapting to Trends</a>
+                            <a href="#scalability" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">10. Scalability</a>
+                            <a href="#search" class="block text-xs text-gray-400 hover:text-primary py-1 transition-colors">11. Search Engine Ranking Boost</a>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <a href="#get-world-class" class="toc-link flex items-center gap-2 py-1.5 text-sm text-gray-500 hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition-all">
+                        <span class="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
+                        Get a World-Class Mobile First Design
+                    </a>
+
+                    <!-- Section 5 -->
+                    <a href="#takeaways" class="toc-link flex items-center gap-2 py-1.5 text-sm text-gray-500 hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition-all">
+                        <span class="w-2 h-2 rounded-full bg-gray-300 flex-shrink-0"></span>
+                        Key Take Aways
+                    </a>
+
+                </nav>
+            </aside>
+
+            <!-- ===================== -->
+            <!-- RIGHT: Article Body   -->
+            <!-- ===================== -->
+            <article class="flex-1 min-w-0 max-w-3xl">
+
+                <!-- H1 -->
+                <h1 id="what-is" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    What is a Mobile-First Design?
+                </h1>
+
+                <p class="text-gray-700 text-base leading-relaxed mb-4">
+                    The first wave of mobile-first design appeared in 2010. It started when Google's CEO announced that all website development should be 'Mobile-first'. Now, what does it even mean? Mobile-First design is designing websites or apps to make them work well on mobile devices. You usually start with the design for a computer screen and then adapt it for mobile. But here, you start with mobile devices first.
+                </p>
+                <p class="text-gray-700 text-base leading-relaxed mb-12">
+                    This approach makes your design look great and function smoothly on smaller screens. It's all about putting mobile users' needs first to create a better experience.
+                </p>
+
+                <!-- H2 with image -->
+                <h2 id="phases" class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    What are the Phases of Mobile-First Design?
+                </h2>
+
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden mb-6 shadow-sm border border-gray-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&h=400&fit=crop"
+                        alt="Mobile First Design Phases"
+                        class="w-full h-auto object-cover"
+                    >
+                </div>
+
+                <p class="text-gray-700 text-base leading-relaxed mb-10">
+                    The phases of mobile-first design ensure that a website or app works perfectly on mobile devices before adapting it for larger screens. Here's a simple breakdown of these phases.
+                </p>
+
+                <!-- Phase 01 -->
+                <div id="research" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        01.Research and Planning
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Understand what users need and how they interact with your mobile site or app. Start with what you want to achieve with your design. Improving user experience or increasing engagement?
+                    </p>
+                </div>
+
+                <!-- Phase 02 -->
+                <div id="wireframing" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        02.Wireframing and Prototyping
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Sketch basic layouts for mobile screens to outline the structure and elements. Develop interactive prototypes to test the flow and usability of the design on mobile devices.
+                    </p>
+                </div>
+
+                <!-- Phase 03 -->
+                <div id="design-dev" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        03.Design and Development
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Focus on creating a clean, user-friendly design that works well on small screens. Put important content and features first. Write code and build the website or app to function on mobile devices before adapting it for larger screens.
+                    </p>
+                </div>
+
+                <!-- Phase 04 -->
+                <div id="testing" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        04.Testing and Optimization
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Check how your design performs on different mobile devices to ensure it loads and works as intended. Make any necessary adjustments to improve loading times and overall performance on mobile.
+                    </p>
+                </div>
+
+                <!-- Phase 05 -->
+                <div id="adapt" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        05.Adapt for Larger Screens
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Gradually adjust the design for tablets and desktops, ensuring that the user experience remains smooth and effective on larger screens.
+                    </p>
+                </div>
+
+                <!-- Phase 06 -->
+                <div id="launch" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        06.Launch and Monitor
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Your mobile-first design is live for users. Continuously gather user feedback and analyze performance to make ongoing improvements. These phases help ensure your design is user-friendly and effective on mobile devices. It still provides a smooth user experience for desktop and tablet users.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- ========================================
+   BLOGS BOTTOM SECTION
+   ======================================== -->
+   <!-- This section goes directly below the previous article section -->
+<section class="py-0 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex gap-12 lg:gap-16 items-start">
+
+            <!-- LEFT: Empty space to align with sidebar width -->
+            <div class="hidden lg:block w-64 xl:w-72 flex-shrink-0"></div>
+
+            <!-- RIGHT: Article Body Continued -->
+            <article class="flex-1 min-w-0 max-w-3xl pb-16">
+
+                <!-- H2 Heading -->
+                <h2 id="benefits" class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    Benefits of Mobile-First Rule in a Product Design
+                </h2>
+
+                <!-- Image -->
+                <div class="rounded-2xl overflow-hidden mb-6 shadow-sm border border-gray-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&h=380&fit=crop"
+                        alt="Mobile First Design Benefits"
+                        class="w-full h-auto object-cover"
+                    >
+                </div>
+
+                <p class="text-gray-700 text-base leading-relaxed mb-10">
+                    Let's understand why your business, be it online or offline, needs a mobile-first design.
+                </p>
+
+                <!-- Benefit 01 -->
+                <div id="dominance" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        01.Mobile Dominance
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        As of 2024, about 63% of global web traffic comes from mobile devices. For example, websites like Facebook and Instagram see most of their traffic from mobile users. Designing for mobile first ensures that mobile users have a good experience.
+                    </p>
+                </div>
+
+                <!-- Benefit 02 -->
+                <div id="on-the-go" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        02.On-the-Go Use
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        People often check their phones while commuting or waiting. For instance, 79% of smartphone users purchased stuff using mobile phones in the past six months. It shows how important it is to design for mobile users who are on the go.
+                    </p>
+                </div>
+
+                <!-- Benefit 03 -->
+                <div id="load-time" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        03.Faster Load Times
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Google found that 53% of mobile users will leave a page that takes longer than 3 seconds to load. Mobile-first design helps speed up loading times by focusing on content and optimizing resources.
+                    </p>
+                </div>
+
+                <!-- Benefit 04 -->
+                <div id="resources" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        04.Efficient Resource Use
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        The mobile-first design encourages the use of smaller images and faster-loading scripts. For instance, a site like Amazon, which has millions of users, ensures fast performance on mobile to keep users engaged and shopping.
+                    </p>
+                </div>
+
+                <!-- Benefit 05 -->
+                <div id="content" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        05.Prioritization of Content
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        When designing for mobile, you must first prioritize what's most important. For example, Twitter's mobile app focuses on a streamlined feed and interactions, which improves usability and keeps users engaged.
+                    </p>
+                </div>
+
+                <!-- Benefit 06 -->
+                <div id="clarity" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        06.Clarity and Usability
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Mobile-first design reduces clutter. For example, Airbnb's mobile app is simple and easy to navigate. It makes it clear for users to book accommodations without being overwhelmed by extra features.
+                    </p>
+                </div>
+
+                <!-- Benefit 07 -->
+                <div id="responsive" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        07.Responsive Design
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Starting with mobile ensures that designs work well on all devices. For example, Google's mobile-first index ranks sites based on their performance on mobile devices. A site like Apple's has a responsive design that adapts well from mobile to desktop.
+                    </p>
+                </div>
+
+                <!-- Benefit 08 -->
+                <div id="accessibility" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        08.Accessibility
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Mobile-first design often includes touch-friendly features. For instance, the YouTube mobile app is designed for easy scrolling and tapping. It improves the user experience for touchscreen users.
+                    </p>
+                </div>
+
+                <!-- Benefit 09 -->
+                <div id="trends" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        09.Adapting to Trends
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Mobile usage continues to rise. Statista reports that mobile internet usage accounts for over 60% of web traffic in 2024. Designing with this trend in mind helps ensure your product remains relevant.
+                    </p>
+                </div>
+
+                <!-- Benefit 10 -->
+                <div id="scalability" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        10.Scalability
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Mobile-first design allows for easier scaling to new devices. For example, Netflix's mobile-first approach ensures their app works smoothly on various screen sizes, from phones to smart TVs.
+                    </p>
+                </div>
+
+                <!-- Benefit 11 -->
+                <div id="search" class="mb-7">
+                    <h3 class="text-lg font-bold text-primary mb-2">
+                        11.Search Engine Ranking Boost
+                    </h3>
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        Google prioritizes mobile-friendly websites in search results. Sites with mobile-first design often rank higher in search results. Mobile usability is a key factor in Google's ranking algorithms. It can lead to more visitors finding your site.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+  <!-- ========================================
+   GET A FIRST CLASS MOBILE FIRST DESIGN SECTION
+   ======================================== -->
+   <!-- This section goes directly below the benefits section -->
+<section class="py-0 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex gap-12 lg:gap-16 items-start">
+
+            <!-- LEFT: Empty spacer to align with sidebar -->
+            <div class="hidden lg:block w-64 xl:w-72 flex-shrink-0"></div>
+
+            <!-- RIGHT: Article Body Continued -->
+            <article class="flex-1 min-w-0 max-w-3xl pb-20">
+
+                <!-- H2 - Get a World-Class -->
+                <h2 id="get-world-class" class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                    Get a World-Class Mobile-first Design!
+                </h2>
+
+                <p class="text-gray-700 text-base leading-relaxed mb-12">
+                    You need to have an online presence if you are a business owner. And for that, a responsive mobile design is the first thing to get. Sysinn can help you big time. Our team of experienced developers and designers can create a magical online presence for you
+                </p>
+
+                <!-- H2 - Key TakeAways -->
+                <h2 id="takeaways" class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    Key TakeAways :
+                </h2>
+
+                <!-- Takeaway List -->
+                <div class="space-y-5 mb-10">
+
+                    <!-- Item 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-base leading-relaxed">
+                            Mobile-first design is crucial because most people use smartphones to browse the internet.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-base leading-relaxed">
+                            It helps improve website speed and boosts your search engine ranking.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-base leading-relaxed">
+                            It ensures your site is accessible, user-friendly, and adapts smoothly to larger screens.
+                        </p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <p class="text-gray-700 text-base leading-relaxed">
+                            Starting with mobile design is a smart way to meet modern user needs and keep up with trends.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Closing Paragraphs -->
+                <p class="text-gray-700 text-base leading-relaxed mb-6">
+                    We are living in the era of mobile phones. According to 2024 statistics, almost 7 billion people use mobile phones worldwide. That's 90% of the world's total population. Interesting, right? So, as a business website owner, can you look over the importance of a mobile-first design? No!! We don't recommend that.
+                </p>
+
+                <p class="text-gray-700 text-base leading-relaxed">
+                    Let's discuss the prospect of a mobile-first design in detail.
+                </p>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+  <!-- ========================================
    LAST BANNER SECTION
    ======================================== -->
 
@@ -727,7 +1147,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
-                <button class="w-10 h-10 rounded-full bg-[#BFDBFE] flex items-center justify-center text-blue-600 hover:bg-blue-300 transition-colors">
+                <button class="w-10 h-10 rounded-full bg-[#BFDBFE] flex items-center justify-center text-primary hover:bg-blue-300 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>

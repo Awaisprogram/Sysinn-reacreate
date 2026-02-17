@@ -404,4 +404,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // blogs
 
-   
+    // Intersection Observer for active TOC highlighting
+    const sections = document.querySelectorAll('article [id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    const tocObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const dot = link.querySelector('span');
+                    if (dot) {
+                        dot.classList.remove('bg-blue-600');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+                const activeLink = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                    const dot = activeLink.querySelector('span');
+                    if (dot) {
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-blue-600');
+                    }
+                }
+            }
+        });
+    }, { rootMargin: '-10% 0px -80% 0px', threshold: 0 });
+
+    sections.forEach(section => tocObserver.observe(section));
