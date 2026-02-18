@@ -126,6 +126,10 @@ button, .btn, [class*="button-"] {
   background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #BED7FF 100%);
 }
 
+.card-bg {
+  background: linear-gradient(135deg, #f0f7ff 0%, #fafbff 50%, #ffffff 100%)
+}
+
 .full-width-grid {
   width: 100vw;
   position: relative;
