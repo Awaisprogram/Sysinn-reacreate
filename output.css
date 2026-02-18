@@ -2939,12 +2939,6 @@
       line-height: 60px;
     }
   }
-  .lg\:tracking-wide {
-    @media (width >= 64rem) {
-      --tw-tracking: var(--tracking-wide);
-      letter-spacing: var(--tracking-wide);
-    }
-  }
   .lg\:opacity-100 {
     @media (width >= 64rem) {
       opacity: 100%;
@@ -2964,7 +2958,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap');
 :root {
   --color-primary: #0B1720;
-  --button-primary: #0E59AE;
+  --button-primary: #366DC2;
   --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Outfit', ui-sans-serif, system-ui, sans-serif;
 }
@@ -3114,12 +3108,12 @@ button, .btn, [class*="button-"] {
   color: #22c55e;
 }
 .toc-link.active {
-  color: #0E59AE !important;
-  border-left-color: #0E59AE !important;
+  color: #366DC2 !important;
+  border-left-color: #366DC2 !important;
   font-weight: 600;
 }
 .toc-link.active span {
-  background-color: #0E59AE !important;
+  background-color: #366DC2 !important;
 }
 @property --tw-translate-x {
   syntax: "*";
