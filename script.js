@@ -1,3 +1,4 @@
+// Mobile Menu Toggle
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const menuIcon = document.getElementById("menu-icon");
@@ -15,6 +16,15 @@ menuBtn.addEventListener("click", () => {
       menuIcon.classList.remove("hidden");
       closeIcon.classList.add("hidden");
   }
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove("open");
+      menuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    }
 });
 
 // Mega Menu with Delayed Close
@@ -65,18 +75,7 @@ megaMenuTriggers.forEach(trigger => {
   }
 });
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove("open");
-      menuIcon.classList.remove("hidden");
-      closeIcon.classList.add("hidden");
-    }
-});
-
-
 // FAQS SECTION
-
 document.querySelectorAll('.faq-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const item = button.parentElement;
@@ -97,52 +96,12 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
       icon.style.transform = 'rotate(0deg)';
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-      icon.style.transform = 'rotate(45deg)'; // Rotates plus to an 'x' or minus style
+      icon.style.transform = 'rotate(45deg)';
     }
   });
 });
 
-// logo animator:
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          const logos = entry.target.querySelectorAll('.logo-item');
-          logos.forEach((logo, index) => {
-              // Start Entrance
-              logo.classList.add('animate-entrance');
-              
-              // Once entrance is done, start the continuous float loop
-              setTimeout(() => {
-                  logo.classList.add('animate-float');
-                  // Randomize float timing slightly so they don't move in perfect sync
-                  logo.style.animationDelay = `${Math.random() * 2}s`;
-              }, 1000 + (index * 100));
-          });
-          observer.unobserve(entry.target);
-      }
-  });
-}, { threshold: 0.3 });
-
-observer.observe(document.querySelector('#logo-section'));
-
-// Swiper 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper('.testimonialSwiper', {
-    effect: 'fade', // This keeps the layout "in place"
-    fadeEffect: {
-        crossFade: true
-    },
-    loop: true,
-    speed: 600,
-    navigation: {
-        nextEl: '.next-btn',
-        prevEl: '.prev-btn',
-    },
-});
-});
-
-// 1. THE DATA: Define the content for each tab here
+// Services Data for Lifecycle Marketing Section
 const servicesData = [
   {
       id: 0,
@@ -188,9 +147,11 @@ const servicesData = [
 
 let activeIndex = 0;
 
-// 2. RENDER FUNCTIONS
+// Render Functions for Services Section
 function renderLeftList() {
   const listContainer = document.getElementById('services-list');
+  if (!listContainer) return;
+  
   listContainer.innerHTML = '';
 
   servicesData.forEach((service, index) => {
@@ -225,11 +186,14 @@ function renderLeftList() {
 }
 
 function renderRightPanel() {
-  const data = servicesData[activeIndex];
-  
-  // Update Text
   const header = document.getElementById('right-header');
   const tag = document.getElementById('central-tag');
+  const topGrid = document.getElementById('feature-grid');
+  const bottomGrid = document.getElementById('feature-grid-bottom');
+  
+  if (!header || !tag || !topGrid || !bottomGrid) return;
+  
+  const data = servicesData[activeIndex];
   
   // Simple fade effect
   header.classList.remove('fade-in');
@@ -243,9 +207,8 @@ function renderRightPanel() {
   const topFeatures = data.features.slice(0, 4);
   const bottomFeatures = data.features.slice(4, 7);
 
-  const iconMap = ["chart-line", "eye", "bolt", "desktop", "chart-bar", "clock", "globe"]; // Just cycling random icons for demo
+  const iconMap = ["chart-line", "eye", "bolt", "desktop", "chart-bar", "clock", "globe"];
 
-  const topGrid = document.getElementById('feature-grid');
   topGrid.innerHTML = topFeatures.map((feat, i) => `
       <div class="flex flex-col items-center gap-1 fade-in" style="animation-delay: ${i * 50}ms">
           <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
@@ -255,7 +218,6 @@ function renderRightPanel() {
       </div>
   `).join('');
 
-  const bottomGrid = document.getElementById('feature-grid-bottom');
   bottomGrid.innerHTML = bottomFeatures.map((feat, i) => `
       <div class="flex flex-col items-center gap-1 fade-in" style="animation-delay: ${(i+4) * 50}ms">
           <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
@@ -266,70 +228,80 @@ function renderRightPanel() {
   `).join('');
 }
 
-// 3. EVENT HANDLER
+// Event Handler for Services
 function setActive(index) {
-  if(activeIndex === index) return; // Prevent re-rendering if clicking same item
+  if(activeIndex === index) return;
   activeIndex = index;
   renderLeftList();
   renderRightPanel();
 }
 
-// Initialize
-renderLeftList();
-renderRightPanel();
+// Initialize Services Section
+function initServices() {
+  renderLeftList();
+  renderRightPanel();
+}
 
-// Slider for bars:
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  centeredSlides: false,
-  loop: true,
-  speed: 800,
-  navigation: {
-    nextEl: ".swiper-button-next-custom",
-    prevEl: ".swiper-button-prev-custom",
-  },
-  breakpoints: {
-    // Mobile
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
-    // Tablet
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
-    // Desktop
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    }
-  }
-});
-
-
- // Tab switching functionality - wrapped in DOMContentLoaded to ensure elements exist
-document.addEventListener('DOMContentLoaded', function() {
-  const tabs = document.querySelectorAll('button.active-tab, button.inactive-tab');
+// Initialize all functionality when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
   
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      // Remove active state from all tabs
-      tabs.forEach(t => {
-        t.classList.remove('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
-        t.classList.add('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
-      });
-      
-      // Add active state to clicked tab
-      this.classList.remove('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
-      this.classList.add('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
-      
-      // Update content based on selected country
-      const country = this.textContent.trim();
-      updateLocationInfo(country);
+  // Initialize Services Section
+  initServices();
+  
+  // Testimonial Swiper
+  if (document.querySelector('.testimonialSwiper')) {
+    new Swiper('.testimonialSwiper', {
+      effect: 'fade',
+      fadeEffect: {
+          crossFade: true
+      },
+      loop: true,
+      speed: 600,
+      navigation: {
+          nextEl: '.next-btn',
+          prevEl: '.prev-btn',
+      },
     });
-  });
+  }
+
+  // Results/Case Studies Swiper
+  if (document.querySelector('.mySwiper')) {
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: false,
+      loop: true,
+      speed: 800,
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 0 },
+        768: { slidesPerView: 1, spaceBetween: 0 },
+        1024: { slidesPerView: 1, spaceBetween: 0 }
+      }
+    });
+  }
+
+  // Location Tabs (if exists on page)
+  const tabs = document.querySelectorAll('button.active-tab, button.inactive-tab');
+  if (tabs.length > 0) {
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabs.forEach(t => {
+          t.classList.remove('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
+          t.classList.add('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
+        });
+        
+        this.classList.remove('inactive-tab', 'bg-white', 'text-gray-700', 'border', 'border-gray-300', 'shadow-sm');
+        this.classList.add('active-tab', 'bg-blue-600', 'text-white', 'shadow-md');
+        
+        const country = this.textContent.trim();
+        updateLocationInfo(country);
+      });
+    });
+  }
 
   function updateLocationInfo(country) {
     const locationData = {
@@ -337,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
         country: 'USA',
         address: '20100 S Western Ave Torrance, CA',
         phone: '(213) 817-5192',
-        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.8373717171656!2d-118.29254!3d33.8358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUwJzA4LjkiTiAxMTjCsDE3JzMzLjEiVw!5e0!3m2!1sen!2sus!4v1234567890',
         pinAddress: '# 20100 S',
         pinCity: 'Western Ave Torrance, CA'
       },
@@ -345,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
         country: 'Norway',
         address: 'Karl Johans gate 22, 0159 Oslo',
         phone: '+47 22 00 00 00',
-        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.0!2d10.7461!3d59.9139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU0JzUwLjAiTiAxMMKwNDQnNDYuMCJF!5e0!3m2!1sen!2sno!4v1234567890',
         pinAddress: 'Karl Johans gate 22',
         pinCity: '0159 Oslo, Norway'
       }
@@ -354,11 +324,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = locationData[country];
     if (!data) return;
     
-    // Update text content - using more specific selectors
     const countryElement = document.querySelector('.text-lg.font-bold');
     const addressElement = document.querySelectorAll('.text-base.font-semibold')[0];
     const phoneLink = document.querySelector('a[href^="tel"]');
-    const mapIframe = document.querySelector('iframe');
     const pinAddressElement = document.querySelector('.text-xs.text-gray-500.font-medium');
     const pinCityElement = document.querySelector('.text-sm.text-gray-900.font-semibold');
     
@@ -368,68 +336,61 @@ document.addEventListener('DOMContentLoaded', function() {
       phoneLink.textContent = data.phone;
       phoneLink.href = `tel:${data.phone.replace(/\D/g, '')}`;
     }
-    if (mapIframe) mapIframe.src = data.mapSrc;
     if (pinAddressElement) pinAddressElement.textContent = data.pinAddress;
     if (pinCityElement) pinCityElement.textContent = data.pinCity;
   }
-});
 
-
-// Blogs swiper
-document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Swiper
-  const swiper = new Swiper('.blogsSwiper', {
-      slidesPerView: 1,      // Default to 1 slide (mobile)
-      spaceBetween: 24,      // 24px gap between slides
-      loop: true,            // Infinite loop
-      grabCursor: true,      // Hand cursor on drag
+  // Blogs Swiper (if exists on page)
+  if (document.querySelector('.blogsSwiper')) {
+    new Swiper('.blogsSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      grabCursor: true,
       navigation: {
-          nextEl: '.swiper-next-blogs',
-          prevEl: '.swiper-prev-blogs',
+        nextEl: '.swiper-next-blogs',
+        prevEl: '.swiper-prev-blogs',
       },
       breakpoints: {
-          // When window width is >= 640px
-          640: { 
-              slidesPerView: 2, 
-              spaceBetween: 24 
-          },
-          // When window width is >= 1024px (Desktop)
-          1024: { 
-              slidesPerView: 3, 
-              spaceBetween: 28 
-          },
+        640: { slidesPerView: 2, spaceBetween: 24 },
+        1024: { slidesPerView: 3, spaceBetween: 28 },
       }
-  });
-});
+    });
+  }
 
-// blogs
-
-    // Intersection Observer for active TOC highlighting
-    const sections = document.querySelectorAll('article [id]');
-    const tocLinks = document.querySelectorAll('.toc-link');
-
+  // TOC Observer for Blogs (if exists)
+  const sections = document.querySelectorAll('article [id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+  
+  if (sections.length > 0 && tocLinks.length > 0) {
     const tocObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                tocLinks.forEach(link => {
-                    link.classList.remove('active');
-                    const dot = link.querySelector('span');
-                    if (dot) {
-                        dot.classList.remove('bg-blue-600');
-                        dot.classList.add('bg-gray-300');
-                    }
-                });
-                const activeLink = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                    const dot = activeLink.querySelector('span');
-                    if (dot) {
-                        dot.classList.remove('bg-gray-300');
-                        dot.classList.add('bg-blue-600');
-                    }
-                }
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.remove('active');
+            const dot = link.querySelector('span');
+            if (dot) {
+              dot.classList.remove('bg-blue-600');
+              dot.classList.add('bg-gray-300');
             }
-        });
+          });
+          const activeLink = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+            const dot = activeLink.querySelector('span');
+            if (dot) {
+              dot.classList.remove('bg-gray-300');
+              dot.classList.add('bg-blue-600');
+            }
+          }
+        }
+      });
     }, { rootMargin: '-10% 0px -80% 0px', threshold: 0 });
 
     sections.forEach(section => tocObserver.observe(section));
+  }
+});
+
+// Make setActive available globally for onclick handlers
+window.setActive = setActive;
+
