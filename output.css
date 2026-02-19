@@ -757,6 +757,9 @@
   .max-w-\[1400px\] {
     max-width: 1400px;
   }
+  .max-w-full {
+    max-width: 100%;
+  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
