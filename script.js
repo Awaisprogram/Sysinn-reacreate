@@ -80,23 +80,27 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const item = button.parentElement;
     const content = button.nextElementSibling;
-    const icon = button.querySelector('.faq-icon');
+    const icon = button.querySelector('.faq-icon i');
     
     // Close all other open items
     document.querySelectorAll('.faq-content').forEach(otherContent => {
       if (otherContent !== content) {
         otherContent.style.maxHeight = null;
-        otherContent.parentElement.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+        const otherIcon = otherContent.parentElement.querySelector('.faq-icon i');
+        otherIcon.classList.remove('fa-minus');
+        otherIcon.classList.add('fa-plus');
       }
     });
 
     // Toggle current item
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
-      icon.style.transform = 'rotate(0deg)';
+      icon.classList.remove('fa-minus');
+      icon.classList.add('fa-plus');
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-      icon.style.transform = 'rotate(45deg)';
+      icon.classList.remove('fa-plus');
+      icon.classList.add('fa-minus');
     }
   });
 });
