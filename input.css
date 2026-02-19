@@ -123,7 +123,7 @@ button, .btn, [class*="button-"] {
 }
 
 .hero-bg {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #BED7FF 100%);
+  background: linear-gradient(to bottom, #D0E2FF 0%, #DCEAFF 15%, #E8F2FF 40%, #F5F9FF 70%, #FFFFFF 100%)
 }
 
 .card-bg {
