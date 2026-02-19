@@ -1078,6 +1078,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
   }
+  .border-\[\#EAF2FF\] {
+    border-color: #EAF2FF;
+  }
   .border-\[\#EBF3FF\] {
     border-color: #EBF3FF;
   }
