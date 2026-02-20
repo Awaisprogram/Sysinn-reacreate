@@ -252,6 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Services Section
   initServices();
   
+  // Initialize Paid Social Dots
+  initPaidSocialCarousel();
+  
   // Testimonial Swiper
   if (document.querySelector('.testimonialSwiper')) {
     new Swiper('.testimonialSwiper', {
@@ -397,4 +400,141 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Make setActive available globally for onclick handlers
 window.setActive = setActive;
+
+// ========================================
+// Paid Social Section - Card Data
+// ========================================
+const paidSocialCards = [
+  {
+    id: 0,
+    title: "Paid Social That Drives The Conversion Pipeline",
+    description: "Paid social is one of the fastest ways for startups and e-commerce brands to scale. We create campaigns focused on audience intent, creative testing, and high-converting landing pages — measuring performance against real business outcomes to generate leads, sales, and measurable pipeline growth.",
+    image: "/images/paid.png",
+    buttonText: "Explore Services"
+  },
+  {
+    id: 1,
+    title: "Email & Lifecycle Marketing For Dedicated Conversion",
+    description: "Don't let leads go cold. We build automated email flows that nurture customers from their first click to their hundredth purchase. Our lifecycle campaigns maximize customer lifetime value through personalization and strategic timing.",
+    image: "/images/paid1.png",
+    buttonText: "Learn More"
+  },
+  {
+    id: 2,
+    title: "Conversion Rate Opetimization (CRO)",
+    description: "Capture high-intent traffic at the exact moment buyers are searching. Our SEM campaigns optimize for quality score, ad copy relevance, and landing page experience to maximize your ROI and reduce cost per acquisition.",
+    image: "/images/paid2.png",
+    buttonText: "View Services"
+  },
+  {
+    id: 3,
+    title: "Conversion First Opetimization",
+    description: "Content that establishes your brand as an industry thought leader. We create SEO-optimized content strategies that attract organic traffic, build topical authority, and nurture prospects through the entire buyer's journey.",
+    image: "/images/paid.png",
+    buttonText: "Our Approach"
+  },
+  {
+    id: 4,
+    title: "Responsive First Web Marketing",
+    description: "Make data-driven decisions with comprehensive analytics setup and reporting. We implement proper tracking, create custom dashboards, and provide actionable insights that help you optimize marketing spend and improve outcomes.",
+    image: "/images/paid.png",
+    buttonText: "See How It Works"
+  }
+];
+
+let currentCardIndex = 0;
+
+// ========================================
+// Paid Social Section - Render Function
+// ========================================
+function renderPaidSocialCard(index) {
+  const cardContainer = document.querySelector('.paid-social-card-content');
+  if (!cardContainer) return;
+  
+  const card = paidSocialCards[index];
+  
+  // Add fade-out class for transition
+  cardContainer.classList.add('opacity-0');
+  
+  setTimeout(() => {
+    // Update card content
+    const titleEl = cardContainer.querySelector('.card-title');
+    const descEl = cardContainer.querySelector('.card-description');
+    const imageEl = cardContainer.querySelector('.card-image');
+    const buttonEl = cardContainer.querySelector('.card-button span');
+    
+    if (titleEl) titleEl.textContent = card.title;
+    if (descEl) descEl.textContent = card.description;
+    if (imageEl) imageEl.src = card.image;
+    if (buttonEl) buttonEl.textContent = card.buttonText;
+    
+    // Fade-in
+    cardContainer.classList.remove('opacity-0');
+    cardContainer.classList.add('transition-opacity', 'duration-300', 'ease-in-out');
+  }, 300);
+}
+
+function updatePaidSocialDots(index) {
+  const dots = document.querySelectorAll('.paid-social-dots .dot');
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+      dot.classList.add('bg-secondary');
+    } else {
+      dot.classList.remove('bg-secondary');
+      dot.classList.add('bg-gray-300', 'hover:bg-gray-400');
+    }
+  });
+}
+
+function setPaidSocialCard(index) {
+  if (index < 0 || index >= paidSocialCards.length) return;
+  if (currentCardIndex === index) return;
+  
+  currentCardIndex = index;
+  renderPaidSocialCard(index);
+  updatePaidSocialDots(index);
+}
+
+// ========================================
+// Paid Social Section - Initialize
+// ========================================
+function initPaidSocialCarousel() {
+  const dots = document.querySelectorAll('.paid-social-dots .dot');
+  if (dots.length === 0) return;
+  
+  // Add click handlers to dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      setPaidSocialCard(index);
+    });
+  });
+  
+  // Initial render
+  updatePaidSocialDots(0);
+  
+  // Auto-play functionality (cycles through cards every 5 seconds)
+  let autoPlayInterval;
+  
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+      const nextIndex = (currentCardIndex + 1) % paidSocialCards.length;
+      setPaidSocialCard(nextIndex);
+    }, 5000);
+  }
+  
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+  
+  // Start auto-play
+  startAutoPlay();
+  
+  // Pause on hover
+  const paidSocialSection = document.querySelector('.paid-social-container');
+  if (paidSocialSection) {
+    paidSocialSection.addEventListener('mouseenter', stopAutoPlay);
+    paidSocialSection.addEventListener('mouseleave', startAutoPlay);
+  }
+}
 
