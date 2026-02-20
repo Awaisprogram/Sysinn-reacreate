@@ -1023,6 +1023,9 @@
   .rounded-\[8px\] {
     border-radius: 8px;
   }
+  .rounded-\[20px\] {
+    border-radius: 20px;
+  }
   .rounded-\[22px\] {
     border-radius: 22px;
   }
@@ -2914,7 +2917,7 @@ button, .btn, [class*="button-"] {
   opacity: 1;
 }
 .hero-bg {
-  background: linear-gradient(to bottom, #D0E2FF 0%, #DCEAFF 15%, #E8F2FF 40%, #F5F9FF 70%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, #D0E2FF 0%, #DCEAFF 10%, #E8F2FF 40%, #F5F9FF 70%, #FFFFFF 100%);
 }
 .card-bg {
   background: linear-gradient(135deg, #f0f7ff 0%, #fafbff 50%, #ffffff 100%);
