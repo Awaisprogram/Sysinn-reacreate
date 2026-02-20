@@ -146,18 +146,11 @@ button, .btn, [class*="button-"] {
 
 /* Logo animator */
 
-@layer utilities {
-
-  @keyframes floatUp {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-25px); }
-    100% { transform: translateY(0px); }
+@layer utilities{
+  @keyframes moveUp{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-50%); }
   }
-
-  .logo-float {
-    animation: floatUp 7s ease-in-out infinite;
-  }
-
 }
 
 /* Testonomial swiper */
