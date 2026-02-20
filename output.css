@@ -1823,6 +1823,21 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  .\[animation-delay\:1s\] {
+    animation-delay: 1s;
+  }
+  .\[animation-delay\:2s\] {
+    animation-delay: 2s;
+  }
+  .\[animation-delay\:3s\] {
+    animation-delay: 3s;
+  }
+  .\[animation-delay\:4s\] {
+    animation-delay: 4s;
+  }
+  .\[animation-delay\:5s\] {
+    animation-delay: 5s;
+  }
   .group-hover\:pointer-events-auto {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -2937,29 +2952,21 @@ button, .btn, [class*="button-"] {
 .btn-soft-shadow {
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
 }
-@keyframes slowFloatingUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
+@layer utilities {
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
-  10% {
-    opacity: 1;
+  .logo-float {
+    animation: floatUp 7s ease-in-out infinite;
   }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-.logo-animate {
-  animation: slowFloatingUp 4s ease-in-out infinite alternate;
-  opacity: 0;
-}
-.logo-animate:nth-child(odd) {
-  animation-duration: 5s;
-  animation-delay: 0.2s;
 }
 .swiper-button-prev::after, .swiper-button-next::after {
   content: '' !important;

@@ -146,34 +146,20 @@ button, .btn, [class*="button-"] {
 
 /* Logo animator */
 
-@keyframes slowFloatingUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
+@layer utilities {
+
+  @keyframes floatUp {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-25px); }
+    100% { transform: translateY(0px); }
   }
-  10% {
-    opacity: 1;
+
+  .logo-float {
+    animation: floatUp 7s ease-in-out infinite;
   }
-  50% {
-    transform: translateY(-10px); /* Moves slightly above original position */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+
 }
 
-/* The class that handles the continuous slow movement */
-.logo-animate {
-  animation: slowFloatingUp 4s ease-in-out infinite alternate;
-  opacity: 0; /* Ensures they don't flash before animation starts */
-}
-
-/* To prevent them from moving all at the same time (looks more natural) */
-.logo-animate:nth-child(odd) {
-  animation-duration: 5s;
-  animation-delay: 0.2s;
-}
 /* Testonomial swiper */
 
 .swiper-button-prev::after, .swiper-button-next::after {
