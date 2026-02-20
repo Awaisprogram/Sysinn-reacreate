@@ -422,22 +422,22 @@ const paidSocialCards = [
   {
     id: 2,
     title: "Conversion Rate Opetimization (CRO)",
-    description: "Capture high-intent traffic at the exact moment buyers are searching. Our SEM campaigns optimize for quality score, ad copy relevance, and landing page experience to maximize your ROI and reduce cost per acquisition.",
+    description: "More traffic alone won't increase revenue. CRO turns existing visitors into leads and sales by optimizing messaging, UX, and the user journey from click to conversion. With targeted improvements, we help you get the most value from every visitor, boosting conversions and maximizing ROI",
     image: "/images/paid2.png",
     buttonText: "View Services"
   },
   {
     id: 3,
     title: "Conversion First Opetimization",
-    description: "Content that establishes your brand as an industry thought leader. We create SEO-optimized content strategies that attract organic traffic, build topical authority, and nurture prospects through the entire buyer's journey.",
-    image: "/images/paid.png",
+    description: "We create content that performs, ranking, persuading, and converting. From ad landing pages to SEO clusters and product pages, each piece is designed to see to take action, driving measurable engagement, generating qualified leads, and increasing sales for your business",
+    image: "/images/paid3.png",
     buttonText: "Our Approach"
   },
   {
     id: 4,
     title: "Responsive First Web Marketing",
-    description: "Make data-driven decisions with comprehensive analytics setup and reporting. We implement proper tracking, create custom dashboards, and provide actionable insights that help you optimize marketing spend and improve outcomes.",
-    image: "/images/paid.png",
+    description: "We build websites as growth engines: fast, scalable, and conversion-focused. From marketing sites to complex web apps and e-commerce platforms, our development prioritizes speed, usability, SEO readiness, and measurable conversion paths turning visits into revenue without limiting future flexibility.",
+    image: "/images/paid4.png",
     buttonText: "See How It Works"
   }
 ];
