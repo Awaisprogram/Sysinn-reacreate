@@ -1119,10 +1119,13 @@
   .border-blue-100 {
     border-color: var(--color-blue-100);
   }
-  .border-blue-100\/50 {
-    border-color: color-mix(in srgb, oklch(93.2% 0.032 255.585) 50%, transparent);
+  .border-blue-200 {
+    border-color: var(--color-blue-200);
+  }
+  .border-blue-200\/50 {
+    border-color: color-mix(in srgb, oklch(88.2% 0.059 254.128) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-blue-100) 50%, transparent);
+      border-color: color-mix(in oklab, var(--color-blue-200) 50%, transparent);
     }
   }
   .border-gray-100 {
@@ -2586,11 +2589,6 @@
   .lg\:mb-24 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 24);
-    }
-  }
-  .lg\:ml-auto {
-    @media (width >= 64rem) {
-      margin-left: auto;
     }
   }
   .lg\:block {
