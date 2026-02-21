@@ -538,3 +538,94 @@ function initPaidSocialCarousel() {
   }
 }
 
+// Slider
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const wrap = document.getElementById("splitWrap");
+  const bar = document.getElementById("dragBar");
+  const mask = document.getElementById("leftMask");
+  
+  const problems = document.getElementById("problemsCol");
+  const solutions = document.getElementById("solutionsCol");
+  
+  if(!wrap || !bar || !mask) return;
+  
+  let dragging=false;
+  
+  
+  // START DRAG
+  bar.addEventListener("mousedown",()=>dragging=true);
+  window.addEventListener("mouseup",()=>dragging=false);
+  
+  
+  // MOVE
+  window.addEventListener("mousemove",(e)=>{
+  
+   if(!dragging) return;
+  
+   const rect = wrap.getBoundingClientRect();
+   let x = e.clientX - rect.left;
+  
+   if(x<0) x=0;
+   if(x>rect.width) x=rect.width;
+  
+   const percent = x/rect.width*100;
+  
+   bar.style.left = percent+"%";
+   mask.style.width = percent+"%";
+  
+   // ⭐ TEXT LOGIC HERE
+   if(percent < 45){
+     problems.style.opacity="1";
+     solutions.style.opacity="0.25";
+   }
+   else if(percent > 55){
+     problems.style.opacity="0.25";
+     solutions.style.opacity="1";
+   }
+   else{
+     problems.style.opacity="1";
+     solutions.style.opacity="1";
+   }
+  
+  });
+  
+  
+  // TOUCH SUPPORT
+  
+  bar.addEventListener("touchstart",()=>dragging=true);
+  window.addEventListener("touchend",()=>dragging=false);
+  
+  window.addEventListener("touchmove",(e)=>{
+  
+   if(!dragging) return;
+  
+   const rect = wrap.getBoundingClientRect();
+   let x = e.touches[0].clientX - rect.left;
+  
+   if(x<0) x=0;
+   if(x>rect.width) x=rect.width;
+  
+   const percent = x/rect.width*100;
+  
+   bar.style.left = percent+"%";
+   mask.style.width = percent+"%";
+  
+   if(percent < 45){
+     problems.style.opacity="1";
+     solutions.style.opacity="0.25";
+   }
+   else if(percent > 55){
+     problems.style.opacity="0.25";
+     solutions.style.opacity="1";
+   }
+   else{
+     problems.style.opacity="1";
+     solutions.style.opacity="1";
+   }
+  
+  });
+  
+  });

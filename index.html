@@ -1501,7 +1501,7 @@
     <!-- ========================================
          COMMON PROBLEMS WE FIX SECTION 
          ======================================== -->
-         <section id="problems" class=" py-20 font-inter">
+         <section id="problems" class="py-20 font-inter">
           <div class="max-w-7xl mx-auto px-6 lg:px-8">
         
             <!-- Header Row -->
@@ -1517,7 +1517,7 @@
                 </p>
               </div>
         
-<div>
+              <div>
                 <button class="button-primary hover:bg-blue-800 text-white text-sm font-semibold px-6 py-3 rounded-md shadow-md transition cursor-pointer">
                   Book a Strategy Call
                 </button>
@@ -1529,7 +1529,7 @@
             <div class="grid lg:grid-cols-3 gap-12 items-center">
         
               <!-- LEFT SIDE - Problems -->
-              <div class="space-y-12">
+              <div id="problemsCol" class="space-y-8 transition duration-500">
         
                 <div class="flex gap-4">
                   <span class="text-gray-400 mt-1">✕</span>
@@ -1583,17 +1583,47 @@
         
               </div>
         
-              <!-- CENTER IMAGE -->
+              <!-- CENTER SPLIT DRAG IMAGE -->
               <div class="flex justify-center">
-                <img 
-                  src="/images/funnel.svg" 
-                  alt="Marketing Funnel Illustration"
-                  class="max-w-xs md:max-w-sm lg:max-w-md w-full object-contain"
-                />
-              </div>
+
+                <div id="splitWrap"
+                class="relative w-full max-w-md h-[360px] select-none">
+                
+                    <!-- RIGHT IMAGE (COLOR) -->
+                    <img src="/images/funnel.svg"
+                    class="absolute inset-0 w-full h-full object-contain pointer-events-none">
+                
+                    <!-- LEFT IMAGE (GREY) -->
+                    <div id="leftMask"
+                    class="absolute inset-0 overflow-hidden pointer-events-none"
+                    style="width:50%">
+                
+                        <img src="/images/funnel-gray.png"
+                        class="absolute inset-0 w-full h-full object-contain">
+                
+                    </div>
+                
+                    <!-- CENTER BAR -->
+                    <div id="dragBar"
+                    class="absolute top-0 bottom-0 w-[3px] bg-gray-700 cursor-ew-resize"
+                    style="left:50%">
+                
+                        <!-- CIRCLE HANDLE -->
+                        <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
+                        w-10 h-10 bg-white border shadow-lg rounded-full flex items-center justify-center">
+                
+                            <div class="w-4 h-4 border-l-2 border-r-2 border-gray-500"></div>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+                
+                </div>
         
               <!-- RIGHT SIDE - Solutions -->
-              <div class="space-y-12">
+              <div id="solutionsCol" class="space-y-8 transition duration-500 opacity-40">
         
                 <div class="flex gap-4">
                   <span class="text-primary mt-1">✓</span>
