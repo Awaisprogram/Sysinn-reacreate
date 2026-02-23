@@ -212,3 +212,17 @@ button, .btn, [class*="button-"] {
 .toc-link.active span {
   background-color: #366DC2 !important;
 }
+
+/* logos */
+
+.logoCard{
+  @apply bg-gray-100 rounded-lg 
+  flex items-center justify-center
+  p-3 sm:p-4
+  h-[56px]  lg:h-[72px]
+  transition duration-300;
+}
+
+.logoCard img{
+  @apply max-h-full max-w-[85%] object-contain;
+}
