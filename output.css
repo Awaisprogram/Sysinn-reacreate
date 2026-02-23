@@ -1,4 +1,4 @@
-/*! tailwindcss v4.2.0 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -282,9 +282,6 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
-  .start {
-    inset-inline-start: var(--spacing);
-  }
   .-top-3 {
     top: calc(var(--spacing) * -3);
   }
@@ -295,7 +292,7 @@
     top: calc(var(--spacing) * 0);
   }
   .top-1\/2 {
-    top: calc(1 / 2 * 100%);
+    top: calc(1/2 * 100%);
   }
   .top-6 {
     top: calc(var(--spacing) * 6);
@@ -370,7 +367,7 @@
     left: calc(var(--spacing) * 0);
   }
   .left-1\/2 {
-    left: calc(1 / 2 * 100%);
+    left: calc(1/2 * 100%);
   }
   .left-4 {
     left: calc(var(--spacing) * 4);
@@ -811,11 +808,11 @@
     flex-grow: 1;
   }
   .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-rotate-1 {
@@ -1847,6 +1844,16 @@
       }
     }
   }
+  .group-hover\:scale-110 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .group-hover\:-rotate-3 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1934,13 +1941,13 @@
   .after\:top-1\/2 {
     &::after {
       content: var(--tw-content);
-      top: calc(1 / 2 * 100%);
+      top: calc(1/2 * 100%);
     }
   }
   .after\:left-1\/2 {
     &::after {
       content: var(--tw-content);
-      left: calc(1 / 2 * 100%);
+      left: calc(1/2 * 100%);
     }
   }
   .after\:hidden {
@@ -1964,14 +1971,14 @@
   .after\:-translate-x-1\/2 {
     &::after {
       content: var(--tw-content);
-      --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+      --tw-translate-x: calc(calc(1/2 * 100%) * -1);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .after\:-translate-y-1\/2 {
     &::after {
       content: var(--tw-content);
-      --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
@@ -2593,7 +2600,7 @@
   }
   .lg\:w-1\/2 {
     @media (width >= 64rem) {
-      width: calc(1 / 2 * 100%);
+      width: calc(1/2 * 100%);
     }
   }
   .lg\:max-w-\[400px\] {
@@ -3205,11 +3212,6 @@ button, .btn, [class*="button-"] {
   syntax: "*";
   inherits: false;
 }
-@property --tw-content {
-  syntax: "*";
-  initial-value: "";
-  inherits: false;
-}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -3224,6 +3226,11 @@ button, .btn, [class*="button-"] {
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
@@ -3281,10 +3288,10 @@ button, .btn, [class*="button-"] {
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
-      --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-content: "";
     }
   }
 }
