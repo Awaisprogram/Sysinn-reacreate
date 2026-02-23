@@ -554,78 +554,96 @@ document.addEventListener("DOMContentLoaded", function(){
   
   let dragging=false;
   
+  // Function to update bar position based on mouse/touch position
+  function updateBarPosition(clientX) {
+    const rect = wrap.getBoundingClientRect();
+    let x = clientX - rect.left;
+    
+    if(x < 0) x = 0;
+    if(x > rect.width) x = rect.width;
+    
+    const percent = x / rect.width * 100;
+    
+    bar.style.left = percent + "%";
+    mask.style.width = percent + "%";
+    
+    // TEXT LOGIC - opacity depends on bar position
+    if(percent < 45){
+      problems.style.opacity = "1";
+      solutions.style.opacity = "0";
+    }
+    else if(percent > 55){
+      problems.style.opacity = "0";
+      solutions.style.opacity = "1";
+    }
+    else{
+      problems.style.opacity = "1";
+      solutions.style.opacity = "1";
+    }
+  }
   
-  // START DRAG
-  bar.addEventListener("mousedown",()=>dragging=true);
-  window.addEventListener("mouseup",()=>dragging=false);
+  // START DRAG - from bar
+  bar.addEventListener("mousedown", (e) => {
+    dragging = true;
+    e.preventDefault();
+  });
+  
+  // START DRAG - from text areas (problems and solutions columns)
+  if(problems) {
+    problems.addEventListener("mousedown", (e) => {
+      dragging = true;
+      updateBarPosition(e.clientX);
+    });
+  }
+  
+  if(solutions) {
+    solutions.addEventListener("mousedown", (e) => {
+      dragging = true;
+      updateBarPosition(e.clientX);
+    });
+  }
+  
+  // STOP DRAG
+  window.addEventListener("mouseup", () => dragging = false);
   
   
-  // MOVE
-  window.addEventListener("mousemove",(e)=>{
-  
-   if(!dragging) return;
-  
-   const rect = wrap.getBoundingClientRect();
-   let x = e.clientX - rect.left;
-  
-   if(x<0) x=0;
-   if(x>rect.width) x=rect.width;
-  
-   const percent = x/rect.width*100;
-  
-   bar.style.left = percent+"%";
-   mask.style.width = percent+"%";
-  
-   // ⭐ TEXT LOGIC HERE
-   if(percent < 45){
-     problems.style.opacity="1";
-     solutions.style.opacity="0.25";
-   }
-   else if(percent > 55){
-     problems.style.opacity="0.25";
-     solutions.style.opacity="1";
-   }
-   else{
-     problems.style.opacity="1";
-     solutions.style.opacity="1";
-   }
-  
+  // MOVE - for mouse drag
+  window.addEventListener("mousemove", (e) => {
+    if(!dragging) return;
+    updateBarPosition(e.clientX);
   });
   
   
   // TOUCH SUPPORT
   
-  bar.addEventListener("touchstart",()=>dragging=true);
-  window.addEventListener("touchend",()=>dragging=false);
+  // START DRAG - from bar
+  bar.addEventListener("touchstart", (e) => {
+    dragging = true;
+    e.preventDefault();
+  });
   
-  window.addEventListener("touchmove",(e)=>{
+  // START DRAG - from text areas (touch)
+  if(problems) {
+    problems.addEventListener("touchstart", (e) => {
+      dragging = true;
+      updateBarPosition(e.touches[0].clientX);
+    });
+  }
   
-   if(!dragging) return;
+  if(solutions) {
+    solutions.addEventListener("touchstart", (e) => {
+      dragging = true;
+      updateBarPosition(e.touches[0].clientX);
+    });
+  }
   
-   const rect = wrap.getBoundingClientRect();
-   let x = e.touches[0].clientX - rect.left;
+  // STOP DRAG - touch
+  window.addEventListener("touchend", () => dragging = false);
   
-   if(x<0) x=0;
-   if(x>rect.width) x=rect.width;
-  
-   const percent = x/rect.width*100;
-  
-   bar.style.left = percent+"%";
-   mask.style.width = percent+"%";
-  
-   if(percent < 45){
-     problems.style.opacity="1";
-     solutions.style.opacity="0.25";
-   }
-   else if(percent > 55){
-     problems.style.opacity="0.25";
-     solutions.style.opacity="1";
-   }
-   else{
-     problems.style.opacity="1";
-     solutions.style.opacity="1";
-   }
-  
+  // MOVE - for touch drag
+  window.addEventListener("touchmove", (e) => {
+    if(!dragging) return;
+    updateBarPosition(e.touches[0].clientX);
   });
   
   });

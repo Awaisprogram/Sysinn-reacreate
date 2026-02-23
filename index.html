@@ -1605,16 +1605,14 @@
                 
                     <!-- CENTER BAR -->
                     <div id="dragBar"
-                    class="absolute top-0 bottom-0 w-[3px] bg-gray-700 cursor-ew-resize"
+                    class="absolute top-0 bottom-0 cursor-ew-resize"
                     style="left:50%">
                 
-                        <!-- CIRCLE HANDLE -->
-                        <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
-                        w-10 h-10 bg-white border shadow-lg rounded-full flex items-center justify-center">
-                
-                            <div class="w-4 h-4 border-l-2 border-r-2 border-gray-500"></div>
-                
-                        </div>
+                        <!-- BAR SVG HANDLE -->
+                        <img src="/images/bar.svg" 
+                        alt="Drag Handle"
+                        class="w-6 h-auto max-h-full object-contain pointer-events-none"
+                        style="transform: translateX(-50%);">
                 
                     </div>
                 

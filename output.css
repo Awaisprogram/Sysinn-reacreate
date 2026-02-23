@@ -450,9 +450,6 @@
       max-width: 96rem;
     }
   }
-  .m-2 {
-    margin: calc(var(--spacing) * 2);
-  }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
@@ -663,6 +660,9 @@
   .max-h-10 {
     max-height: calc(var(--spacing) * 10);
   }
+  .max-h-full {
+    max-height: 100%;
+  }
   .min-h-\[120px\] {
     min-height: 120px;
   }
@@ -738,9 +738,6 @@
   .w-96 {
     width: calc(var(--spacing) * 96);
   }
-  .w-\[3px\] {
-    width: 3px;
-  }
   .w-\[300px\] {
     width: 300px;
   }
@@ -779,9 +776,6 @@
   }
   .max-w-\[280px\] {
     max-width: 280px;
-  }
-  .max-w-\[400px\] {
-    max-width: 400px;
   }
   .max-w-\[1400px\] {
     max-width: 1400px;
@@ -1096,10 +1090,6 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
-  .border-r-2 {
-    border-right-style: var(--tw-border-style);
-    border-right-width: 2px;
-  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -1151,9 +1141,6 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
-  .border-gray-500 {
-    border-color: var(--color-gray-500);
-  }
   .border-gray-600 {
     border-color: var(--color-gray-600);
   }
@@ -1195,9 +1182,6 @@
   }
   .bg-\[\#0056b3\] {
     background-color: #0056b3;
-  }
-  .bg-\[\#2176ff\] {
-    background-color: #2176ff;
   }
   .bg-\[\#BFDBFE\] {
     background-color: #BFDBFE;
@@ -1259,9 +1243,6 @@
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
-  .bg-gray-700 {
-    background-color: var(--color-gray-700);
-  }
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -1294,9 +1275,6 @@
   }
   .object-right {
     object-position: right;
-  }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -2078,13 +2056,6 @@
       }
     }
   }
-  .hover\:border-blue-500 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-blue-500);
-      }
-    }
-  }
   .hover\:border-blue-600 {
     &:hover {
       @media (hover: hover) {
@@ -2413,11 +2384,6 @@
       grid-column: span 2 / span 2;
     }
   }
-  .md\:w-auto {
-    @media (width >= 48rem) {
-      width: auto;
-    }
-  }
   .md\:max-w-\[350px\] {
     @media (width >= 48rem) {
       max-width: 350px;
@@ -2451,11 +2417,6 @@
   .md\:items-start {
     @media (width >= 48rem) {
       align-items: flex-start;
-    }
-  }
-  .md\:justify-end {
-    @media (width >= 48rem) {
-      justify-content: flex-end;
     }
   }
   .md\:justify-start {
@@ -2492,11 +2453,6 @@
   .md\:p-16 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 16);
-    }
-  }
-  .md\:px-8 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 8);
     }
   }
   .md\:px-12 {
