@@ -644,6 +644,9 @@
   .h-\[2px\] {
     height: 2px;
   }
+  .h-\[280px\] {
+    height: 280px;
+  }
   .h-\[320px\] {
     height: 320px;
   }
@@ -844,8 +847,8 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .animate-\[moveUp_26s_linear_infinite\] {
-    animation: moveUp 26s linear infinite;
+  .animate-\[moveUp_13s_linear_infinite\] {
+    animation: moveUp 13s linear infinite;
   }
   .cursor-ew-resize {
     cursor: ew-resize;
