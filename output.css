@@ -479,9 +479,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -647,9 +644,6 @@
   .h-\[2px\] {
     height: 2px;
   }
-  .h-\[280px\] {
-    height: 280px;
-  }
   .h-\[320px\] {
     height: 320px;
   }
@@ -667,6 +661,9 @@
   }
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
+  }
+  .max-h-9 {
+    max-height: calc(var(--spacing) * 9);
   }
   .max-h-10 {
     max-height: calc(var(--spacing) * 10);
@@ -724,6 +721,9 @@
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
@@ -1317,9 +1317,6 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -1638,6 +1635,9 @@
   }
   .text-blue-600 {
     color: var(--color-blue-600);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
   }
   .text-gray-400 {
     color: var(--color-gray-400);
@@ -2355,11 +2355,6 @@
       max-width: 320px;
     }
   }
-  .sm\:max-w-\[400px\] {
-    @media (width >= 40rem) {
-      max-width: 400px;
-    }
-  }
   .sm\:max-w-\[420px\] {
     @media (width >= 40rem) {
       max-width: 420px;
@@ -2368,11 +2363,6 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
-    }
-  }
-  .sm\:gap-8 {
-    @media (width >= 40rem) {
-      gap: calc(var(--spacing) * 8);
     }
   }
   .sm\:px-4 {
