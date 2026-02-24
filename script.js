@@ -4,11 +4,27 @@ const mobileMenu = document.getElementById("mobile-menu");
 const menuIcon = document.getElementById("menu-icon");
 const closeIcon = document.getElementById("close-icon");
 
+// Ensure initial state is correct on page load
+function setInitialIconState() {
+    if (mobileMenu.classList.contains("open")) {
+        // If menu is open, show close icon
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+    } else {
+        // If menu is closed, show hamburger icon
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+    }
+}
+
+// Call on page load to set correct initial state
+setInitialIconState();
+
 menuBtn.addEventListener("click", () => {
   // Toggle the open class for animation
   mobileMenu.classList.toggle("open");
   
-  // Toggle Icons
+  // Toggle Icons based on open state
   if (mobileMenu.classList.contains("open")) {
       menuIcon.classList.add("hidden");
       closeIcon.classList.remove("hidden");
