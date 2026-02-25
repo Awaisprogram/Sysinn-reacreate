@@ -640,6 +640,9 @@
   .h-\[2px\] {
     height: 2px;
   }
+  .h-\[32px\] {
+    height: 32px;
+  }
   .h-\[280px\] {
     height: 280px;
   }
@@ -747,6 +750,9 @@
   }
   .w-96 {
     width: calc(var(--spacing) * 96);
+  }
+  .w-\[32px\] {
+    width: 32px;
   }
   .w-\[300px\] {
     width: 300px;
