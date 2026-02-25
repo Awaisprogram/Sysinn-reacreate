@@ -1491,6 +1491,10 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
@@ -1563,9 +1567,6 @@
   }
   .text-\[44px\] {
     font-size: 44px;
-  }
-  .text-\[50px\] {
-    font-size: 50px;
   }
   .leading-\[1\.1\] {
     --tw-leading: 1.1;
@@ -2611,6 +2612,11 @@
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
     }
   }
   .md\:text-\[52px\] {
