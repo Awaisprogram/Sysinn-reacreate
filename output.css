@@ -1452,8 +1452,8 @@
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
   }
-  .pl-12 {
-    padding-left: calc(var(--spacing) * 12);
+  .pl-10 {
+    padding-left: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
@@ -2349,6 +2349,11 @@
   .focus\:ring-blue-300 {
     &:focus {
       --tw-ring-color: var(--color-blue-300);
+    }
+  }
+  .focus\:ring-blue-400 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-400);
     }
   }
   .focus\:ring-blue-500 {
