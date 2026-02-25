@@ -271,6 +271,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Paid Social Dots
   initPaidSocialCarousel();
   
+  // Initialize Results Filter Buttons
+  initResultsFilter();
+  
   // Testimonial Swiper
   if (document.querySelector('.testimonialSwiper')) {
     new Swiper('.testimonialSwiper', {
@@ -413,6 +416,220 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => tocObserver.observe(section));
   }
 });
+
+// ========================================
+// Results Section - Filter Buttons Functionality
+// ========================================
+function initResultsFilter() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const swiperWrapper = document.querySelector('.mySwiper .swiper-wrapper');
+  
+  if (!filterButtons.length || !swiperWrapper) return;
+  
+  // Define case study data for each category
+  const caseStudies = {
+    'ppc': [
+      {
+        category: 'ppc',
+        title: 'High-Performance Google Ads Campaigns',
+        subtitle: 'PPC Services - Google Ads',
+        description: 'Scalable Lead Generation Through Paid Search',
+        stats: [
+          { icon: 'yellow', value: '65+ Leads', desc: 'Qualified lead generated per campaign.' },
+          { icon: 'purple', value: '118 Avg CPL', desc: 'Average Cost Per Lead.' },
+          { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
+          { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
+        ],
+        image: 'images/Google.png'
+      },
+      {
+        category: 'ppc',
+        title: 'High-Performance Google Ads Campaigns',
+        subtitle: 'PPC Services - Google Ads',
+        description: 'Scalable Lead Generation Through Paid Search',
+        stats: [
+          { icon: 'yellow', value: '65+ Leads', desc: 'Qualified lead generated per campaign.' },
+          { icon: 'purple', value: '118 Avg CPL', desc: 'Average Cost Per Lead.' },
+          { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
+          { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
+        ],
+        image: 'images/Google.png'
+      }
+    ],
+    'web-design': [
+      {
+        category: 'web-design',
+        title: 'Custom Web Design Solutions',
+        subtitle: 'Web Design & Development',
+        description: 'Conversion-Optimized Website Development',
+        stats: [
+          { icon: 'yellow', value: '45+ Projects', desc: 'Websites delivered successfully.' },
+          { icon: 'purple', value: '98% Satisfaction', desc: 'Client satisfaction rate.' },
+          { icon: 'blue', value: '3.2s Avg Load', desc: 'Page load time.' },
+          { icon: 'green', value: '4.8/5 Design', desc: 'Design quality rating.' }
+        ],
+        image: 'images/Google.png'
+      },
+      {
+        category: 'web-design',
+        title: 'E-commerce Web Development',
+        subtitle: 'Web Design & Development',
+        description: 'Scalable Online Store Solutions',
+        stats: [
+          { icon: 'yellow', value: '30+ Stores', desc: 'E-commerce websites built.' },
+          { icon: 'purple', value: '25% Conversion', desc: 'Average conversion rate.' },
+          { icon: 'blue', value: '2.1s Load Time', desc: 'Fast loading pages.' },
+          { icon: 'green', value: '150% Revenue', desc: 'Average revenue increase.' }
+        ],
+        image: 'images/Google.png'
+      }
+    ],
+    'seo': [
+      {
+        category: 'seo',
+        title: 'Comprehensive SEO Strategy',
+        subtitle: 'SEO Services',
+        description: 'Data-Driven Search Engine Optimization',
+        stats: [
+          { icon: 'yellow', value: '200+ Keywords', desc: 'Ranked in top 10.' },
+          { icon: 'purple', value: '180% Traffic', desc: 'Organic traffic increase.' },
+          { icon: 'blue', value: '5.5% CTR', desc: 'Average search CTR.' },
+          { icon: 'green', value: '75% Growth', desc: 'Year over year growth.' }
+        ],
+        image: 'images/Google.png'
+      },
+      {
+        category: 'seo',
+        title: 'Local SEO Excellence',
+        subtitle: 'SEO Services',
+        description: 'Dominate Local Search Results',
+        stats: [
+          { icon: 'yellow', value: '50+ Local', desc: 'Businesses ranked #1.' },
+          { icon: 'purple', value: '300% Calls', desc: 'Increase in phone calls.' },
+          { icon: 'blue', value: '4.9 Rating', desc: 'Average Google rating.' },
+          { icon: 'green', value: '85% Visible', desc: 'Map pack presence.' }
+        ],
+        image: 'images/Google.png'
+      }
+    ],
+    'ecommerce': [
+      {
+        category: 'ecommerce',
+        title: 'E-commerce Growth Strategy',
+        subtitle: 'Ecommerce',
+        description: 'Full-Funnel E-commerce Marketing',
+        stats: [
+          { icon: 'yellow', value: '$2M Revenue', desc: 'Generated for clients.' },
+          { icon: 'purple', value: '35% ROAS', desc: 'Return on ad spend.' },
+          { icon: 'blue', value: '12% CVR', desc: 'Conversion rate.' },
+          { icon: 'green', value: '5x Growth', desc: 'Average revenue multiplier.' }
+        ],
+        image: 'images/Google.png'
+      },
+      {
+        category: 'ecommerce',
+        title: 'Shopify Optimization',
+        subtitle: 'Ecommerce',
+        description: 'Maximize Your Shopify Store',
+        stats: [
+          { icon: 'yellow', value: '60+ Stores', desc: 'Optimized and launched.' },
+          { icon: 'purple', value: '40% Sales', desc: 'Average increase.' },
+          { icon: 'blue', value: '3s Load Time', desc: 'Page speed optimization.' },
+          { icon: 'green', value: '2.5x AOV', desc: 'Average order value growth.' }
+        ],
+        image: 'images/Google.png'
+      }
+    ]
+  };
+  
+  const iconColors = {
+    yellow: 'stat-icon-yellow',
+    purple: 'stat-icon-purple',
+    blue: 'stat-icon-blue',
+    green: 'stat-icon-green'
+  };
+  
+  // Function to render slides based on category
+  function renderSlides(category) {
+    const studies = caseStudies[category] || caseStudies['ppc'];
+    
+    const slidesHTML = studies.map((study, index) => `
+      <div class="swiper-slide !w-[900px] max-w-[90vw]" data-category="${study.category}">
+        <div class="bg-white rounded-3xl border border-gray-200 p-6 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-xl transition-shadow duration-300">
+          <div class="lg:w-1/2 flex flex-col">
+            <div class="inline-block self-start bg-blue-50 text-primary text-xs font-bold px-4 py-1.5 rounded-full mb-4">
+              ${study.subtitle}
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">${study.title}</h3>
+            <p class="text-gray-500 mb-6">${study.description}</p>
+            <div class="bg-gray-50 rounded-2xl p-4 border border-gray-300 mt-auto">
+              <div class="rounded-xl overflow-hidden shadow-sm bg-white">
+                <img src="${study.image}" alt="Dashboard" class="w-full h-auto object-cover">
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
+            ${study.stats.map(stat => `
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-6 mt-1">
+                  <svg class="w-6 h-6 ${iconColors[stat.icon]}" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
+                </div>
+                <div>
+                  <div class="text-xl font-bold text-gray-900">${stat.value}</div>
+                  <p class="text-gray-500 text-sm mt-1">${stat.desc}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+    
+    swiperWrapper.innerHTML = slidesHTML;
+    
+    // Reinitialize swiper with new slides
+    if (window.mySwiperInstance) {
+      window.mySwiperInstance.destroy(true, true);
+    }
+    
+    // Create new swiper instance
+    window.mySwiperInstance = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: false,
+      loop: studies.length > 1,
+      speed: 800,
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 0 },
+        768: { slidesPerView: 1, spaceBetween: 0 },
+        1024: { slidesPerView: 1, spaceBetween: 0 }
+      }
+    });
+  }
+  
+  // Add click event to filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active styles from all buttons
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-[#0b4d9c]', 'text-white', 'shadow-md', 'font-semibold');
+        btn.classList.add('bg-gray-100', 'text-gray-600', 'font-medium');
+      });
+      
+      // Add active style to clicked button
+      this.classList.remove('bg-gray-100', 'text-gray-600', 'font-medium');
+      this.classList.add('bg-[#0b4d9c]', 'text-white', 'shadow-md', 'font-semibold');
+      
+      // Get category and render slides
+      const category = this.getAttribute('data-category');
+      renderSlides(category);
+    });
+  });
+}
 
 // Make setActive available globally for onclick handlers
 window.setActive = setActive;
