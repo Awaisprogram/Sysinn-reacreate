@@ -670,6 +670,9 @@
   .max-h-10 {
     max-height: calc(var(--spacing) * 10);
   }
+  .max-h-\[446px\] {
+    max-height: 446px;
+  }
   .max-h-full {
     max-height: 100%;
   }
@@ -1526,6 +1529,9 @@
   }
   .text-\[24px\] {
     font-size: 24px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
   }
   .text-\[34px\] {
     font-size: 34px;

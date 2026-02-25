@@ -440,7 +440,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
           { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       },
       {
         category: 'ppc',
@@ -453,7 +453,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
           { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       }
     ],
     'web-design': [
@@ -468,7 +468,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '3.2s Avg Load', desc: 'Page load time.' },
           { icon: 'green', value: '4.8/5 Design', desc: 'Design quality rating.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       },
       {
         category: 'web-design',
@@ -481,7 +481,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '2.1s Load Time', desc: 'Fast loading pages.' },
           { icon: 'green', value: '150% Revenue', desc: 'Average revenue increase.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       }
     ],
     'seo': [
@@ -496,11 +496,11 @@ function initResultsFilter() {
           { icon: 'blue', value: '5.5% CTR', desc: 'Average search CTR.' },
           { icon: 'green', value: '75% Growth', desc: 'Year over year growth.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       },
       {
         category: 'seo',
-        title: 'Local SEO Excellence',
+        title: 'Local SEO Higher Excellence',
         subtitle: 'SEO Services',
         description: 'Dominate Local Search Results',
         stats: [
@@ -509,7 +509,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '4.9 Rating', desc: 'Average Google rating.' },
           { icon: 'green', value: '85% Visible', desc: 'Map pack presence.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       }
     ],
     'ecommerce': [
@@ -524,11 +524,11 @@ function initResultsFilter() {
           { icon: 'blue', value: '12% CVR', desc: 'Conversion rate.' },
           { icon: 'green', value: '5x Growth', desc: 'Average revenue multiplier.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       },
       {
         category: 'ecommerce',
-        title: 'Shopify Optimization',
+        title: 'Shopify With High Optimization',
         subtitle: 'Ecommerce',
         description: 'Maximize Your Shopify Store',
         stats: [
@@ -537,7 +537,7 @@ function initResultsFilter() {
           { icon: 'blue', value: '3s Load Time', desc: 'Page speed optimization.' },
           { icon: 'green', value: '2.5x AOV', desc: 'Average order value growth.' }
         ],
-        image: 'images/Google.png'
+        image: 'images/slide1.webp'
       }
     ]
   };
@@ -555,17 +555,16 @@ function initResultsFilter() {
     
     const slidesHTML = studies.map((study, index) => `
       <div class="swiper-slide !w-[900px] max-w-[90vw]" data-category="${study.category}">
-        <div class="bg-white rounded-3xl border border-gray-200 p-6 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-xl transition-shadow duration-300">
-          <div class="lg:w-1/2 flex flex-col">
+        <div class="bg-white rounded-md border border-gray-200 p-6 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-xl transition-shadow duration-300">
+          <div class="lg:w-1/2 flex flex-col border border-gray-200 pt-4 px-4 rounded-md">
             <div class="inline-block self-start bg-blue-50 text-primary text-xs font-bold px-4 py-1.5 rounded-full mb-4">
               ${study.subtitle}
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">${study.title}</h3>
+            <h3 class="text-[28px] font-bold text-gray-900 mb-2">${study.title}</h3>
             <p class="text-gray-500 mb-6">${study.description}</p>
-            <div class="bg-gray-50 rounded-2xl p-4 border border-gray-300 mt-auto">
-              <div class="rounded-xl overflow-hidden shadow-sm bg-white">
-                <img src="${study.image}" alt="Dashboard" class="w-full h-auto object-cover">
-              </div>
+            
+              <div class="rounded-md overflow-hidden">
+                <img src="${study.image}" alt="Dashboard" class="w-full max-h-[446px] object-contain">
             </div>
           </div>
           <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
