@@ -557,11 +557,11 @@ function initResultsFilter() {
       <div class="swiper-slide !w-[900px] max-w-[90vw]" data-category="${study.category}">
         <div class="bg-white rounded-md border border-gray-200 p-6 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-xl transition-shadow duration-300">
           <div class="lg:w-1/2 flex flex-col border border-gray-200 pt-4 px-4 rounded-md">
-            <div class="inline-block self-start bg-blue-50 text-primary text-xs font-medium py-3 px-4 rounded-full mb-4">
+            <div class="inline-block self-start bg-blue-50 text-primary text-[15px] font-medium py-3 px-4 rounded-full mb-4">
               ${study.subtitle}
             </div>
             <h3 class="text-[28px] font-bold text-gray-900 mb-2">${study.title}</h3>
-            <p class="text-gray-500 mb-6">${study.description}</p>
+            <p class="text-gray-500 mb-6 text-[18px]">${study.description}</p>
             
               <div class="rounded-md overflow-hidden">
                 <img src="${study.image}" alt="Dashboard" class="w-full max-h-[446px] object-contain">
@@ -575,7 +575,7 @@ function initResultsFilter() {
                 </div>
                 <div>
                   <div class="text-xl font-bold text-gray-900">${stat.value}</div>
-                  <p class="text-gray-500 text-sm mt-1">${stat.desc}</p>
+                  <p class="text-gray-500 text-[18px] mt-1">${stat.desc}</p>
                 </div>
               </div>
             `).join('')}
