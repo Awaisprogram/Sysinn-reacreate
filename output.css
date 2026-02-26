@@ -799,6 +799,9 @@
   .max-w-\[280px\] {
     max-width: 280px;
   }
+  .max-w-\[1310px\] {
+    max-width: 1310px;
+  }
   .max-w-\[1320px\] {
     max-width: 1320px;
   }
@@ -1577,10 +1580,6 @@
   .leading-\[1\.7\] {
     --tw-leading: 1.7;
     line-height: 1.7;
-  }
-  .leading-\[4px\] {
-    --tw-leading: 4px;
-    line-height: 4px;
   }
   .leading-\[32px\] {
     --tw-leading: 32px;
