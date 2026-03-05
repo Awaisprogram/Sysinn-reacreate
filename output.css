@@ -643,6 +643,9 @@
   .h-\[32px\] {
     height: 32px;
   }
+  .h-\[60px\] {
+    height: 60px;
+  }
   .h-\[64px\] {
     height: 64px;
   }
@@ -666,6 +669,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
@@ -763,11 +769,17 @@
   .w-\[32px\] {
     width: 32px;
   }
+  .w-\[60px\] {
+    width: 60px;
+  }
   .w-\[64px\] {
     width: 64px;
   }
   .w-\[300px\] {
     width: 300px;
+  }
+  .w-\[320px\] {
+    width: 320px;
   }
   .w-auto {
     width: auto;
@@ -801,6 +813,12 @@
   }
   .max-w-\[280px\] {
     max-width: 280px;
+  }
+  .max-w-\[900px\] {
+    max-width: 900px;
+  }
+  .max-w-\[1260px\] {
+    max-width: 1260px;
   }
   .max-w-\[1310px\] {
     max-width: 1310px;
@@ -1263,9 +1281,6 @@
   .bg-\[\#eef6ff\] {
     background-color: #eef6ff;
   }
-  .bg-\[\#f8faff\] {
-    background-color: #f8faff;
-  }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
@@ -1416,6 +1431,9 @@
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -1457,6 +1475,9 @@
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
+  }
+  .pr-10 {
+    padding-right: calc(var(--spacing) * 10);
   }
   .\!pb-10 {
     padding-bottom: calc(var(--spacing) * 10) !important;
@@ -1571,9 +1592,6 @@
   .text-\[18px\] {
     font-size: 18px;
   }
-  .text-\[19px\] {
-    font-size: 19px;
-  }
   .text-\[20px\] {
     font-size: 20px;
   }
@@ -1583,8 +1601,14 @@
   .text-\[28px\] {
     font-size: 28px;
   }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
   .text-\[34px\] {
     font-size: 34px;
+  }
+  .text-\[36px\] {
+    font-size: 36px;
   }
   .text-\[42px\] {
     font-size: 42px;
@@ -1684,6 +1708,15 @@
   }
   .text-\[\#4b5563\] {
     color: #4b5563;
+  }
+  .text-\[\#5f6b7a\] {
+    color: #5f6b7a;
+  }
+  .text-\[\#6b7280\] {
+    color: #6b7280;
+  }
+  .text-\[\#0056b3\] {
+    color: #0056b3;
   }
   .text-\[\#333\] {
     color: #333;
@@ -1795,6 +1828,10 @@
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_4px_20px_rgba\(0\,0\,0\,0\.02\)\] {
+    --tw-shadow: 0 4px 20px var(--tw-shadow-color, rgba(0,0,0,0.02));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_4px_20px_rgba\(0\,0\,0\,0\.03\)\] {
@@ -2664,9 +2701,24 @@
       font-size: 20px;
     }
   }
+  .md\:text-\[24px\] {
+    @media (width >= 48rem) {
+      font-size: 24px;
+    }
+  }
+  .md\:text-\[28px\] {
+    @media (width >= 48rem) {
+      font-size: 28px;
+    }
+  }
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .md\:text-\[40px\] {
+    @media (width >= 48rem) {
+      font-size: 40px;
     }
   }
   .md\:text-\[50px\] {
@@ -2789,9 +2841,19 @@
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
   }
+  .lg\:grid-cols-\[230px_1fr_420px\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 230px 1fr 420px;
+    }
+  }
   .lg\:grid-cols-\[auto_1fr_1fr\] {
     @media (width >= 64rem) {
       grid-template-columns: auto 1fr 1fr;
+    }
+  }
+  .lg\:flex-col {
+    @media (width >= 64rem) {
+      flex-direction: column;
     }
   }
   .lg\:flex-row {
@@ -2862,6 +2924,12 @@
   .lg\:gap-24 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 24);
+    }
+  }
+  .lg\:border-b {
+    @media (width >= 64rem) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 1px;
     }
   }
   .lg\:p-0 {
@@ -2977,6 +3045,11 @@
   .lg\:text-\[42px\] {
     @media (width >= 64rem) {
       font-size: 42px;
+    }
+  }
+  .lg\:text-\[44px\] {
+    @media (width >= 64rem) {
+      font-size: 44px;
     }
   }
   .lg\:text-\[45px\] {
@@ -3189,6 +3262,10 @@ button, .btn, [class*="button-"] {
   max-height: 100%;
   max-width: 85%;
   object-fit: contain;
+}
+.active-tab {
+  color: #0056b3 !important;
+  border-left-color: #0056b3 !important;
 }
 @property --tw-translate-x {
   syntax: "*";

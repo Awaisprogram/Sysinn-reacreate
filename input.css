@@ -228,3 +228,11 @@ button, .btn, [class*="button-"] {
 .logoCard img{
   @apply max-h-full max-w-[85%] object-contain;
 }
+
+/* DIGITAL MARKETING */
+
+/* Custom active state for the vertical blue bar */
+.active-tab {
+  color: #0056b3 !important;
+  border-left-color: #0056b3 !important;
+}
