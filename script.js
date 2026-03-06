@@ -420,218 +420,37 @@ document.addEventListener('DOMContentLoaded', () => {
 // ========================================
 // Results Section - Filter Buttons Functionality
 // ========================================
-function initResultsFilter() {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const swiperWrapper = document.querySelector('.mySwiper .swiper-wrapper');
-  
-  if (!filterButtons.length || !swiperWrapper) return;
-  
-  // Define case study data for each category
-  const caseStudies = {
-    'ppc': [
-      {
-        category: 'ppc',
-        title: 'High-Performance Google Ads Campaigns',
-        subtitle: 'PPC Services - Google Ads',
-        description: 'Scalable Lead Generation Through Paid Search',
-        stats: [
-          { icon: 'yellow', value: '65+ Leads', desc: 'Qualified lead generated per campaign.' },
-          { icon: 'purple', value: '118 Avg CPL', desc: 'Average Cost Per Lead.' },
-          { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
-          { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
-        ],
-        image: 'images/slide1.webp'
-      },
-      {
-        category: 'ppc',
-        title: 'High-Performance Google Ads Campaigns',
-        subtitle: 'PPC Services - Google Ads',
-        description: 'Scalable Lead Generation Through Paid Search',
-        stats: [
-          { icon: 'yellow', value: '65+ Leads', desc: 'Qualified lead generated per campaign.' },
-          { icon: 'purple', value: '118 Avg CPL', desc: 'Average Cost Per Lead.' },
-          { icon: 'blue', value: '7.2% CTR', desc: 'Click Through Rate.' },
-          { icon: 'green', value: '0.72 Avg CPC', desc: 'Average Cost Per Click.' }
-        ],
-        image: 'images/slide1.webp'
-      }
-    ],
-    'web-design': [
-      {
-        category: 'web-design',
-        title: 'Custom Web Design Solutions',
-        subtitle: 'Web Design & Development',
-        description: 'Conversion-Optimized Website Development',
-        stats: [
-          { icon: 'yellow', value: '45+ Projects', desc: 'Websites delivered successfully.' },
-          { icon: 'purple', value: '98% Satisfaction', desc: 'Client satisfaction rate.' },
-          { icon: 'blue', value: '3.2s Avg Load', desc: 'Page load time.' },
-          { icon: 'green', value: '4.8/5 Design', desc: 'Design quality rating.' }
-        ],
-        image: 'images/slide1.webp'
-      },
-      {
-        category: 'web-design',
-        title: 'E-commerce Web Development',
-        subtitle: 'Web Design & Development',
-        description: 'Scalable Online Store Solutions',
-        stats: [
-          { icon: 'yellow', value: '30+ Stores', desc: 'E-commerce websites built.' },
-          { icon: 'purple', value: '25% Conversion', desc: 'Average conversion rate.' },
-          { icon: 'blue', value: '2.1s Load Time', desc: 'Fast loading pages.' },
-          { icon: 'green', value: '150% Revenue', desc: 'Average revenue increase.' }
-        ],
-        image: 'images/slide1.webp'
-      }
-    ],
-    'seo': [
-      {
-        category: 'seo',
-        title: 'Comprehensive SEO Strategy',
-        subtitle: 'SEO Services',
-        description: 'Data-Driven Search Engine Optimization',
-        stats: [
-          { icon: 'yellow', value: '200+ Keywords', desc: 'Ranked in top 10.' },
-          { icon: 'purple', value: '180% Traffic', desc: 'Organic traffic increase.' },
-          { icon: 'blue', value: '5.5% CTR', desc: 'Average search CTR.' },
-          { icon: 'green', value: '75% Growth', desc: 'Year over year growth.' }
-        ],
-        image: 'images/slide1.webp'
-      },
-      {
-        category: 'seo',
-        title: 'Local SEO Higher Excellence',
-        subtitle: 'SEO Services',
-        description: 'Dominate Local Search Results',
-        stats: [
-          { icon: 'yellow', value: '50+ Local', desc: 'Businesses ranked #1.' },
-          { icon: 'purple', value: '300% Calls', desc: 'Increase in phone calls.' },
-          { icon: 'blue', value: '4.9 Rating', desc: 'Average Google rating.' },
-          { icon: 'green', value: '85% Visible', desc: 'Map pack presence.' }
-        ],
-        image: 'images/slide1.webp'
-      }
-    ],
-    'ecommerce': [
-      {
-        category: 'ecommerce',
-        title: 'E-commerce Growth Strategy',
-        subtitle: 'Ecommerce',
-        description: 'Full-Funnel E-commerce Marketing',
-        stats: [
-          { icon: 'yellow', value: '$2M Revenue', desc: 'Generated for clients.' },
-          { icon: 'purple', value: '35% ROAS', desc: 'Return on ad spend.' },
-          { icon: 'blue', value: '12% CVR', desc: 'Conversion rate.' },
-          { icon: 'green', value: '5x Growth', desc: 'Average revenue multiplier.' }
-        ],
-        image: 'images/slide1.webp'
-      },
-      {
-        category: 'ecommerce',
-        title: 'Shopify With High Optimization',
-        subtitle: 'Ecommerce',
-        description: 'Maximize Your Shopify Store',
-        stats: [
-          { icon: 'yellow', value: '60+ Stores', desc: 'Optimized and launched.' },
-          { icon: 'purple', value: '40% Sales', desc: 'Average increase.' },
-          { icon: 'blue', value: '3s Load Time', desc: 'Page speed optimization.' },
-          { icon: 'green', value: '2.5x AOV', desc: 'Average order value growth.' }
-        ],
-        image: 'images/slide1.webp'
-      }
-    ]
-  };
-  
-  const iconColors = {
-    yellow: 'stat-icon-yellow',
-    purple: 'stat-icon-purple',
-    blue: 'stat-icon-blue',
-    green: 'stat-icon-green'
-  };
-  
-  // Function to render slides based on category
-  function renderSlides(category) {
-    const studies = caseStudies[category] || caseStudies['ppc'];
-    
-    const slidesHTML = studies.map((study, index) => `
-      <div class="swiper-slide !w-[900px] max-w-[90vw]" data-category="${study.category}">
-        <div class="bg-white rounded-xl border border-gray-200 p-6 flex flex-col lg:flex-row gap-8 lg:gap-12 hover:shadow-xl transition-shadow duration-300">
-          <div class="lg:w-1/2 flex flex-col border border-gray-200 pt-4 px-4 rounded-xl">
-            <div class="inline-block self-start bg-blue-50 text-primary text-[15px] font-medium py-3 px-4 rounded-full mb-4">
-              ${study.subtitle}
-            </div>
-            <h3 class="text-[28px] font-bold text-gray-900 mb-2">${study.title}</h3>
-            <p class="text-gray-500 mb-6 text-[18px]">${study.description}</p>
-            
-              <div class="rounded-md overflow-hidden">
-                <img src="${study.image}" alt="Dashboard" class="w-full max-h-[446px] object-contain">
-            </div>
-          </div>
-          <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
-            ${study.stats.map(stat => `
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-6 mt-1">
-                  <svg class="w-6 h-6 ${iconColors[stat.icon]}" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
-                </div>
-                <div>
-                  <div class="text-xl font-bold text-gray-900">${stat.value}</div>
-                  <p class="text-gray-500 text-[18px] mt-1">${stat.desc}</p>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    `).join('');
-    
-    swiperWrapper.innerHTML = slidesHTML;
-    
-    // Reinitialize swiper with new slides
-    if (window.mySwiperInstance) {
-      window.mySwiperInstance.destroy(true, true);
-    }
-    
-    // Create new swiper instance
-    window.mySwiperInstance = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      centeredSlides: false,
-      loop: studies.length > 1,
-      speed: 800,
-      navigation: {
-        nextEl: ".swiper-button-next-custom",
-        prevEl: ".swiper-button-prev-custom",
-      },
-      breakpoints: {
-        320: { slidesPerView: 1, spaceBetween: 0 },
-        768: { slidesPerView: 1, spaceBetween: 0 },
-        1024: { slidesPerView: 1, spaceBetween: 0 }
+(function () {
+  const track = document.getElementById('cs-track');
+  const slides = document.querySelectorAll('.cs-slide');
+  const dots = document.querySelectorAll('.cs-dot');
+  const prevBtn = document.getElementById('cs-prev');
+  const nextBtn = document.getElementById('cs-next');
+  const total = slides.length;
+  let current = 0;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    dots.forEach((dot, i) => {
+      if (i === current) {
+        dot.classList.add('bg-[#0b4d9c]', 'w-3', 'h-3');
+        dot.classList.remove('bg-gray-300', 'w-2.5', 'h-2.5');
+      } else {
+        dot.classList.remove('bg-[#0b4d9c]', 'w-3', 'h-3');
+        dot.classList.add('bg-gray-300', 'w-2.5', 'h-2.5');
       }
     });
   }
-  
-  // Add click event to filter buttons
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active styles from all buttons
-      filterButtons.forEach(btn => {
-        btn.classList.remove('bg-[#0b4d9c]', 'text-white', 'shadow-md', 'font-semibold');
-        btn.classList.add('bg-gray-100', 'text-gray-600', 'font-medium');
-      });
-      
-      // Add active style to clicked button
-      this.classList.remove('bg-gray-100', 'text-gray-600', 'font-medium');
-      this.classList.add('bg-[#0b4d9c]', 'text-white', 'shadow-md', 'font-semibold');
-      
-      // Get category and render slides
-      const category = this.getAttribute('data-category');
-      renderSlides(category);
-    });
-  });
-}
 
-// Make setActive available globally for onclick handlers
-window.setActive = setActive;
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.index)));
+
+  // Auto-advance every 5s
+  setInterval(() => goTo(current + 1), 5000);
+})();
 
 // ========================================
 // Paid Social Section - Card Data
