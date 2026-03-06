@@ -1320,7 +1320,7 @@
           <div class="grid lg:grid-cols-[400px_1fr] gap-8 items-center">
       
             <!-- LEFT: Image -->
-            <div class="w-full rounded-2xl overflow-hidden lg:h-[600px] h-64 md:h-80 lg:block hidden">
+            <div class="w-full rounded-2xl overflow-hidden lg:h-[679px] h-64 md:h-80 lg:block hidden">
               <img src="images/audit-card.svg" alt="Experience Real Results"
                    class="w-full h-full object-cover">
             </div>
@@ -1333,35 +1333,35 @@
                 <div class="grid sm:grid-cols-2 grid-cols-1 gap-4">
                   <div>
                     <input type="text" placeholder="First Name *"
-                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                   </div>
                   <div>
                     <input type="text" placeholder="Last Name"
-                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                   </div>
                 </div>
       
                 <!-- Row 2: Email -->
                 <div>
                   <input type="email" placeholder="Email Address *"
-                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                 </div>
       
                 <!-- Row 3: Company + Phone -->
                 <div class="grid sm:grid-cols-2 grid-cols-1 gap-4">
                   <div>
                     <input type="text" placeholder="Company Name"
-                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                   </div>
                   <div>
                     <input type="tel" placeholder="Phone No"
-                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                           class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                   </div>
                 </div>
       
                 <!-- Row 4: Select Service -->
                 <div class="relative">
-                  <select class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-400 appearance-none bg-white focus:outline-none focus:border-blue-400 transition-colors cursor-pointer">
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-400 appearance-none bg-white focus:outline-none focus:border-blue-400 transition-colors cursor-pointer">
                     <option value="" disabled selected>Select Your Service</option>
                     <option value="seo">SEO Services</option>
                     <option value="ppc">PPC / Google Ads</option>
@@ -1379,35 +1379,41 @@
                 <!-- Row 5: How did you find us -->
                 <div>
                   <input type="text" placeholder="How did you find us?"
-                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                 </div>
       
                 <!-- Row 6: How do you hear about Sysinn -->
                 <div>
                   <input type="text" placeholder="How do you hear about Sysinn? *"
-                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[14px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                         class="w-full border border-gray-300 rounded-lg px-4 py-4 text-[16px] md:text-[20px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
                 </div>
       
                 <!-- Row 7: Checkbox -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 py-5">
                   <div class="relative shrink-0">
-                    <input type="checkbox" id="agree" class="peer sr-only">
-                    <label for="agree"
-                           class="flex items-center justify-center w-5 h-5 border-2 border-blue-500 rounded cursor-pointer peer-checked:bg-blue-500 transition-colors">
-                      <svg class="w-3 h-3 text-white hidden peer-checked:block" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                      </svg>
-                    </label>
+                    <input 
+type="checkbox"
+class="w-7 h-7 appearance-none rounded border border-gray-300 bg-[#E7EEF7]
+checked:bg-primary checked:border-primary
+relative cursor-pointer
+after:content-[''] after:absolute after:hidden
+checked:after:block
+after:w-[7px] after:h-[14px]
+after:border-white after:border-r-[3px] after:border-b-[3px]
+after:left-1/2 after:top-1/2
+after:-translate-x-1/2 after:-translate-y-1/2
+after:rotate-45
+focus:ring-2 focus:ring-primary">
                   </div>
-                  <label for="agree" class="text-gray-500 text-[13px] cursor-pointer select-none">
+                  <label for="agree" class="text-gray-500 text-[16px] md:text-[20px] cursor-pointer select-none">
                     I agree to get updates and messages from Sysinn
                   </label>
                 </div>
       
                 <!-- Submit -->
-                <div class="flex justify-end mt-1">
+                <div class="flex justify-center mt-1">
                   <button type="submit"
-                          class="bg-[#0b4d9c] hover:bg-[#093d7a] text-white text-[14px] font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
+                          class="bg-[#0b4d9c] hover:bg-[#093d7a] text-white text-[18px] font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
                     Get My Free Proposal
                   </button>
                 </div>
@@ -1976,167 +1982,166 @@
     <!-- ========================================
          RESULTS CAN VERIFY SECTION 
          ======================================== -->
-        <!-- Explore Our Success Stories Section -->
-          <section id="results" class="py-16 bg-white overflow-hidden">
-  <div class="max-w-[1320px] mx-auto px-6 lg:px-8">
-
-    <!-- Header -->
-    <div class="text-center mb-12 max-w-3xl mx-auto">
-      <h2 class="text-4xl lg:text-[48px] font-bold text-gray-900 mb-4">Explore Our Success Stories</h2>
-      <p class="text-gray-500 text-[16px] md:text-[20px] leading-relaxed">
-        Sysinn transforms businesses with AI driven optimization and technical SEO expertise. Our
-        portfolio showcases real results, boosted organic traffic, higher conversions, and stronger
-        online visibility.
-      </p>
-    </div>
-
-    <!-- Slider wrapper with outside arrows -->
-    <div class="relative flex items-center gap-4">
-
-      <!-- Prev Arrow -->
-      <button id="cs-prev"
-        class="shrink-0 w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors shadow-sm z-10 text-center cursor-pointer">
-        <i class="fa-solid fa-arrow-left"></i>
-      </button>
-
-      <!-- Slides container -->
-      <div class="overflow-hidden w-full" id="cs-track-outer">
-        <div class="flex transition-transform duration-500 ease-in-out" id="cs-track">
-
-          <!-- Slide 1 -->
-          <div class="cs-slide shrink-0 w-full px-1">
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
-
-              <!-- Left: image area -->
-              <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
-                <!-- Device mockup image -->
-                <img src="images/psykiater.svg" alt="Website mockup"
-                     class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
-              </div>
-
-              <!-- Right: content -->
-              <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
-                <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
-                  Spesialist i Psykiatri
-                </h3>
-                <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
-                  For Specialit i Psykiater, we created a visually calming, SEO-friendly website designed
-                  to help individuals easily access and navigate mental health services online.
-                </p>
-
-                <!-- Stat -->
-                <div class="flex items-baseline gap-2">
-                  <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+205%</span>
-                  <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Appointment Bookings</span>
-                </div>
-
-                <!-- CTA -->
-                <div>
-                  <a href="#"
-                     class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
-                    Read Case Study
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
+         
+        <section id="results" class="py-16 bg-white overflow-hidden">
+          <div class="max-w-[1320px] mx-auto px-6 lg:px-8">
+        
+            <!-- Header -->
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+              <h2 class="text-4xl lg:text-[48px] font-bold text-gray-900 mb-4">Explore Our Success Stories</h2>
+              <p class="text-gray-500 text-[16px] md:text-[20px] leading-relaxed">
+                Sysinn transforms businesses with AI driven optimization and technical SEO expertise. Our
+                portfolio showcases real results, boosted organic traffic, higher conversions, and stronger
+                online visibility.
+              </p>
             </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="cs-slide shrink-0 w-full px-1">
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
-              <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
-                <!-- Device mockup image -->
-                <img src="images/psykiater.svg" alt="Website mockup"
-                     class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
-              </div>
-              <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
-                <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
-                  Ecommerce Growth Case
-                </h3>
-                <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
-                  We redesigned their full funnel — from landing pages to checkout — driving a significant
-                  increase in both organic traffic and paid conversion rates.
-                </p>
-                <div class="flex items-baseline gap-2">
-                  <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+312%</span>
-                  <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Monthly Revenue</span>
+        
+            <!-- Slider wrapper with outside arrows -->
+            <div class="relative flex items-center gap-4">
+        
+              <!-- Prev Arrow -->
+              <button id="cs-prev"
+                class="hidden lg:block shrink-0 w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors shadow-sm z-10 text-center cursor-pointer">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+        
+              <!-- Slides container -->
+              <div class="overflow-hidden w-full" id="cs-track-outer">
+                <div class="flex transition-transform duration-500 ease-in-out" id="cs-track">
+        
+                  <!-- Slide 1 -->
+                  <div class="cs-slide shrink-0 w-full px-1">
+                    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
+        
+                      <!-- Left: image area -->
+                      <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
+                        <!-- Device mockup image -->
+                        <img src="images/psykiater.svg" alt="Website mockup"
+                             class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
+                      </div>
+        
+                      <!-- Right: content -->
+                      <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
+                        <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
+                          Spesialist i Psykiatri
+                        </h3>
+                        <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
+                          For Specialit i Psykiater, we created a visually calming, SEO-friendly website designed
+                          to help individuals easily access and navigate mental health services online.
+                        </p>
+        
+                        <!-- Stat -->
+                        <div class="flex items-baseline gap-2">
+                          <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+205%</span>
+                          <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Appointment Bookings</span>
+                        </div>
+        
+                        <!-- CTA -->
+                        <div>
+                          <a href="#"
+                             class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+                            Read Case Study
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </a>
+                        </div>
+                      </div>
+        
+                    </div>
+                  </div>
+        
+                  <!-- Slide 2 -->
+                  <div class="cs-slide shrink-0 w-full px-1">
+                    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
+                      <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
+                        <!-- Device mockup image -->
+                        <img src="images/psykiater.svg" alt="Website mockup"
+                             class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
+                      </div>
+                      <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
+                        <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
+                          Ecommerce Growth Case
+                        </h3>
+                        <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
+                          We redesigned their full funnel — from landing pages to checkout — driving a significant
+                          increase in both organic traffic and paid conversion rates.
+                        </p>
+                        <div class="flex items-baseline gap-2">
+                          <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+312%</span>
+                          <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Monthly Revenue</span>
+                        </div>
+                        <div>
+                          <a href="#"
+                             class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+                            Read Case Study
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Slide 3 -->
+                  <div class="cs-slide shrink-0 w-full px-1">
+                    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
+                      <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
+                        <!-- Device mockup image -->
+                        <img src="images/psykiater.svg" alt="Website mockup"
+                             class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
+                      </div>
+                      <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
+                        <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
+                          Local SEO Domination
+                        </h3>
+                        <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
+                          Through targeted local SEO and Google Business Profile optimization, we helped this
+                          client dominate local search and triple their inbound calls within 90 days.
+                        </p>
+                        <div class="flex items-baseline gap-2">
+                          <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+180%</span>
+                          <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Local Search Visibility</span>
+                        </div>
+                        <div>
+                          <a href="#"
+                             class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+                             Read Case Study
+                             <i class="fa-solid fa-arrow-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
                 </div>
-                <div>
-                  <a href="#"
-                     class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
-                    Read Case Study
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
               </div>
+        
+              <!-- Next Arrow -->
+              <button id="cs-next"
+                class="hidden lg:block shrink-0 w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors shadow-sm z-10 cursor-pointer">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+        
             </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="cs-slide shrink-0 w-full px-1">
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col lg:flex-row overflow-hidden">
-              <div class="relative lg:w-[42%]  flex items-center justify-center  min-h-[329px]">
-                <!-- Device mockup image -->
-                <img src="images/psykiater.svg" alt="Website mockup"
-                     class="w-full max-w-[320px] aspect-2/2  object-contain drop-shadow-md">
+            <!-- end slider wrapper -->
+        
+            <!-- Dots + CTA -->
+            <div class="flex flex-col items-center gap-6 mt-8">
+        
+              <!-- Dots -->
+              <div class="flex items-center gap-2" id="cs-dots">
+                <span class="cs-dot w-3 h-3 rounded-full bg-[#0b4d9c] transition-all" data-index="0"></span>
+                <span class="cs-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all" data-index="1"></span>
+                <span class="cs-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all" data-index="2"></span>
               </div>
-              <div class="lg:w-[58%] p-8 lg:p-10 flex flex-col justify-center gap-5">
-                <h3 class="text-[22px] lg:text-[24px] font-extrabold text-gray-900 tracking-wide uppercase">
-                  Local SEO Domination
-                </h3>
-                <p class="text-gray-500 text-[16px] md:text-[20px] leading-[32px]">
-                  Through targeted local SEO and Google Business Profile optimization, we helped this
-                  client dominate local search and triple their inbound calls within 90 days.
-                </p>
-                <div class="flex items-baseline gap-2">
-                  <span class="text-[32px] lg:text-[36px] font-extrabold text-primary">+180%</span>
-                  <span class="text-gray-500 text-[13px] md:text-[14px]">Increase in Local Search Visibility</span>
-                </div>
-                <div>
-                  <a href="#"
-                     class="inline-flex text-[12px] md:text-[16px] items-center gap-2 border border-gray-300 hover:border-blue-400 text-primary hover:text-primary bg-[#ECF3FF] text-[13px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
-                     Read Case Study
-                     <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
+        
+              <!-- View All Button -->
+              <a href="#"
+                 class="inline-flex items-center gap-2 bg-[#0b4d9c] hover:bg-[#093d7a] text-white text-[14px] font-semibold px-7 py-3 rounded-lg transition-colors duration-200">
+                View All Case Studies
+              </a>
+        
             </div>
+        
           </div>
-
-        </div>
-      </div>
-
-      <!-- Next Arrow -->
-      <button id="cs-next"
-        class="shrink-0 w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors shadow-sm z-10 cursor-pointer">
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
-
-    </div>
-    <!-- end slider wrapper -->
-
-    <!-- Dots + CTA -->
-    <div class="flex flex-col items-center gap-6 mt-8">
-
-      <!-- Dots -->
-      <div class="flex items-center gap-2" id="cs-dots">
-        <span class="cs-dot w-3 h-3 rounded-full bg-[#0b4d9c] transition-all" data-index="0"></span>
-        <span class="cs-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all" data-index="1"></span>
-        <span class="cs-dot w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all" data-index="2"></span>
-      </div>
-
-      <!-- View All Button -->
-      <a href="#"
-         class="inline-flex items-center gap-2 bg-[#0b4d9c] hover:bg-[#093d7a] text-white text-[14px] font-semibold px-7 py-3 rounded-lg transition-colors duration-200">
-        View All Case Studies
-      </a>
-
-    </div>
-
-  </div>
-          </section>
         
 
     <!-- ========================================
@@ -2182,7 +2187,7 @@
         TESTONMIAL SECTION
          ======================================== -->
          <section class="py-24">
-          <div class="max-w-[1260px] mx-auto px-6">
+          <div class="max-w-[1320px] mx-auto px-6">
         
             <div class="text-center mb-16">
               <p class="text-primary text-[20px] md:text-[24px] font-semibold mb-2">
@@ -2352,13 +2357,13 @@
                   <img src="images/client1.svg" alt="Riktigregnskap" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
-                  <img src="images/clinet2.webp" alt="Kognitivterapeut" class="h-8 w-auto object-contain   transition-all">
+                  <img src="images/clinet2.png" alt="Kognitivterapeut" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
                   <img src="images/clinet3.svg" alt="Alderspsykiater" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
-                  <img src="images/client4.webp" alt="Muslimsk Psykiater" class="h-8 w-auto object-contain   transition-all">
+                  <img src="images/client4.png" alt="Muslimsk Psykiater" class="h-8 w-auto object-contain   transition-all">
                 </div>
         
                 <!-- Row 2 -->
@@ -2366,13 +2371,13 @@
                   <img src="images/client5.svg" alt="Barnesakkyndig" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
-                  <img src="images/client6.webp" alt="Seostrategi" class="h-8 w-auto object-contain   transition-all">
+                  <img src="images/client6.png" alt="Seostrategi" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
                   <img src="images/client7.svg" alt="Data Analytics" class="h-8 w-auto object-contain   transition-all">
                 </div>
                 <div class="bg-white rounded-2xl px-[16px] py-[46px] flex items-center justify-center shadow-sm">
-                  <img src="images/clinet8.webp" alt="Nettside Design" class="h-8 w-auto object-contain   transition-all">
+                  <img src="images/clinet8.png" alt="Nettside Design" class="h-8 w-auto object-contain   transition-all">
                 </div>
         
               </div>
@@ -2387,140 +2392,141 @@
          <section id="faq" class="bg-white py-16 font-inter">
           <div class="max-w-[1320px] mx-auto px-6 lg:px-8">
             
-            <div class="text-center mb-20">
-              <span class="text-primary font-bold text-sm uppercase tracking-[0.2em]">FAQ</span>
-              <h2 class="text-4xl lg:text-[45px] font-bold text-[#1a1f2e] mt-4">Frequently Asked Questions</h2>
+            <div class="text-center mb-16">
+              <p class="text-primary font-bold text-sm uppercase tracking-[0.2em] mb-4">FAQ</p>
+              <h2 class="text-4xl lg:text-[45px] font-bold text-[#1a1f2e]">Frequently Asked Questions</h2>
             </div>
         
-            <div class="grid lg:grid-cols-2 gap-x-20">
+            <div class="grid lg:grid-cols-2 gap-x-8 gap-y-4 items-stretch">
               
-              <div class="flex flex-col">
-<div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">How long does SEO take to work in the U.S. market?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+              <div class="flex flex-col space-y-4">
+                
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">How long does SEO take to work in the U.S. market?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">Typically 3-6 months for initial results, depending on competition and site history.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-150 ease-in-out">
+                    <p class="pb-6 text-gray-500 text-[15px] leading-relaxed">Typically 3-6 months for initial results, depending on competition and site history.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Should I invest in SEO or PPC first?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Should I invest in SEO or PPC first?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">We recommend starting with both to capture immediate demand while building long-term equity.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">We recommend starting with both to capture immediate demand while building long-term equity.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Do digital marketing agencies create content?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Do digital marketing agencies create content?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">Yes, we provide high-intent content tailored for both users and search engines.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">Yes, we provide high-intent content tailored for both users and search engines.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Do you only work with U.S. businesses?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Do you only work with U.S. businesses?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">While we specialize in the US market, we work with global brands looking to scale in America.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">While we specialize in the US market, we work with global brands looking to scale in America.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">How does email marketing fit into a complete digital marketing strategy?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">How does email marketing fit into a complete strategy?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">Email handles the retention and conversion of the traffic driven by SEO and PPC.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">Email handles the retention and conversion of the traffic driven by SEO and PPC.</p>
                   </div>
                 </div>
               </div>
         
-<div class="flex flex-col">
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Is AI SEO replacing traditional SEO?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+              <div class="flex flex-col space-y-4">
+                
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Is AI SEO replacing traditional SEO?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">No, it's a tool that helps us understand intent better, but authority still matters.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">No, it's a tool that helps us understand intent better, but authority still matters.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">How do you measure real ROI?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">How do you measure real ROI?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">We track leads, sales velocity, and customer lifetime value (LTV).</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">We track leads, sales velocity, and customer lifetime value (LTV).</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Why hire a digital marketing agency for a small business?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Why hire a digital marketing agency for a small business?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">Agencies provide a full team of specialists for the cost of one junior hire.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">Agencies provide a full team of specialists for the cost of one junior hire.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Can a digital marketing agency manage social media and paid social ads together?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Can a digital marketing agency manage social media and paid social ads together?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">Yes, integrated management ensures your brand voice and ad budget work in sync.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">Yes, integrated management ensures your brand voice and ad budget work in sync.</p>
                   </div>
                 </div>
         
-                <div class="faq-item border-b border-gray-300">
-                  <button class="faq-toggle w-full py-8 flex items-center justify-between text-left group cursor-pointer">
-                    <span class="font-bold text-[#1a1f2e]  leading-snug pr-4 text-[16px] md:text-[20px]">Do digital marketing companies handle website and ad design in-house?</span>
-                    <div class="faq-icon flex-shrink-0 w-9 h-9 rounded-md bg-[#F4F9FF] flex items-center justify-center text-primary border border-[#EBF3FF] transition-colors duration-150">
-                      <i class="fas fa-plus w-4 h-4"></i>
+                <div class="faq-item bg-[#F3F8FF] rounded-xl px-6 md:px-8 flex flex-col h-full">
+                  <button class="faq-toggle w-full py-7 flex items-center justify-between text-left group cursor-pointer">
+                    <span class="font-bold text-primary leading-snug pr-4 text-[15px] md:text-[17px]">Do digital marketing companies handle website and ad design in-house?</span>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded bg-white flex items-center justify-center text-primary border border-[#EBF3FF]">
+                      <i class="fas fa-plus w-3 h-3"></i>
                     </div>
                   </button>
-                  <div class="faq-content max-h-0 overflow-hidden transition-colors duration-150 ease-in-out">
-                    <p class="pb-8 text-gray-500 text-[15px] leading-relaxed">We do. This keeps the design conversion-focused and aligned with your strategy.</p>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all">
+                    <p class="pb-6 text-gray-500 text-[15px]">We do. This keeps the design conversion-focused and aligned with your strategy.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
          
     <!-- ========================================
          LAST BANNER SECTION
