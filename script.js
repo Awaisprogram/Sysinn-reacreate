@@ -527,7 +527,7 @@ function renderPaidSocialCard(index) {
 }
 
 function updatePaidSocialDots(index) {
-  const dots = document.querySelectorAll('.paid-social-dots .dot');
+  const dots = document.querySelectorAll('.paid-social-dots .Paiddot');
   dots.forEach((dot, i) => {
     if (i === index) {
       dot.classList.remove('bg-gray-300', 'hover:bg-gray-400');
@@ -552,7 +552,7 @@ function setPaidSocialCard(index) {
 // Paid Social Section - Initialize
 // ========================================
 function initPaidSocialCarousel() {
-  const dots = document.querySelectorAll('.paid-social-dots .dot');
+  const dots = document.querySelectorAll('.paid-social-dots .Paiddot');
   if (dots.length === 0) return;
   
   // Add click handlers to dots
