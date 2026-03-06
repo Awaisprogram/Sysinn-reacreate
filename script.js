@@ -798,12 +798,12 @@ document.addEventListener("DOMContentLoaded", function(){
     description.textContent = slides[index].description;
     
     dots.forEach((dot, i) => {
-    dot.classList.remove("w-5","h-2.5","bg-[#0f172a]");
+    dot.classList.remove("w-5","h-2.5","bg-[#0E59AE]");
     dot.classList.add("w-2.5","h-2.5","bg-gray-300");
     
     if(i === index){
     dot.classList.remove("bg-gray-300","w-2.5","h-2.5");
-    dot.classList.add("w-5","h-2.5","bg-[#0f172a]");
+    dot.classList.add("w-5","h-2.5","bg-[#0E59AE]");
     }
     });
     }
