@@ -1,3 +1,4 @@
+
 // Mobile Menu Toggle
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -736,3 +737,87 @@ document.addEventListener("DOMContentLoaded", function(){
         .classList.remove("hidden");
     });
   });
+
+
+  // HOME AI:
+  const slides = [
+    {
+    icon: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="56" height="56" rx="28" fill="#E6F7F1"/>
+<path d="M23.3203 31.2835V19.2835L32.6453 13.9001C37.812 10.9168 47.062 18.2751 43.1786 25.0085" stroke="#489478" stroke-linejoin="round"/>
+<path d="M23.3203 25.4502L33.712 19.4502L43.037 24.8335C48.2036 27.8169 46.4536 39.5085 38.6786 39.5085" stroke="#489478" stroke-linejoin="round"/>
+<path d="M28.3667 22.5332L38.7583 28.5332V39.3082C38.7583 45.2749 27.7583 49.6082 23.875 42.8749" stroke="#489478" stroke-linejoin="round"/>
+<path d="M33.4181 25.6665V37.4498L24.0931 42.8332C18.9264 45.8165 9.67643 38.4582 13.5598 31.7248" stroke="#489478" stroke-linejoin="round"/>
+<path d="M33.4158 31.2834L23.0242 37.2834L13.6992 31.9001C8.52418 28.9084 10.2742 17.2251 18.0492 17.2251" stroke="#489478" stroke-linejoin="round"/>
+<path d="M28.3682 34.2003L17.9766 28.2003V17.4253C17.9766 11.4586 28.9766 7.1253 32.8599 13.8586" stroke="#489478" stroke-linejoin="round"/>
+</svg>
+`,
+    title: "ChatGPT Search Optimization",
+    description:
+    "Our chat GPT SEO strategies leverage digital PR to build external brand mentions and create high-quality content."
+    },
+    
+    {
+    icon: `<svg class="w-6 h-6 text-[#4285F4]" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
+    </svg>`,
+    title: "Gemini AI Optimization",
+    description:
+    "Our Gemini-focused strategies help your brand appear prominently in Google's AI-powered search results."
+    },
+    
+    {
+    icon: `<svg class="w-6 h-6 text-[#7c3aed]" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+    </svg>`,
+    title: "Perplexity AI Visibility",
+    description:
+    "Position your brand as an authoritative source within Perplexity's citation ecosystem."
+    },
+    
+    {
+    icon: `<svg class="w-6 h-6 text-[#f59e0b]" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+    </svg>`,
+    title: "LLM Brand Positioning",
+    description:
+    "We ensure your brand narrative is consistently represented across all major large language models."
+    }
+    ];
+    
+    let currentSlideIndex = 0;
+    
+    const icon = document.getElementById("slideIcon");
+    const title = document.getElementById("slideTitle");
+    const description = document.getElementById("slideDescription");
+    const dots = document.querySelectorAll(".dot");
+    
+    function renderSlide(index) {
+    icon.innerHTML = slides[index].icon;
+    title.textContent = slides[index].title;
+    description.textContent = slides[index].description;
+    
+    dots.forEach((dot, i) => {
+    dot.classList.remove("w-5","h-2.5","bg-[#0f172a]");
+    dot.classList.add("w-2.5","h-2.5","bg-gray-300");
+    
+    if(i === index){
+    dot.classList.remove("bg-gray-300","w-2.5","h-2.5");
+    dot.classList.add("w-5","h-2.5","bg-[#0f172a]");
+    }
+    });
+    }
+    
+    dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlideIndex = index;
+    renderSlide(currentSlideIndex);
+    });
+    });
+    
+    setInterval(() => {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    renderSlide(currentSlideIndex);
+    }, 4000);
+    
+    renderSlide(currentSlideIndex);

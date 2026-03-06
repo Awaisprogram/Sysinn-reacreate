@@ -238,3 +238,13 @@ button, .btn, [class*="button-"] {
   color: #0056b3 !important;
   border-left-color: #0056b3 !important;
 }
+
+.gradient-border {
+  border: 4px solid;
+  border-image-slice: 1;
+  border-width: 4px;
+  border-image-source: linear-gradient(to right, #0E59AE, #BAD4FF, #4DC1B9);
+  border-radius: 12px;
+  padding: 16px;
+  background-color: white; /* content background */
+}
