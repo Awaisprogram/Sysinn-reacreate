@@ -436,10 +436,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach((dot, i) => {
       if (i === current) {
         dot.classList.add('bg-[#0b4d9c]', 'w-3', 'h-3');
-        dot.classList.remove('bg-gray-300', 'w-2.5', 'h-2.5');
+        dot.classList.remove('bg-gray-300', 'w-3', 'h-3');
       } else {
         dot.classList.remove('bg-[#0b4d9c]', 'w-3', 'h-3');
-        dot.classList.add('bg-gray-300', 'w-2.5', 'h-2.5');
+        dot.classList.add('bg-gray-300', 'w-3', 'h-3');
       }
     });
   }
