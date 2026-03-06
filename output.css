@@ -72,7 +72,6 @@
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -848,6 +847,9 @@
   }
   .max-w-\[900px\] {
     max-width: 900px;
+  }
+  .max-w-\[1094px\] {
+    max-width: 1094px;
   }
   .max-w-\[1260px\] {
     max-width: 1260px;
@@ -1688,9 +1690,6 @@
   .text-\[36px\] {
     font-size: 36px;
   }
-  .text-\[40px\] {
-    font-size: 40px;
-  }
   .text-\[42px\] {
     font-size: 42px;
   }
@@ -1744,10 +1743,6 @@
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
-  }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -1929,6 +1924,10 @@
   }
   .shadow-\[0_10px_40px_rgba\(0\,0\,0\,0\.03\)\] {
     --tw-shadow: 0 10px 40px var(--tw-shadow-color, rgba(0,0,0,0.03));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_15px_50px_\#0E59AE26\] {
+    --tw-shadow: 0 15px 50px var(--tw-shadow-color, #0E59AE26);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-lg {
