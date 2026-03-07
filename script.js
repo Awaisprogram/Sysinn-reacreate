@@ -461,35 +461,35 @@ const paidSocialCards = [
     id: 0,
     title: "Paid Social That Drives The Conversion Pipeline",
     description: "Paid social is one of the fastest ways for startups and e-commerce brands to scale. We create campaigns focused on audience intent, creative testing, and high-converting landing pages — measuring performance against real business outcomes to generate leads, sales, and measurable pipeline growth.",
-    image: "/images/paid.webp",
+    image: "images/paid.webp",
     buttonText: "Explore Services"
   },
   {
     id: 1,
     title: "Email & Lifecycle Marketing For Dedicated Conversion",
     description: "Don't let leads go cold. We build automated email flows that nurture customers from their first click to their hundredth purchase. Our lifecycle campaigns maximize customer lifetime value through personalization and strategic timing.",
-    image: "/images/paid1.webp",
+    image: "images/paid1.webp",
     buttonText: "Learn More"
   },
   {
     id: 2,
     title: "Conversion Rate Opetimization (CRO)",
     description: "More traffic alone won't increase revenue. CRO turns existing visitors into leads and sales by optimizing messaging, UX, and the user journey from click to conversion. With targeted improvements, we help you get the most value from every visitor, boosting conversions and maximizing ROI",
-    image: "/images/paid2.webp",
+    image: "images/paid2.webp",
     buttonText: "View Services"
   },
   {
     id: 3,
     title: "Conversion First Opetimization",
     description: "We create content that performs, ranking, persuading, and converting. From ad landing pages to SEO clusters and product pages, each piece is designed to see to take action, driving measurable engagement, generating qualified leads, and increasing sales for your business",
-    image: "/images/paid3.webp",
+    image: "images/paid3.webp",
     buttonText: "Our Approach"
   },
   {
     id: 4,
     title: "Responsive First Web Marketing",
     description: "We build websites as growth engines: fast, scalable, and conversion-focused. From marketing sites to complex web apps and e-commerce platforms, our development prioritizes speed, usability, SEO readiness, and measurable conversion paths turning visits into revenue without limiting future flexibility.",
-    image: "/images/paid4.webp",
+    image: "images/paid4.webp",
     buttonText: "See How It Works"
   }
 ];
