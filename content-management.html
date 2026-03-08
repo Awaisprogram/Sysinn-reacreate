@@ -1689,6 +1689,80 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Tab buttons
+        var tabWhatWeDo = document.getElementById('tab-what-we-do');
+        var tabWhoWeServe = document.getElementById('tab-who-we-serve');
+        var tabHowItWorks = document.getElementById('tab-how-it-works');
+        
+        // Panels
+        var panelWhatWeDo = document.getElementById('panel-what-we-do');
+        var panelWhoWeServe = document.getElementById('panel-who-we-serve');
+        var panelHowItWorks = document.getElementById('panel-how-it-works');
+        
+        // Images
+        var imgWhatWeDo = document.getElementById('img-what-we-do');
+        var imgWhoWeServe = document.getElementById('img-who-we-serve');
+        var imgHowItWorks = document.getElementById('img-how-it-works');
+        
+        function hideAllPanels() {
+          panelWhatWeDo.classList.add('hidden');
+          panelWhoWeServe.classList.add('hidden');
+          panelHowItWorks.classList.add('hidden');
+        }
+        
+        function hideAllImages() {
+          imgWhatWeDo.classList.add('hidden');
+          imgWhoWeServe.classList.add('hidden');
+          imgHowItWorks.classList.add('hidden');
+        }
+        
+        function resetTabStyles() {
+          tabWhatWeDo.classList.remove('text-primary');
+          tabWhatWeDo.classList.add('text-gray-500');
+          tabWhoWeServe.classList.remove('text-primary');
+          tabWhoWeServe.classList.add('text-gray-500');
+          tabHowItWorks.classList.remove('text-primary');
+          tabHowItWorks.classList.add('text-gray-500');
+        }
+        
+        // Tab What We Do click
+        tabWhatWeDo.addEventListener('click', function() {
+          resetTabStyles();
+          hideAllPanels();
+          hideAllImages();
+          
+          tabWhatWeDo.classList.remove('text-gray-500');
+          tabWhatWeDo.classList.add('text-blue-600');
+          panelWhatWeDo.classList.remove('hidden');
+          imgWhatWeDo.classList.remove('hidden');
+        });
+        
+        // Tab Who We Serve click
+        tabWhoWeServe.addEventListener('click', function() {
+          resetTabStyles();
+          hideAllPanels();
+          hideAllImages();
+          
+          tabWhoWeServe.classList.remove('text-gray-500');
+          tabWhoWeServe.classList.add('text-[#0E59AE]');
+          panelWhoWeServe.classList.remove('hidden');
+          imgWhoWeServe.classList.remove('hidden');
+        });
+        
+        // Tab How It Works click
+        tabHowItWorks.addEventListener('click', function() {
+          resetTabStyles();
+          hideAllPanels();
+          hideAllImages();
+          
+          tabHowItWorks.classList.remove('text-gray-500');
+          tabHowItWorks.classList.add('text-[#0E59AE]');
+          panelHowItWorks.classList.remove('hidden');
+          imgHowItWorks.classList.remove('hidden');
+        });
+      });
+    </script>
 </body>
 </html>

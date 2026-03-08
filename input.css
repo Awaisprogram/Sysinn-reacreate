@@ -248,3 +248,12 @@ button, .btn, [class*="button-"] {
   padding: 16px;
   background-color: white; /* content background */
 }
+
+/* Digital Marketing Tab - Custom Classes */
+.dm-hidden {
+  display: none !important;
+}
+
+.dm-active-tab {
+  color: #0E59AE !important;
+}

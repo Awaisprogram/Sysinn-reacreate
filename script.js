@@ -700,43 +700,10 @@ document.addEventListener("DOMContentLoaded", function(){
   
   });
 
-  // digital marketing
+  // digital marketing - Tab functionality with unique class names
+    
+  
 
-  const tabs = document.querySelectorAll(".tab-btn");
-  const panels = document.querySelectorAll(".tab-panel");
-  const images = document.querySelectorAll(".tab-img");
-  
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const tabName = tab.getAttribute("data-tab");
-  
-      // remove active state
-      tabs.forEach(t => {
-        t.classList.remove("active-tab", "text-blue-600");
-        t.classList.add("text-gray-500");
-      });
-  
-      // add active state
-      tab.classList.add("active-tab", "text-blue-600");
-      tab.classList.remove("text-gray-500");
-  
-      // hide panels
-      panels.forEach(panel => panel.classList.add("hidden"));
-  
-      // show selected panel
-      document
-        .querySelector(`[data-panel="${tabName}"]`)
-        .classList.remove("hidden");
-  
-      // hide images
-      images.forEach(img => img.classList.add("hidden"));
-  
-      // show selected image
-      document
-        .querySelector(`[data-tab-img="${tabName}"]`)
-        .classList.remove("hidden");
-    });
-  });
 
 
   // HOME AI:
