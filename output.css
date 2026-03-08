@@ -1214,8 +1214,17 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
   }
+  .border-\[\#C5DBFF\] {
+    border-color: #C5DBFF;
+  }
+  .border-\[\#C5DBFF\]\/50 {
+    border-color: color-mix(in oklab, #C5DBFF 50%, transparent);
+  }
   .border-\[\#E0EFFF\] {
     border-color: #E0EFFF;
+  }
+  .border-\[\#E7EEF7\] {
+    border-color: #E7EEF7;
   }
   .border-\[\#EAF2FF\] {
     border-color: #EAF2FF;
@@ -1232,9 +1241,6 @@
   .border-\[\#e5efff\] {
     border-color: #e5efff;
   }
-  .border-\[\#f1f5f9\] {
-    border-color: #f1f5f9;
-  }
   .border-black\/30 {
     border-color: color-mix(in srgb, #000 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1246,9 +1252,6 @@
   }
   .border-blue-100 {
     border-color: var(--color-blue-100);
-  }
-  .border-blue-200 {
-    border-color: var(--color-blue-200);
   }
   .border-blue-200\/50 {
     border-color: color-mix(in srgb, oklch(88.2% 0.059 254.128) 50%, transparent);
@@ -2426,10 +2429,10 @@
       }
     }
   }
-  .hover\:border-blue-100 {
+  .hover\:border-\[\#C5DBFF\] {
     &:hover {
       @media (hover: hover) {
-        border-color: var(--color-blue-100);
+        border-color: #C5DBFF;
       }
     }
   }
