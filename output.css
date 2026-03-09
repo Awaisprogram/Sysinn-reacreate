@@ -3147,6 +3147,11 @@
       margin-bottom: calc(var(--spacing) * 24);
     }
   }
+  .lg\:ml-4 {
+    @media (width >= 64rem) {
+      margin-left: calc(var(--spacing) * 4);
+    }
+  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -3519,6 +3524,16 @@
   .lg\:pt-10 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:pr-10 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:pl-4 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 4);
     }
   }
   .lg\:text-left {
