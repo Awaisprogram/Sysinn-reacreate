@@ -593,114 +593,119 @@ function initPaidSocialCarousel() {
 // Slider
 
 
-document.addEventListener("DOMContentLoaded", function(){
-
-  const wrap = document.getElementById("splitWrap");
+document.addEventListener("DOMContentLoaded", function() {
+  const wrap = document.getElementById("fullSplitWrap");
   const bar = document.getElementById("dragBar");
-  const mask = document.getElementById("leftMask");
-  
-  const problems = document.getElementById("problemsCol");
-  const solutions = document.getElementById("solutionsCol");
-  
-  if(!wrap || !bar || !mask) return;
-  
-  let dragging=false;
-  
-  // Function to update bar position based on mouse/touch position
-  function updateBarPosition(clientX) {
-    const rect = wrap.getBoundingClientRect();
-    let x = clientX - rect.left;
-    
-    if(x < 0) x = 0;
-    if(x > rect.width) x = rect.width;
-    
-    const percent = x / rect.width * 100;
-    
-    bar.style.left = percent + "%";
-    mask.style.width = percent + "%";
-    
-    // TEXT LOGIC - opacity depends on bar position
-    if(percent < 45){
-      problems.style.opacity = "1";
-      solutions.style.opacity = "0";
-    }
-    else if(percent > 55){
-      problems.style.opacity = "0";
-      solutions.style.opacity = "1";
-    }
-    else{
-      problems.style.opacity = "1";
-      solutions.style.opacity = "1";
-    }
-  }
-  
-  // START DRAG - from bar
-  bar.addEventListener("mousedown", (e) => {
-    dragging = true;
-    e.preventDefault();
-  });
-  
-  // START DRAG - from text areas (problems and solutions columns)
-  if(problems) {
-    problems.addEventListener("mousedown", (e) => {
-      dragging = true;
-      updateBarPosition(e.clientX);
-    });
-  }
-  
-  if(solutions) {
-    solutions.addEventListener("mousedown", (e) => {
-      dragging = true;
-      updateBarPosition(e.clientX);
-    });
-  }
-  
-  // STOP DRAG
-  window.addEventListener("mouseup", () => dragging = false);
-  
-  
-  // MOVE - for mouse drag
-  window.addEventListener("mousemove", (e) => {
-    if(!dragging) return;
-    updateBarPosition(e.clientX);
-  });
-  
-  
-  // TOUCH SUPPORT
-  
-  // START DRAG - from bar
-  bar.addEventListener("touchstart", (e) => {
-    dragging = true;
-    e.preventDefault();
-  });
-  
-  // START DRAG - from text areas (touch)
-  if(problems) {
-    problems.addEventListener("touchstart", (e) => {
-      dragging = true;
-      updateBarPosition(e.touches[0].clientX);
-    });
-  }
-  
-  if(solutions) {
-    solutions.addEventListener("touchstart", (e) => {
-      dragging = true;
-      updateBarPosition(e.touches[0].clientX);
-    });
-  }
-  
-  // STOP DRAG - touch
-  window.addEventListener("touchend", () => dragging = false);
-  
-  // MOVE - for touch drag
-  window.addEventListener("touchmove", (e) => {
-    if(!dragging) return;
-    updateBarPosition(e.touches[0].clientX);
-  });
-  
-  });
+  const clipLayer = document.getElementById("clipLayer");
 
-  // digital marketing - Tab functionality with unique class names
+  if (!wrap || !bar || !clipLayer) return;
+
+  let isDragging = false;
+  let currentPercent = 50; 
+  let targetPercent = 50;  
+  let animationFrameId = null;
+
+  // Render initial visual state
+  updateVisuals(currentPercent);
+
+  function updateVisuals(percent) {
+    // Moves slider indicator
+    bar.style.left = percent + "%";
+    
+    // The "inset" masks the top layer out from the left edge.
+    // This physically shows/hides the background which acts like an eraser over the text!
+    clipLayer.style.clipPath = `inset(0 0 0 ${percent}%)`;
+    clipLayer.style.webkitClipPath = `inset(0 0 0 ${percent}%)`;
+  }
+
+  // Smooth easing function
+  function lerp(start, end, factor) {
+    return start + (end - start) * factor;
+  }
+
+  // Animates dragging state smoothly (60FPS)
+  function animate() {
+    if (Math.abs(currentPercent - targetPercent) > 0.1) {
+      currentPercent = lerp(currentPercent, targetPercent, 0.15);
+      updateVisuals(currentPercent);
+      animationFrameId = requestAnimationFrame(animate);
+    } else {
+      currentPercent = targetPercent;
+      updateVisuals(currentPercent);
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
+  }
+
+  // Sync positions safely
+  function setPercentage(percent, smooth = false) {
+    targetPercent = Math.max(0, Math.min(100, percent));
+    if (smooth) {
+      if (!animationFrameId) animate();
+    } else {
+      currentPercent = targetPercent;
+      updateVisuals(currentPercent);
+    }
+  }
+
+  // Calculate mouse position relative to the full window container width
+  function handleDrag(clientX) {
+    const rect = wrap.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setPercentage(percent, false);
+  }
+
+  function startDrag() {
+    isDragging = true;
+    document.body.classList.add('select-none', 'cursor-ew-resize');
+  }
+
+  function stopDrag() {
+    isDragging = false;
+    document.body.classList.remove('select-none', 'cursor-ew-resize');
+  }
+
+  function handleInteractStart(clientX) {
+    startDrag();
+    handleDrag(clientX);
+  }
+
+  // 1. Bar Handlers
+  bar.addEventListener("mousedown", (e) => {
+    startDrag();
+    e.preventDefault();
+  });
+  bar.addEventListener("touchstart", (e) => {
+    startDrag();
+  }, { passive: true });
+
+  // 2. Global Wrapper Interactivity (Allows clicking anywhere on text to pull the slider!)
+  wrap.addEventListener("mousedown", (e) => {
+    if (e.target.closest('#dragBar')) return;
+    handleInteractStart(e.clientX);
+  });
+  wrap.addEventListener("touchstart", (e) => {
+    if (e.target.closest('#dragBar')) return;
+    handleInteractStart(e.touches[0].clientX);
+  }, { passive: true });
+
+  // 3. Movement Listeners
+  window.addEventListener("mouseup", stopDrag);
+  window.addEventListener("touchend", stopDrag);
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    handleDrag(e.clientX);
+  });
+  
+  window.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    handleDrag(e.touches[0].clientX);
+    // Prevents vertical page scroll ONLY while actively pulling horizontally
+    if(e.cancelable) e.preventDefault(); 
+  }, { passive: false });
+});
     
   
 
