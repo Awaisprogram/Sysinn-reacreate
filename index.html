@@ -502,48 +502,44 @@
     <!-- ========================================
          HERO SECTION WITH NAVIGATION
          ======================================== -->
-         <section id="hero" class="hero-bg relative min-h-[607px]  flex flex-col font-heading">
+         <section id="hero" class="hero-bg relative min-h-[607px] overflow-hidden flex flex-col font-heading py-16 ">
+          <div class="absolute inset-0 z-0 h-screen w-full">
+            <img src="images/main.svg" alt="" class="w-full h-screen object-cover animate-fade" />
+          </div>
   
- 
+          <div class="max-w-[1320px] mx-auto px-6 lg:px-8 flex-grow flex items-center relative">
+            
+            
+            <div class="absolute inset-0 -z-10 hero-bg"></div>
         
-          <div class="max-w-[1320px] mx-auto px-6  lg:px-8 flex-grow flex items-center">
-            <div class="absolute inset-0 h-full w-full ">
-              <img src="images/main.svg" alt="">
-                   
-           </div>
-   
-   <!-- Gradient Overlay - higher z-index to appear in front of grid -->
-         <div class="absolute inset-0 -z-10 hero-bg"></div>
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-16 gap-16 lg:gap-24 w-full items-center">
-
-              
-              <div class="max-w-2xl mx-auto">
-                <h1 class=" font-heading   lg:pt-0 pt-12 text-4xl md:text-[50px] font-semibold  font-heading text-[#1a1f2e] leading-[1.1] lg:leading-[60px] mb-6 ">
-                  A <span class="text-[#366DC2]">360° Digital Marketing</span><br class="hidden lg:block">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-12 lg:gap-[90px] xl:gap-[120px] w-full items-center relative z-10">
+        
+              <div class="lg:w-[705px]">
+                <h1 class="font-heading lg:pt-0 pt-12 text-4xl md:text-[56px] font-semibold text-[#1a1f2e] leading-[1.1] lg:leading-[76px] mb-6">
+                  A <span class="text-[#0E59AE] font-heading">360° Digital Marketing</span><br class="hidden lg:block">
                   Company for Growth<br class="hidden lg:block">
                   Focused Businesses
                 </h1>
                 
-                <p class="text-gray-500 text-[15px] lg:text-[20px] leading-[1.7] mb-10">
-                  Sysinn helps businesses in America turn attention into revenue by combining conversion-focused UI/UX, scalable development, and the best performance marketing agency built for modern search, including AI Overviews, zero-click behavior, and intent-driven discovery.
+                <p class="text-[#454545] font-light text-[15px] lg:text-[20px] leading-[1.7] mb-10">
+                  Sysinn helps businesses turn attention into revenue by combining conversion-focused UI/UX, scalable development, and the best performance marketing agency built for modern search, including AI Overviews, zero-click behavior, and intent-driven discovery.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
+                  <button class="bg-[#0E59AE] relative text-white px-8 py-3 rounded-md font-bold text-[15px] hover:bg-white hover:text-[#0E59AE] transition-colors duration-150 ease-in-out shadow-lg shadow-blue-500/30 whitespace-nowrap cursor-pointer">
+                    Book a strategy Call
+                  </button>
                   
-                    <button class="bg-[#0E59AE] relative  text-white px-8 py-4 rounded-md font-bold text-[15px] hover:bg-white hover:text-primary transition-colors duration-150 ease-in-out   shadow-lg shadow-blue-500/30 whitespace-nowrap cursor-pointer">
-                      Book a strategy Call
-                    </button>
-                  
-                  
-                  <button class="bg-white relative hover:bg-gray-50 text-[#1a1f2e] px-10 py-4 rounded-md font-bold text-[15px] transition-colors btn-soft-shadow border border-transparent hover:border-gray-500 whitespace-nowrap cursor-pointer">
+                  <button class="relative  bg-gradient-to-r from-[#FDFEFF] to-[#F6F3FF] relative hover:bg-gray-50 text-[#1a1f2e] px-10 py-3 rounded-md font-bold text-[15px] transition-colors btn-soft-shadow border border-transparent hover:border-gray-500 whitespace-nowrap cursor-pointer">
                     Learn More
                   </button>
                 </div>
               </div>
         
               <div class="relative flex items-center justify-center lg:justify-end">
-                <img src="images/hero.svg" alt="Marketing 360 Wheel" class="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto drop-shadow-xl" />
+                <img src="images/hero.svg" alt="Marketing 360 Wheel" class="w-full max-w-2xl lg:max-w-[600px] h-auto drop-shadow-xl" />
               </div>
+              
             </div>
           </div>
         </section>
@@ -553,37 +549,35 @@
     <!-- ========================================
          STATS SECTION
          ======================================== -->
-    <section id="stats" class="bg-white py-12 lg:py-18 font-inter">
-      <div class="max-w-[1320px] mx-auto px-6 lg:px-8">
+    <section id="stats" class="relative bg-white py-12 lg:py-18 font-inter">
+      <div class="max-w-[1120px] mx-auto px-6 lg:px-8">
         
-        <div class="max-w-4xl mx-auto text-center mb-16">
+        <div class="text-center mb-10">
           <h2 class="text-4xl lg:text-[48px] font-bold text-gray-900 mb-6">
-            Your Go-to <span class="text-primary">Digital Marketing</span> & <br><span class="text-primary">AI Marketing</span> Agency 
+            Your Go-to <span class="text-[#366DC2] font-heading">Digital Marketing</span> & <br><span class="text-[#366DC2]">AI Marketing</span> Agency 
           </h2>
           
-          <p class="text-gray-500 md:text-[20px] text-[18px] leading-relaxed max-w-3xl mx-auto">
-            Sysinn helps businesses in America turn attention into revenue by combining conversion-focused UI/UX, scalable
-            development, and the best performance marketing agency built for modern search, including AI Overviews, zero-click
-            behavior, and intent-driven discovery.
+          <p class="text-[#595959] md:text-[20px] text-[18px] leading-[32px] ">
+            Sysinn helps businesses in America turn attention into revenue by combining conversion-focused UI/UX, scalable development, and the best performance marketing agency built for modern search,  including AI Overviews, zero-click behavior, and intent-driven discovery.
           </p>
         </div>
     
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 items-center justify-center">
             
             <div class="flex flex-col items-center text-center px-4 md:border-r border-gray-200">
-              <span class="text-3xl md:text-[32px] font-bold text-primary mb-2">6+ Years</span>
-              <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">In Competitive Global Markets</span>
+              <span class="text-3xl md:text-[32px] font-bold text-[#5E90C9] mb-2">6+ Years</span>
+              <span class="text-[#8C8C8C] md:text-[20px] text-[18px] ">In Competitive Global Markets</span>
             </div>
     
             <div class="flex flex-col items-center text-center px-4 md:border-r border-gray-200">
-              <span class="text-3xl md:text-[32px] font-bold text-primary mb-2">7.25%</span>
-              <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">Average Google Ads CR</span>
+              <span class="text-3xl md:text-[32px] font-bold text-[#5E90C9] mb-2">7.25%</span>
+              <span class="text-[#8C8C8C] md:text-[20px] text-[18px] ">Average Google Ads CR</span>
             </div>
     
             <div class="flex flex-col items-center text-center px-4">
-              <span class="text-3xl md:text-[32px] font-bold text-primary mb-2">53%</span>
-              <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">Of Trackable Website Traffic</span>
+              <span class="text-3xl md:text-[32px] font-bold text-[#5E90C9] mb-2">53%</span>
+              <span class="text-[#8C8C8C] md:text-[20px] text-[18px] ">Of Trackable Website Traffic</span>
             </div>
     
           </div>
@@ -605,7 +599,7 @@
       
               <!-- Card Container -->
               <div class="relative paid-social-container">
-                   <div class="paid-social-card-content grid lg:grid-cols-2 gap-12 lg:gap-16 items-center  bg-[#EAF2FF] rounded-xl  border border-[#C5DBFF]/50 overflow-visible">
+                   <div class="paid-social-card-content grid lg:grid-cols-2 gap-6 items-center  bg-[#EAF2FF] rounded-xl  border border-[#C5DBFF]/50 overflow-visible">
       
                       <!-- Left: Text Content -->
                       <div class="px-6 lg:py-0 py-6">
@@ -613,7 +607,7 @@
                               Paid Social That Drives The Conversion Pipeline
                           </h2>
       
-                   <p class="card-description text-gray-600  lg:pl-4 text-[14px] md:text-[18px] leading-relaxed mb-8">
+                   <p class="card-description text-[#595959]  lg:pl-4 text-[14px] md:text-[18px] leading-[28px] mb-8">
                               Paid social is one of the fastest ways for startups and e-commerce brands to scale. We create campaigns focused on audience intent, creative testing, and high-converting landing pages — measuring performance against real business outcomes to generate leads, sales, and measurable pipeline growth.
                           </p>
       
@@ -641,12 +635,12 @@
                   </div>
       
                   <!-- Pagination Dots -->
-                  <div class="paid-social-dots flex justify-center items-center gap-2.5 py-6">
-                      <button class="Paiddot w-4 h-4 rounded-full bg-secondary transition-colors cursor-pointer"></button>
-                      <button class="Paiddot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
-                      <button class="Paiddot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
-                      <button class="Paiddot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
-                      <button class="Paiddot w-4 h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
+                  <div class="paid-social-dots flex justify-center items-center gap-4 py-6">
+                      <button class="Paiddot w-[16px] h-[16px] rounded-full bg-secondary transition-colors cursor-pointer"></button>
+                      <button class="Paiddot w-[16px] h-[16px] rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
+                      <button class="Paiddot w-[16px] h-[16px] rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
+                      <button class="Paiddot w-[16px] h-[16px] rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
+                      <button class="Paiddot w-[16px] h-[16px] rounded-full bg-gray-300 hover:bg-gray-400 transition-colors cursor-pointer"></button>
                   </div>
               </div>
       
@@ -661,12 +655,7 @@
 
          <section id="services" class="relative py-16 bg-white overflow-hidden font-inter">
 
-          <!-- Background Pattern -->
-          <div class="absolute inset-0 z-0 pointer-events-none opacity-60">
-            <div class="absolute inset-0"
-              style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23E0E7FF\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
-            </div>
-          </div>
+        
         
           <div class="max-w-[1320px] mx-auto px-6 lg:px-8 relative z-10">
         
@@ -688,12 +677,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group  lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl flex items-center justify-center
-                              transform rotate-3 group-hover:rotate-6
-                              transition-transform ">
-                    <img src="images/digital1.svg" alt="ecommerce">
-                  </div>
+               
+                  <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                  shadow-[0px_8px_20px_#0E59AE1A]
+                  flex items-center justify-center">
+        
+                  <img src="images/digital1.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+        
                 </div>
         
                 <h3 class="text-[24px] max-w-xl font-bold text-primary mb-3">
@@ -711,14 +701,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl
-                              flex items-center justify-center
-                              transform -rotate-2 group-hover:-rotate-4
-                              transition-transform">
-                    <img src="images/digital2.svg" alt="website" >
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital2.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   Website UI/UX Design
@@ -735,14 +724,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px]  rounded-xl
-                              flex items-center justify-center
-                              transform rotate-2 group-hover:rotate-4
-                              transition-transform">
-                  <img src="images/digital3.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital3.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                  App Development
@@ -759,14 +747,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px]  rounded-xl
-                              flex items-center justify-center
-                              transform -rotate-1 group-hover:-rotate-3
-                              transition-transform">
-                  <img src="images/digital4.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital4.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   Graphics Design
@@ -783,14 +770,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl
-                              flex items-center justify-center
-                              transform rotate-3 group-hover:rotate-5
-                              transition-transform">
-                  <img src="images/digital5.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital5.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   Web Development
@@ -807,14 +793,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl
-                              flex items-center justify-center
-                              transform -rotate-2 group-hover:-rotate-4
-                              transition-transform">
-                <img src="images/digital6.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital6.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   AI SEO
@@ -831,14 +816,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl
-                              flex items-center justify-center
-                              transform -rotate-2 group-hover:-rotate-4
-                              transition-transform">
-                <img src="images/digital7.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital7.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   PPC Services
@@ -855,14 +839,13 @@
                           hover:shadow-lg transition duration-150
                           flex flex-col items-center justify-center text-center cursor-pointer group lg:h-[309px]">
         
-                <div class="mb-6">
-                  <div class="w-[64px] h-[64px] rounded-xl
-                              flex items-center justify-center
-                              transform -rotate-2 group-hover:-rotate-4
-                              transition-transform">
-                <img src="images/digital8.svg" alt="digital">
-                  </div>
-                </div>
+                          <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
+                          shadow-[0px_8px_20px_#0E59AE1A]
+                          flex items-center justify-center">
+                
+                          <img src="images/digital8.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+                
+                        </div>
         
                 <h3 class="text-[24px] font-bold text-primary mb-3">
                   SEO Services
@@ -894,10 +877,10 @@
                 <!-- LEFT TEXT -->
                 <div class="lg:px-8">
                   <h2 class="text-4xl lg:text-[45px] font-bold text-gray-900 leading-[54px] mb-6">
-                    <span class="text-primary">AI-Driven</span> Marketing Execution Across Every Channel
+                    <span class="text-primary font-heading">AI-Driven</span> Marketing Execution Across Every Channel
                   </h2>
         
-                  <p class="text-gray-600 text-[14px] md:text-[18px] leading-relaxed">
+                  <p class="text-[#454545] text-[14px] md:text-[18px] leading-[29px]">
                     AI is changing discovery, but growth still depends on fundamentals:
                     strong offers, clear messaging, fast pages, and measurable conversion paths.
                     We use an AI-aware structure to improve performance across SEO, ads,
@@ -1062,11 +1045,12 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose1.svg" alt="strategy" class="w-6 h-6 object-contain">
+                  <img src="images/chose1.svg" alt="strategy" class="w-[32px] h-[32px] object-contain">
+        
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1084,11 +1068,11 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose2.svg" alt="ai search" class="w-6 h-6 object-contain">
+                  <img src="images/chose2.svg" alt="ai search" class="w-[32px] h-[32px] object-contain">
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1106,11 +1090,11 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose3.svg" alt="technical foundation" class="w-6 h-6 object-contain">
+                  <img src="images/chose3.svg" alt="technical foundation" class="w-[32px] h-[32px] object-contain">
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1128,11 +1112,11 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose4.svg" alt="conversion" class="w-6 h-6 object-contain">
+                  <img src="images/chose4.svg" alt="conversion" class="w-[32px] h-[32px] object-contain">
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1150,11 +1134,11 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose5.svg" alt="revenue" class="w-6 h-6 object-contain">
+                  <img src="images/chose5.svg" alt="revenue" class="w-[32px] h-[32px] object-contain">
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1172,11 +1156,11 @@
                 hover:shadow-[0px_18px_45px_#0E59AE1A]
                 hover:-translate-y-1 transition-all duration-300">
         
-                <div class="mb-6 w-14 h-14 rounded-full bg-white
+                <div class="mb-6 w-[64px] h-[64px] rounded-full bg-white
                   shadow-[0px_8px_20px_#0E59AE1A]
                   flex items-center justify-center">
         
-                  <img src="images/chose6.svg" alt="reporting" class="w-6 h-6 object-contain">
+                  <img src="images/chose6.svg" alt="reporting" class="w-[32px] h-[32px] object-contain">
                 </div>
         
                 <h3 class="text-[20px] md:text-[22px] font-bold text-gray-900 mb-3">
@@ -1206,7 +1190,7 @@
             <h2 class="text-3xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-3">
               Get Your Free Digital Market Audit In Your Inbox.
             </h2>
-            <p class="text-gray-500 text-[16px] md:text-[20px] leading-relaxed">
+            <p class="text-[#454545] text-[14px] md:text-[18px] leading-[29px]">
               AI is changing discovery, but growth still depends on fundamentals: strong offers, clear messaging, fast pages, and measurable conversion paths.
               We use an AI-aware structure to improve performance across SEO, ads, content, and conversion, not as a standalone gimmick.
             </p>
@@ -1333,7 +1317,7 @@ focus:ring-2 focus:ring-primary">
             <div class="flex flex-col items-center gap-3 text-center">
               <h1 class="font-bold text-[32px] md:text-[42px] lg:text-[48px] leading-tight text-[#0f172a] m-0">
                 The Best AI SEO Agency for
-                <span class="text-primary">AI Visibility</span>
+                <span class="bg-gradient-to-r from-[#4991E7] via-[#8879CC] to-[#C4677E] bg-clip-text text-transparent font-heading">AI Visibility</span>
               </h1>
         
               <p class="font-normal text-[16px] md:text-[20px] text-[#64748b] m-0">
@@ -1349,7 +1333,7 @@ focus:ring-2 focus:ring-primary">
               <div class="flex flex-col gap-5">
         
                 <!-- Card -->
-                <div class="rounded-2xl bg-gradient-to-r from-[#0E59AE] via-[#BAD4FF] to-[#4DC1B9] p-[2px] shadow-sm min-h-[282px] flex flex-col gap-4 transition-all duration-300">
+                <div class="rounded-2xl bg-gradient-to-r from-[#4991E7] via-[#8879CC] to-[#C4677E] p-[2px] shadow-sm min-h-[282px] flex flex-col gap-4 transition-all duration-300">
 
                   <!-- Inner content div with white background -->
                   <div class="bg-white rounded-2xl p-6 flex flex-col gap-4 flex-1">
@@ -1407,17 +1391,17 @@ focus:ring-2 focus:ring-primary">
               <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 items-center justify-center">
                 
                 <div class="flex flex-col items-center text-center px-4 md:border-r border-gray-200">
-                  <span class="text-3xl md:text-[32px] font-bold  mb-2">5,556%</span>
+                  <span class="text-3xl md:text-[32px] font-bold  mb-2 bg-gradient-to-r from-[#4991E7] via-[#8879CC] to-[#C4677E] bg-clip-text text-transparent">5,556%</span>
                   <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">AI Referral Traffic 2025</span>
                 </div>
         
                 <div class="flex flex-col items-center text-center px-4 md:border-r border-gray-200">
-                  <span class="text-3xl md:text-[32px] font-bold  mb-2">+404%</span>
+                  <span class="text-3xl md:text-[32px] font-bold  mb-2 bg-gradient-to-r from-[#4991E7] via-[#8879CC] to-[#C4677E] bg-clip-text text-transparent">+404%</span>
                   <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">Gemiini Traffic (2025)</span>
                 </div>
         
                 <div class="flex flex-col items-center text-center px-4">
-                  <span class="text-3xl md:text-[32px] font-bold  mb-2">1,078%</span>
+                  <span class="text-3xl md:text-[32px] font-bold  mb-2 bg-gradient-to-r from-[#4991E7] via-[#8879CC] to-[#C4677E] bg-clip-text text-transparent">1,078%</span>
                   <span class="text-gray-500 md:text-[20px] text-[18px] font-medium">ChatGPT Search Traffic 2025</span>
                 </div>
         
@@ -1520,23 +1504,23 @@ focus:ring-2 focus:ring-primary">
                           </h2>
                           
                           <!-- Tags Grid -->
-                          <div class="grid grid-cols-2 gap-3 mb-8">
-                              <div class="text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center border border-[#C5DBFF]">
+                          <div class="grid grid-cols-2 gap-3 mb-6">
+                              <div class="text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center bg-white border border-[#C5DBFF]">
                                   Multi-niche Franchise
                               </div>
-                              <div class=" text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center border border-[#C5DBFF]">
+                              <div class=" text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center bg-white border border-[#C5DBFF]">
                                   Small & Medium Businesses
                               </div>
-                              <div class=" text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center border border-[#C5DBFF]">
+                              <div class=" text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center bg-white border border-[#C5DBFF]">
                                   Seed & Funded Startups
                               </div>
-                            <div class="text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center border border-[#C5DBFF]">
+                            <div class="text-primary text-[13px] md:text-[16px] font-semibold px-5 py-3 rounded-lg text-center bg-white border border-[#C5DBFF]">
                                   E-commerce Brands
                               </div>
                           </div>
                           
                           <!-- CTA Button -->
-                          <button class="bg-[#0E59AE] hover:bg-white hover:text-primary transition-colors duration-150 ease-in-out text-white font-semibold px-8 py-3.5 rounded-lg shadow-md transition-colors duration-150 hover:shadow-lg active:scale-95 cursor-pointer">
+                          <button class="bg-[#0E59AE] hover:bg-white hover:text-primary transition-colors duration-150 ease-in-out text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-colors duration-150 hover:shadow-lg active:scale-95 cursor-pointer">
                               Book a Strategy Call
                           </button>
                       </div>
@@ -1572,10 +1556,10 @@ focus:ring-2 focus:ring-primary">
             </div>
         
             <!-- Grid -->
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div class="grid lg:grid-cols-2 gap-16  items-center">
         
               <!-- Left Content -->
-              <div class="max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+              <div class="max-w-md lg:max-w-lg xl:max-w-4xl mx-auto">
                 <h3 class="text-2xl lg:text-[40px]  font-bold text-gray-900 leading-snug mb-6">
                   
                     Real World Experience
@@ -1583,7 +1567,7 @@ focus:ring-2 focus:ring-primary">
                    You Can Verify.
                 </h3>
         
-                <p class="text-gray-600 text-[15px] md:text-[20px] leading-relaxed mb-8 max-w-xl">
+                <p class="text-gray-600 text-[15px] md:text-[20px] leading-relaxed mb-8 max-w-4xl">
                   Sysinn isn't theoretical. Everything we recommend comes from hands-on execution.
                 </p>
         
@@ -1637,7 +1621,7 @@ focus:ring-2 focus:ring-primary">
          <section id="frameworks" class="bg-white py-8  font-inter">
           <div class="max-w-[1320px] mx-auto px-6 lg:px-8 ">
         
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div class="grid lg:grid-cols-2 gap-16  items-center">
         
               <!-- Left Image -->
               <div class="order-2 lg:order-1 flex lg:justify-start justify-center  max-w-full lg:max-w-lg xl:max-w-xl">
@@ -2692,7 +2676,7 @@ focus:ring-2 focus:ring-primary">
               <!-- Email -->
               <div class="flex items-center gap-2 text-sm text-gray-400">
                 <i class="fas fa-envelope text-gray-400 flex-shrink-0"></i>
-                <span><strong class="text-gray-300">Email Address:</strong> info@sysinn.com</span>
+                <span><strong class="text-gray-300">Email Address:</strong> hei@sysinn.com</span>
               </div>
           
             </div>
