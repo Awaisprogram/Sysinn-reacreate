@@ -870,6 +870,9 @@
   .max-w-\[380px\] {
     max-width: 380px;
   }
+  .max-w-\[627px\] {
+    max-width: 627px;
+  }
   .max-w-\[900px\] {
     max-width: 900px;
   }
@@ -1249,6 +1252,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
   }
+  .border-\[\#2C7DFF\] {
+    border-color: #2C7DFF;
+  }
   .border-\[\#BED7FF\] {
     border-color: #BED7FF;
   }
@@ -1470,6 +1476,10 @@
     --tw-gradient-from: #4991E7;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-\[\#EAF2FF\] {
+    --tw-gradient-from: #EAF2FF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-\[\#FDFEFF\] {
     --tw-gradient-from: #FDFEFF;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1515,6 +1525,10 @@
   }
   .to-\[\#F6F3FF\] {
     --tw-gradient-to: #F6F3FF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-\[\#FFFFFF\] {
+    --tw-gradient-to: #FFFFFF;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-\[\#d8e6fa\] {
@@ -2026,6 +2040,18 @@
   }
   .text-\[\#595959\] {
     color: #595959;
+  }
+  .text-\[\#BED7FF\] {
+    color: #BED7FF;
+  }
+  .text-\[\#D9D9D9\] {
+    color: #D9D9D9;
+  }
+  .text-\[\#FCFCFC\] {
+    color: #FCFCFC;
+  }
+  .text-\[\#FFFFFF\] {
+    color: #FFFFFF;
   }
   .text-\[\#f59e0b\] {
     color: #f59e0b;
@@ -2702,6 +2728,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-blue-600);
+      }
+    }
+  }
+  .hover\:text-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-400);
       }
     }
   }
